@@ -33,8 +33,9 @@
             z-index: 20;
             width: 100%;
             backdrop-filter: blur(12px);
-            background: rgba(14, 18, 35, 0.72);
-            border-bottom: 1px solid rgba(255,255,255,0.10);
+            background: rgba(255,255,255,0.88);
+            border-bottom: 1px solid rgba(31,39,64,0.08);
+            box-shadow: 0 8px 24px rgba(18, 24, 44, 0.08);
         }
         
         .sticky-nav-inner {
@@ -51,7 +52,6 @@
             max-width: 210px;
             max-height: 44px;
             display: block;
-            filter: drop-shadow(0 6px 20px rgba(0,0,0,0.18));
         }
         
         .nav-links {
@@ -62,7 +62,7 @@
         }
         
         .nav-links a {
-            color: rgba(255,255,255,0.92);
+            color: #24304f;
             font-weight: 600;
             font-size: 0.98rem;
             transition: opacity 0.2s ease;
@@ -750,6 +750,10 @@
         
         /* Responsive */
         @media (max-width: 768px) {
+            .sticky-nav {
+                display: none;
+            }
+            
             .sticky-nav-inner {
                 justify-content: center;
                 text-align: center;
