@@ -41,7 +41,7 @@
         .sticky-nav-inner {
             max-width: 1280px;
             margin: 0 auto;
-            padding: 14px 24px;
+            padding: 12px 24px;
             display: flex;
             align-items: center;
             justify-content: space-between;
@@ -69,17 +69,22 @@
         }
         
         .nav-links a:hover {
-            opacity: 0.8;
+            opacity: 0.78;
         }
         
         .nav-cta {
             display: inline-block;
-            padding: 12px 22px;
+            padding: 11px 20px;
             border-radius: 999px;
-            background: #ffffff;
-            color: #5d6df2 !important;
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            color: #ffffff !important;
             font-weight: 700 !important;
-            box-shadow: 0 8px 22px rgba(0,0,0,0.18);
+            box-shadow: 0 10px 24px rgba(102,126,234,0.22);
+        }
+        
+        .nav-cta:hover {
+            opacity: 1 !important;
+            transform: translateY(-1px);
         }
         
         .top-brand-bar {
@@ -403,6 +408,20 @@
             box-shadow: 0 10px 30px rgba(31,39,64,0.06);
         }
         
+        .pain-icon {
+            width: 56px;
+            height: 56px;
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
+            border-radius: 16px;
+            margin-bottom: 16px;
+            font-size: 1.5rem;
+            background: linear-gradient(135deg, #eef2ff 0%, #f5eefe 100%);
+            color: #5d6df2;
+            box-shadow: inset 0 1px 0 rgba(255,255,255,0.7);
+        }
+        
         .pain-card h3 {
             font-size: 1.3rem;
             color: #1f2740;
@@ -444,9 +463,17 @@
         }
         
         .use-case-icon {
-            font-size: 2.4rem;
-            margin-bottom: 16px;
-            display: block;
+            width: 56px;
+            height: 56px;
+            font-size: 1.5rem;
+            margin: 0 auto 16px;
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
+            border-radius: 16px;
+            background: linear-gradient(135deg, #eef2ff 0%, #f5eefe 100%);
+            color: #5d6df2;
+            box-shadow: inset 0 1px 0 rgba(255,255,255,0.7);
         }
         
         .use-case-card h3 {
@@ -557,6 +584,31 @@
             border-radius: 22px;
             padding: 30px;
             box-shadow: 0 10px 30px rgba(31,39,64,0.07);
+            position: relative;
+            overflow: hidden;
+        }
+        
+        .testimonial-card::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 4px;
+            background: linear-gradient(90deg, #667eea 0%, #764ba2 100%);
+        }
+        
+        .review-badge {
+            display: inline-flex;
+            align-items: center;
+            gap: 8px;
+            margin-bottom: 14px;
+            padding: 8px 12px;
+            border-radius: 999px;
+            background: #eef2ff;
+            color: #4b57d1;
+            font-size: 0.82rem;
+            font-weight: 700;
         }
         
         .testimonial-stars {
@@ -584,6 +636,42 @@
             text-align: center;
             color: #6b7280;
             font-size: 0.96rem;
+        }
+        
+        /* Outcomes Section */
+        .outcomes {
+            padding: 90px 20px;
+            background: linear-gradient(135deg, #1b2240 0%, #2d3768 100%);
+            color: white;
+        }
+        
+        .outcomes-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+            gap: 22px;
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+        
+        .outcome-card {
+            background: rgba(255,255,255,0.08);
+            border: 1px solid rgba(255,255,255,0.12);
+            border-radius: 20px;
+            padding: 26px;
+            text-align: center;
+            backdrop-filter: blur(8px);
+        }
+        
+        .outcome-card strong {
+            display: block;
+            font-size: 1.15rem;
+            margin-bottom: 8px;
+        }
+        
+        .outcome-card p {
+            font-size: 0.98rem;
+            opacity: 0.92;
+            line-height: 1.7;
         }
         
         /* Industries Section */
@@ -892,18 +980,22 @@
         <p class="section-subtitle">Most teams do not need more software. They need fewer missed opportunities, faster response times, and a workflow that actually works together.</p>
         <div class="pain-grid">
             <div class="pain-card">
+                <div class="pain-icon">⏱️</div>
                 <h3>Leads Go Cold Too Fast</h3>
                 <p>When response time slips, potential customers move on. Slow follow-up, missed calls, and inconsistent outreach quietly cost businesses revenue every week.</p>
             </div>
             <div class="pain-card">
+                <div class="pain-icon">🔗</div>
                 <h3>Too Many Tools, Not Enough Alignment</h3>
                 <p>CRMs, calendars, texting, email, phone systems, and lead forms often live in separate places. That creates confusion, duplicate work, and missed handoffs.</p>
             </div>
             <div class="pain-card">
+                <div class="pain-icon">📝</div>
                 <h3>Manual Follow-Up Breaks Down</h3>
                 <p>Even strong teams struggle to stay consistent when reminders, check-ins, and outreach depend entirely on people remembering every next step.</p>
             </div>
             <div class="pain-card">
+                <div class="pain-icon">🌙</div>
                 <h3>After-Hours Opportunities Get Lost</h3>
                 <p>Businesses that only respond during office hours leave too much on the table. Prospects still reach out at night, on weekends, and when your staff is busy.</p>
             </div>
@@ -988,19 +1080,46 @@
         <p class="section-subtitle">Real feedback from Google reviews highlighting responsiveness, professionalism, and the value clients feel they receive from the One Solution team.</p>
         <div class="testimonials-grid">
             <div class="testimonial-card">
+                <div class="review-badge">Google Review</div>
                 <div class="testimonial-stars">★★★★★</div>
                 <h3>Chris</h3>
                 <p>“OneSolutionApp and specifically Gabe is the one you want in your corner. Their goal and focus is making sure you get more than you paid for. He most definitely goes above and beyond for his clients and their customer experience.”</p>
             </div>
             <div class="testimonial-card">
+                <div class="review-badge">Google Review</div>
                 <div class="testimonial-stars">★★★★★</div>
                 <h3>Daniel Jiles · Sunflower Casita</h3>
                 <p>“We love Gabe over here at Sunflower Casita! Thank you for all you do Gabe!”</p>
             </div>
             <div class="testimonial-card">
+                <div class="review-badge">Google Review</div>
                 <div class="testimonial-stars">★★★★★</div>
                 <h3>Karen Niemczyk</h3>
                 <p>“Very professional and knowledgeable.”</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Outcomes Section -->
+    <section class="outcomes">
+        <h2 class="section-title" style="color:white;">What Better Systems Create</h2>
+        <p class="section-subtitle" style="color:rgba(255,255,255,0.85); max-width: 820px;">When response speed, communication, and automation improve, the business starts feeling more controlled, more consistent, and more scalable.</p>
+        <div class="outcomes-grid">
+            <div class="outcome-card">
+                <strong>Faster Response Times</strong>
+                <p>Reach leads while they are still paying attention instead of after momentum has already been lost.</p>
+            </div>
+            <div class="outcome-card">
+                <strong>More Booked Appointments</strong>
+                <p>Turn more inquiries into scheduled calls, consultations, estimates, and next steps.</p>
+            </div>
+            <div class="outcome-card">
+                <strong>Better Follow-Up Consistency</strong>
+                <p>Create a reliable process instead of leaving communication to memory, sticky notes, or manual catch-up.</p>
+            </div>
+            <div class="outcome-card">
+                <strong>Fewer Missed Opportunities</strong>
+                <p>Reduce the quiet revenue leaks caused by disconnected tools, delayed replies, and dropped handoffs.</p>
             </div>
         </div>
     </section>
