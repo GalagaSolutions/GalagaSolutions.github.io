@@ -1,0 +1,297 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Explore One Solution packages for Voice AI, CRM automation, AI SMS, and AI calling workflows.">
+  <title>Packages | One Solution</title>
+  <link rel="icon" type="image/jpeg" href="/assets/favicon-one-solution.jpg">
+  <style>
+    * { box-sizing: border-box; margin: 0; padding: 0; }
+    html { scroll-behavior: smooth; }
+    body {
+      font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, sans-serif;
+      line-height: 1.6;
+      color: #222;
+      background: linear-gradient(180deg, #f7f9ff 0%, #ffffff 100%);
+    }
+    a { text-decoration: none; }
+    .sticky-nav {
+      position: sticky;
+      top: 0;
+      z-index: 20;
+      width: 100%;
+      backdrop-filter: blur(12px);
+      background: rgba(255,255,255,0.88);
+      border-bottom: 1px solid rgba(31,39,64,0.08);
+      box-shadow: 0 8px 24px rgba(18,24,44,0.08);
+    }
+    .sticky-nav-inner {
+      max-width: 1280px;
+      margin: 0 auto;
+      padding: 12px 24px;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 20px;
+    }
+    .nav-brand img { max-width: 210px; max-height: 44px; display:block; }
+    .nav-links { display:flex; align-items:center; gap:24px; flex-wrap:wrap; }
+    .nav-links a { color:#24304f; font-weight:600; font-size:.98rem; transition:opacity .2s ease; }
+    .nav-links a:hover { opacity:.78; }
+    .nav-cta {
+      display:inline-block; padding:11px 20px; border-radius:999px;
+      background:linear-gradient(135deg,#667eea 0%,#764ba2 100%);
+      color:#fff !important; font-weight:700 !important;
+      box-shadow:0 10px 24px rgba(102,126,234,.22);
+    }
+    .hero {
+      background: linear-gradient(135deg, #667eea 0%, #764ba2 45%, #4facfe 100%);
+      color: white;
+      padding: 90px 20px 80px;
+      text-align: center;
+    }
+    .hero-logo { margin: 0 auto 24px; display:flex; justify-content:center; }
+    .hero-logo img {
+      max-width: 300px; max-height: 66px; width:auto; height:auto;
+      filter: drop-shadow(0 8px 24px rgba(0,0,0,.18));
+    }
+    .hero h1 {
+      font-size: 3.4rem; line-height: 1.1; margin: 0 auto 18px; max-width: 920px; font-weight: 800;
+    }
+    .hero p {
+      max-width: 860px; margin: 0 auto 30px; font-size: 1.18rem; opacity: 0.96;
+    }
+    .hero-actions { display:flex; justify-content:center; gap:16px; flex-wrap:wrap; }
+    .btn {
+      display:inline-block; padding:16px 32px; border-radius:999px; font-weight:700; transition:all .25s ease;
+    }
+    .btn-primary { background:#fff; color:#5d6df2; box-shadow:0 10px 30px rgba(0,0,0,.18); }
+    .btn-secondary {
+      color:#fff; border:2px solid rgba(255,255,255,.9); background:rgba(255,255,255,.08); backdrop-filter:blur(6px);
+    }
+    .btn:hover { transform: translateY(-2px); }
+    .wrap { max-width: 1280px; margin: 0 auto; padding: 70px 20px; }
+    .section-title { text-align:center; font-size:2.8rem; margin-bottom:18px; color:#20263a; font-weight:800; }
+    .section-subtitle { text-align:center; max-width:820px; margin:0 auto 50px; color:#5b6477; font-size:1.08rem; }
+
+    .pricing-grid {
+      display:grid; grid-template-columns:repeat(auto-fit,minmax(290px,1fr)); gap:28px; align-items:stretch;
+    }
+    .pricing-card {
+      background:#fff; border:1px solid #e8ecff; border-radius:26px; padding:32px; box-shadow:0 14px 38px rgba(31,39,64,.08); position:relative; overflow:hidden;
+    }
+    .pricing-card.featured {
+      transform: translateY(-6px);
+      box-shadow: 0 24px 50px rgba(102,126,234,.18);
+      border-color: rgba(102,126,234,.35);
+    }
+    .pricing-card::before {
+      content:''; position:absolute; top:0; left:0; width:100%; height:5px; background:linear-gradient(90deg,#667eea 0%,#764ba2 100%);
+    }
+    .badge {
+      display:inline-block; margin-bottom:14px; padding:8px 12px; border-radius:999px; background:#eef2ff; color:#4b57d1; font-size:.82rem; font-weight:700;
+    }
+    .featured .badge { background: linear-gradient(135deg,#667eea 0%,#764ba2 100%); color:#fff; }
+    .pricing-card h3 { font-size:1.55rem; color:#1f2740; margin-bottom:10px; }
+    .price { font-size:3rem; font-weight:800; color:#20263a; line-height:1; margin-bottom:8px; }
+    .price span { font-size:1rem; color:#667085; font-weight:600; }
+    .setup { color:#5d6df2; font-weight:700; margin-bottom:18px; }
+    .desc { color:#616b80; margin-bottom:22px; line-height:1.8; }
+    .includes { list-style:none; margin:0 0 24px; }
+    .includes li { color:#334155; padding:10px 0; border-bottom:1px solid #edf1fb; }
+    .includes li:last-child { border-bottom:none; }
+    .cta-row { display:flex; gap:12px; flex-wrap:wrap; }
+    .card-btn {
+      flex:1 1 160px; text-align:center; padding:14px 18px; border-radius:14px; font-weight:700;
+    }
+    .card-btn.primary { background:linear-gradient(135deg,#667eea 0%,#764ba2 100%); color:#fff; }
+    .card-btn.secondary { background:#f5f7ff; color:#475569; }
+
+    .comparison {
+      margin-top:70px; background:#fff; border:1px solid #e8ecff; border-radius:28px; padding:34px; box-shadow:0 12px 36px rgba(31,39,64,.06);
+      overflow-x:auto;
+    }
+    table { width:100%; border-collapse:collapse; min-width:760px; }
+    th, td { padding:16px 14px; text-align:left; border-bottom:1px solid #edf1fb; }
+    th { color:#1f2740; font-size:1rem; }
+    td { color:#5b6477; }
+    .yes { color:#1d9b5f; font-weight:700; }
+    .no { color:#9aa4b2; font-weight:700; }
+
+    .notes {
+      margin-top:60px; display:grid; grid-template-columns:repeat(auto-fit,minmax(260px,1fr)); gap:22px;
+    }
+    .note-card {
+      background:#fff; border:1px solid #e8ecff; border-radius:22px; padding:26px; box-shadow:0 10px 30px rgba(31,39,64,.06);
+    }
+    .note-card h3 { color:#1f2740; font-size:1.2rem; margin-bottom:10px; }
+    .note-card p { color:#616b80; line-height:1.8; }
+
+    .cta-band {
+      margin-top:70px; background:linear-gradient(135deg,#1d2340 0%,#2d3768 100%); color:white; padding:46px 28px; border-radius:28px; text-align:center; box-shadow:0 20px 50px rgba(25,35,75,.18);
+    }
+    .cta-band h2 { font-size:2rem; margin-bottom:14px; }
+    .cta-band p { max-width:760px; margin:0 auto 24px; opacity:.93; }
+    footer { padding: 40px 20px 60px; text-align:center; color:#6b7280; }
+    footer a { color:#5d6df2; }
+
+    @media (max-width: 768px) {
+      .sticky-nav { display:none; }
+      .hero { padding: 84px 20px 68px; }
+      .hero-logo img { max-width: 240px; max-height: 54px; }
+      .hero h1 { font-size: 2.4rem; }
+      .section-title { font-size: 2rem; }
+      .pricing-card.featured { transform:none; }
+    }
+  </style>
+</head>
+<body>
+  <header class="sticky-nav">
+    <div class="sticky-nav-inner">
+      <a class="nav-brand" href="/" aria-label="One Solution home">
+        <img src="/assets/one-solution-logo-header-final.png" alt="One Solution logo">
+      </a>
+      <nav class="nav-links" aria-label="Primary navigation">
+        <a href="/">Home</a>
+        <a href="/integrations.html">Integrations</a>
+        <a href="https://my.onesolutionapp.com/contact-us/">Contact</a>
+        <a class="nav-cta" href="https://my.onesolutionapp.com/contact-us/">Schedule a Demo</a>
+      </nav>
+    </div>
+  </header>
+
+  <section class="hero">
+    <div class="hero-logo">
+      <img src="/assets/one-solution-logo-header-final.png" alt="One Solution logo">
+    </div>
+    <h1>Packages Built Around Real Business Workflow Needs</h1>
+    <p>This packages page is designed for this site experience while staying aligned with One Solution’s current pricing structure. Whether you need focused Voice AI or a broader CRM and automation system, there’s a package that fits your workflow and growth stage.</p>
+    <div class="hero-actions">
+      <a class="btn btn-primary" href="https://my.onesolutionapp.com/contact-us/">Schedule a Demo</a>
+      <a class="btn btn-secondary" href="/integrations.html">View Integrations</a>
+    </div>
+  </section>
+
+  <main class="wrap">
+    <section>
+      <h2 class="section-title">Choose the Right Starting Point</h2>
+      <p class="section-subtitle">Based on the public pricing structure currently shown on One Solution’s packages page, organized here in a cleaner, more premium format for easier comparison.</p>
+
+      <div class="pricing-grid">
+        <article class="pricing-card">
+          <span class="badge">Voice AI</span>
+          <h3>1Solution Voice AI</h3>
+          <div class="price">$900 <span>/ month</span></div>
+          <div class="setup">$550 one-time setup fee</div>
+          <p class="desc">A focused option for businesses that want AI voice handling without adopting the full CRM and automation stack.</p>
+          <ul class="includes">
+            <li>740 minutes per account each month</li>
+            <li>$0.70 per minute after included usage</li>
+            <li>AI voice calling included</li>
+            <li>Setup includes base configuration, domain merge support, phone number setup, and A2P guidance</li>
+          </ul>
+          <div class="cta-row">
+            <a class="card-btn primary" href="https://my.onesolutionapp.com/contact-us/">Talk to Sales</a>
+            <a class="card-btn secondary" href="https://my.onesolutionapp.com/packages/">Source Pricing</a>
+          </div>
+        </article>
+
+        <article class="pricing-card featured">
+          <span class="badge">Most Complete</span>
+          <h3>CRM + AI SMS + Automation + AI Calling</h3>
+          <div class="price">$1,800 <span>/ month</span></div>
+          <div class="setup">$550 one-time setup fee</div>
+          <p class="desc">A stronger all-in-one system for businesses that want CRM, automation, AI SMS, and AI calling working together across one operational flow.</p>
+          <ul class="includes">
+            <li>AI calling at $0.70 per minute</li>
+            <li>740 included minutes per month per account</li>
+            <li>AI SMS included</li>
+            <li>AI email included</li>
+            <li>CRM included</li>
+            <li>Database management included</li>
+            <li>100% sales automation included</li>
+          </ul>
+          <div class="cta-row">
+            <a class="card-btn primary" href="https://my.onesolutionapp.com/contact-us/">Schedule a Demo</a>
+            <a class="card-btn secondary" href="https://my.onesolutionapp.com/packages/">Source Pricing</a>
+          </div>
+        </article>
+
+        <article class="pricing-card">
+          <span class="badge">CRM + AI SMS</span>
+          <h3>1Solution CRM with AI SMS Conversation / Automation</h3>
+          <div class="price">$2,000 <span>/ month</span></div>
+          <div class="setup">$550 one-time setup fee</div>
+          <p class="desc">A CRM-centered package for businesses that want managed automation, AI SMS communication, and a stronger backend follow-up structure.</p>
+          <ul class="includes">
+            <li>AI SMS included</li>
+            <li>AI email included</li>
+            <li>AI web chatbot included</li>
+            <li>CRM included</li>
+            <li>Database management included</li>
+            <li>Setup includes base automations, domain merging, phone support, and A2P guidance</li>
+          </ul>
+          <div class="cta-row">
+            <a class="card-btn primary" href="https://my.onesolutionapp.com/contact-us/">Talk to Sales</a>
+            <a class="card-btn secondary" href="https://my.onesolutionapp.com/packages/">Source Pricing</a>
+          </div>
+        </article>
+      </div>
+    </section>
+
+    <section class="comparison">
+      <h2 class="section-title" style="text-align:left; margin-bottom:10px; font-size:2rem;">Quick Feature Comparison</h2>
+      <p class="section-subtitle" style="text-align:left; margin:0 0 20px; max-width:none;">A simplified view of the package differences based on the source pricing page.</p>
+      <table>
+        <thead>
+          <tr>
+            <th>Feature</th>
+            <th>Voice AI</th>
+            <th>CRM + AI SMS + Automation + AI Calling</th>
+            <th>CRM with AI SMS / Automation</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr><td>AI SMS</td><td class="no">Not included</td><td class="yes">Included</td><td class="yes">Included</td></tr>
+          <tr><td>AI Email</td><td class="no">Not included</td><td class="yes">Included</td><td class="yes">Included</td></tr>
+          <tr><td>AI Voice Calling</td><td class="yes">Included</td><td class="yes">Included</td><td class="no">Not included</td></tr>
+          <tr><td>AI Web Chatbot</td><td class="no">Not included</td><td class="no">Not listed</td><td class="yes">Included</td></tr>
+          <tr><td>CRM</td><td class="no">Not included</td><td class="yes">Included</td><td class="yes">Included</td></tr>
+          <tr><td>Database Management</td><td class="no">Not included</td><td class="yes">Included</td><td class="yes">Included</td></tr>
+          <tr><td>Sales Automation</td><td class="no">Not included</td><td class="yes">Included</td><td class="no">Not listed</td></tr>
+        </tbody>
+      </table>
+    </section>
+
+    <section class="notes">
+      <div class="note-card">
+        <h3>Setup Notes</h3>
+        <p>Current package references mention a $550 one-time setup fee, plus A2P 10DLC registration at a separate one-time carrier charge where applicable.</p>
+      </div>
+      <div class="note-card">
+        <h3>Who This Fits Best</h3>
+        <p>Voice AI works well for focused voice handling, while the broader CRM and automation packages are better for teams that want full lead management and follow-up systems.</p>
+      </div>
+      <div class="note-card">
+        <h3>Need Help Choosing?</h3>
+        <p>If you are unsure which package fits your workflow, the best next step is a short demo conversation so One Solution can map the right setup for your business.</p>
+      </div>
+    </section>
+
+    <section class="cta-band">
+      <h2>Not Sure Which Package Fits Best?</h2>
+      <p>The right package depends on how your leads come in, how your team follows up, and whether you need focused Voice AI or a more complete CRM and automation system.</p>
+      <div class="hero-actions">
+        <a class="btn btn-primary" href="https://my.onesolutionapp.com/contact-us/">Schedule a Demo</a>
+        <a class="btn btn-secondary" href="/integrations.html">Explore Integrations</a>
+      </div>
+    </section>
+  </main>
+
+  <footer>
+    <p>&copy; 2026 One Solution LLC. All rights reserved.</p>
+    <p><a href="/">Home</a> | <a href="/integrations.html">Integrations</a> | <a href="https://my.onesolutionapp.com/contact-us/">Contact Us</a></p>
+  </footer>
+</body>
+</html>
