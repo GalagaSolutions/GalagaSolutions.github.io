@@ -38,6 +38,20 @@
             box-shadow: 0 8px 24px rgba(18, 24, 44, 0.08);
         }
         
+        .mobile-hero-logo {
+            display: none;
+            justify-content: center;
+            margin: 0 auto 24px;
+        }
+        
+        .mobile-hero-logo img {
+            max-width: 260px;
+            max-height: 58px;
+            width: auto;
+            height: auto;
+            filter: drop-shadow(0 8px 24px rgba(0,0,0,0.18));
+        }
+        
         .sticky-nav-inner {
             max-width: 1280px;
             margin: 0 auto;
@@ -809,6 +823,10 @@
                 display: none;
             }
             
+            .mobile-hero-logo {
+                display: flex;
+            }
+            
             .sticky-nav-inner {
                 justify-content: center;
                 text-align: center;
@@ -858,6 +876,9 @@
     <!-- Hero Section -->
     <section class="hero">
         <div class="hero-content">
+            <div class="mobile-hero-logo">
+                <img src="/assets/one-solution-logo-header-final.png" alt="One Solution logo">
+            </div>
             <h1>AI Voice & Automation for Service Businesses That Need More Leads, Faster Follow-Up, and Better Conversion</h1>
             <p>One Solution helps businesses capture more opportunities, respond faster, automate follow-up, and connect their CRM, messaging, scheduling, and communication tools into one growth-focused system.</p>
             <div class="cta-container">
