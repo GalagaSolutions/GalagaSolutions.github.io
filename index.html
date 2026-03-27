@@ -138,6 +138,32 @@
             border: 3px solid white;
         }
         
+        /* Trust Strip */
+        .trust-strip {
+            background: #ffffff;
+            padding: 26px 20px;
+            border-top: 1px solid rgba(255,255,255,0.08);
+            border-bottom: 1px solid #e8ecff;
+        }
+        
+        .trust-strip-inner {
+            max-width: 1200px;
+            margin: 0 auto;
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+            gap: 18px;
+            text-align: center;
+        }
+        
+        .trust-pill {
+            background: #f8faff;
+            border: 1px solid #e5eafc;
+            border-radius: 999px;
+            padding: 14px 18px;
+            font-weight: 600;
+            color: #42506b;
+        }
+        
         /* Stats Section */
         .stats {
             background: #f8f9fa;
@@ -298,6 +324,53 @@
             line-height: 1.8;
         }
         
+        /* How It Works Section */
+        .how-it-works {
+            padding: 100px 20px;
+            background: linear-gradient(180deg, #ffffff 0%, #f8faff 100%);
+        }
+        
+        .steps-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+            gap: 28px;
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+        
+        .step-card {
+            background: #fff;
+            border: 1px solid #e8ecff;
+            border-radius: 22px;
+            padding: 32px;
+            box-shadow: 0 10px 30px rgba(31,39,64,0.07);
+        }
+        
+        .step-number {
+            width: 54px;
+            height: 54px;
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
+            border-radius: 50%;
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            color: white;
+            font-size: 1.2rem;
+            font-weight: 800;
+            margin-bottom: 18px;
+        }
+        
+        .step-card h3 {
+            color: #1f2740;
+            font-size: 1.35rem;
+            margin-bottom: 12px;
+        }
+        
+        .step-card p {
+            color: #616b80;
+            line-height: 1.8;
+        }
+        
         /* Pricing Teaser Section */
         .pricing-teaser {
             padding: 100px 20px;
@@ -419,6 +492,38 @@
             margin-bottom: 8px;
         }
         
+        /* FAQ Section */
+        .faq {
+            padding: 100px 20px;
+            background: #ffffff;
+        }
+        
+        .faq-list {
+            max-width: 1000px;
+            margin: 0 auto;
+            display: grid;
+            gap: 18px;
+        }
+        
+        .faq-item {
+            background: linear-gradient(180deg, #ffffff 0%, #f8faff 100%);
+            border: 1px solid #e8ecff;
+            border-radius: 18px;
+            padding: 24px 26px;
+            box-shadow: 0 8px 24px rgba(31,39,64,0.05);
+        }
+        
+        .faq-item h3 {
+            color: #1f2740;
+            font-size: 1.15rem;
+            margin-bottom: 10px;
+        }
+        
+        .faq-item p {
+            color: #616b80;
+            line-height: 1.8;
+        }
+        
         /* Integration Section */
         .integrations {
             background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
@@ -530,12 +635,22 @@
     <!-- Hero Section -->
     <section class="hero">
         <div class="hero-content">
-            <h1>Transform Your Business with AI Voice Technology</h1>
-            <p>Automate customer interactions, boost productivity, and integrate seamlessly with thousands of CRMs and software platforms</p>
+            <h1>AI Voice & Automation for Service Businesses That Need More Leads, Faster Follow-Up, and Better Conversion</h1>
+            <p>One Solution helps businesses capture more opportunities, respond faster, automate follow-up, and connect their CRM, messaging, scheduling, and communication tools into one growth-focused system.</p>
             <div class="cta-container">
                 <a href="https://my.onesolutionapp.com/" class="cta-button">Get Started</a>
                 <a href="https://my.onesolutionapp.com/contact-us/" class="cta-button secondary">Schedule a Demo</a>
             </div>
+        </div>
+    </section>
+
+    <!-- Trust Strip -->
+    <section class="trust-strip">
+        <div class="trust-strip-inner">
+            <div class="trust-pill">Works with your current CRM and tools</div>
+            <div class="trust-pill">Built for service businesses and growth teams</div>
+            <div class="trust-pill">Guided setup with real implementation support</div>
+            <div class="trust-pill">Designed to reduce missed leads and delayed follow-up</div>
         </div>
     </section>
 
@@ -637,6 +752,29 @@
         </div>
     </section>
 
+    <!-- How It Works Section -->
+    <section class="how-it-works">
+        <h2 class="section-title">How It Works</h2>
+        <p class="section-subtitle">A simple process designed to help you improve response speed, automate follow-up, and connect the tools your business already uses.</p>
+        <div class="steps-grid">
+            <div class="step-card">
+                <div class="step-number">1</div>
+                <h3>We Review Your Workflow</h3>
+                <p>We look at how your leads currently come in, where follow-up breaks down, and which systems your team already depends on every day.</p>
+            </div>
+            <div class="step-card">
+                <div class="step-number">2</div>
+                <h3>We Connect and Configure</h3>
+                <p>We align your CRM, messaging, calling, scheduling, and automation flows so the right actions happen faster and with less manual effort.</p>
+            </div>
+            <div class="step-card">
+                <div class="step-number">3</div>
+                <h3>You Capture More Opportunities</h3>
+                <p>With stronger response times, better lead handling, and more consistent follow-up, your business is positioned to convert more of the opportunities you already generate.</p>
+            </div>
+        </div>
+    </section>
+
     <!-- Pricing Teaser Section -->
     <section class="pricing-teaser">
         <span class="pricing-badge">Flexible Pricing</span>
@@ -729,6 +867,38 @@
                     <li>Lead routing to estimators</li>
                     <li>Follow-up sequences for open bids</li>
                 </ul>
+            </div>
+        </div>
+    </section>
+
+    <!-- FAQ Section -->
+    <section class="faq">
+        <h2 class="section-title">Frequently Asked Questions</h2>
+        <p class="section-subtitle">Answering the biggest questions prospects usually have before they decide to book a conversation.</p>
+        <div class="faq-list">
+            <div class="faq-item">
+                <h3>Do I need to replace my current CRM?</h3>
+                <p>Not necessarily. One Solution is designed to work with the systems many businesses already use, helping improve workflow and automation without forcing a complete reset.</p>
+            </div>
+            <div class="faq-item">
+                <h3>Can I use Voice AI without the full CRM package?</h3>
+                <p>Yes. Your packages already include a Voice AI option for businesses that want focused voice automation without adopting the broader CRM and communication stack.</p>
+            </div>
+            <div class="faq-item">
+                <h3>How long does setup usually take?</h3>
+                <p>That depends on your current systems and what you want connected, but the goal is always practical implementation that gets value in place quickly rather than dragging the process out.</p>
+            </div>
+            <div class="faq-item">
+                <h3>What types of businesses is this best for?</h3>
+                <p>It works especially well for service businesses that depend on speed-to-lead, appointment booking, follow-up consistency, and strong customer communication.</p>
+            </div>
+            <div class="faq-item">
+                <h3>What if my software is not listed on the integrations page?</h3>
+                <p>That does not automatically rule it out. The integrations page is curated, and broader compatibility can often be supported through flexible connection layers like Zapier and similar workflow tools.</p>
+            </div>
+            <div class="faq-item">
+                <h3>Is this only for larger companies?</h3>
+                <p>No. The offer is positioned for real businesses that want better systems, clearer follow-up, and more automation without unnecessary complexity.</p>
             </div>
         </div>
     </section>
