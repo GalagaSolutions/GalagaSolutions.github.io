@@ -252,6 +252,52 @@
             font-size: 1.1rem;
         }
         
+        /* Use Cases Section */
+        .use-cases {
+            padding: 100px 20px;
+            background: linear-gradient(180deg, #f8f9ff 0%, #ffffff 100%);
+        }
+        
+        .use-cases-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+            gap: 28px;
+            max-width: 1300px;
+            margin: 0 auto;
+        }
+        
+        .use-case-card {
+            background: #fff;
+            border: 1px solid #e8ecff;
+            border-radius: 22px;
+            padding: 32px;
+            box-shadow: 0 10px 30px rgba(102,126,234,0.08);
+            transition: transform 0.25s ease, box-shadow 0.25s ease;
+        }
+        
+        .use-case-card:hover {
+            transform: translateY(-6px);
+            box-shadow: 0 18px 40px rgba(102,126,234,0.16);
+        }
+        
+        .use-case-icon {
+            font-size: 2.4rem;
+            margin-bottom: 16px;
+            display: block;
+        }
+        
+        .use-case-card h3 {
+            font-size: 1.35rem;
+            color: #1f2740;
+            margin-bottom: 12px;
+        }
+        
+        .use-case-card p {
+            color: #616b80;
+            font-size: 1rem;
+            line-height: 1.8;
+        }
+        
         /* Integration Section */
         .integrations {
             background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
@@ -428,6 +474,44 @@
                 <span class="feature-icon">🛡️</span>
                 <h3>Enterprise Security</h3>
                 <p>Bank-level encryption and compliance with GDPR, HIPAA, and industry standards</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Use Cases Section -->
+    <section class="use-cases">
+        <h2 class="section-title">Popular Use Cases</h2>
+        <p class="section-subtitle">Show prospects exactly how One Solution helps businesses respond faster, capture more opportunities, and automate follow-up without adding more manual work.</p>
+        <div class="use-cases-grid">
+            <div class="use-case-card">
+                <span class="use-case-icon">📲</span>
+                <h3>Missed Call Text-Back</h3>
+                <p>Automatically respond when calls are missed so leads do not disappear after hours, during busy periods, or when your team is tied up.</p>
+            </div>
+            <div class="use-case-card">
+                <span class="use-case-icon">🎯</span>
+                <h3>Lead Capture & Routing</h3>
+                <p>Capture inquiries from calls, forms, and campaigns, then route them to the right person, pipeline, or follow-up sequence instantly.</p>
+            </div>
+            <div class="use-case-card">
+                <span class="use-case-icon">📅</span>
+                <h3>Appointment Booking</h3>
+                <p>Let customers book consultations, estimates, and service calls faster with streamlined scheduling tied into your existing calendar workflows.</p>
+            </div>
+            <div class="use-case-card">
+                <span class="use-case-icon">🔁</span>
+                <h3>Follow-Up Automation</h3>
+                <p>Keep prospects engaged with consistent reminders, nurturing sequences, and status-based outreach that happens automatically.</p>
+            </div>
+            <div class="use-case-card">
+                <span class="use-case-icon">💬</span>
+                <h3>Customer Reactivation</h3>
+                <p>Reconnect with older leads and past customers using timely outreach campaigns designed to revive dormant opportunities.</p>
+            </div>
+            <div class="use-case-card">
+                <span class="use-case-icon">🌙</span>
+                <h3>After-Hours Response</h3>
+                <p>Stay responsive even when your office is closed, giving customers answers and next steps while your team is offline.</p>
             </div>
         </div>
     </section>
