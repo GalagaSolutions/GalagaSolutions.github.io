@@ -2,140 +2,116 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Orin by One Solution | Done-for-You AI Business Assistant</title>
-  <meta name="description" content="Orin by One Solution is a done-for-you AI business assistant: setup, customization, CRM/workflow integration, and live support." />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Orin by One Solution | Done-for-You AI Assistant</title>
   <link rel="icon" href="./assets/favicon-one-solution.jpg" />
   <style>
-    :root {--bg:#070b16;--panel:#0d162d;--panel2:#0b1328;--text:#eef3ff;--muted:#aebada;--line:#253455;--primary:#3b82f6;--primary2:#7c3aed;--accent:#22c55e}
-    *{box-sizing:border-box} html,body{margin:0;padding:0}
-    body{font-family:Inter,system-ui,-apple-system,Segoe UI,Roboto,sans-serif;color:var(--text);line-height:1.54;background:radial-gradient(1000px 450px at 8% -8%, #1a2b58 0%, transparent 62%),radial-gradient(900px 420px at 92% -18%, #2b1e54 0%, transparent 60%),var(--bg)}
-    .wrap{width:min(1160px,92vw);margin:auto}
-    .nav{display:flex;align-items:center;justify-content:space-between;padding:18px 0}.nav img{height:46px}
-    .btn{display:inline-flex;align-items:center;justify-content:center;gap:8px;padding:12px 18px;border-radius:10px;text-decoration:none;font-weight:700;cursor:pointer;border:0;transition:.2s ease}
-    .btn.primary{background:linear-gradient(90deg,var(--primary),var(--primary2));color:#fff}.btn.primary:hover{transform:translateY(-1px);filter:brightness(1.06)}
-    .btn.ghost{border:1px solid #415686;color:#e7efff;background:transparent}
-    .hero{padding:18px 0;display:grid;grid-template-columns:1.08fr .92fr;gap:18px;align-items:center}
-    .kicker{display:inline-flex;background:#122041;border:1px solid #27437f;color:#9ec5ff;padding:6px 10px;border-radius:999px;font-size:.78rem;font-weight:700}
-    h1{font-size:clamp(2rem,5vw,3.5rem);line-height:1.04;margin:.45rem 0 .85rem}.lead{color:var(--muted);font-size:1.04rem;max-width:720px}
-    .trust{display:flex;gap:10px;flex-wrap:wrap;color:#c5d7ff;font-size:.9rem;margin-top:12px}.trust span{background:#102043;border:1px solid #2f4f88;padding:5px 9px;border-radius:999px}
-    .prompt{margin:16px 0 10px;background:var(--panel2);border:1px solid #2b4070;border-radius:12px;padding:10px;display:grid;grid-template-columns:1fr auto;gap:10px}
-    .prompt textarea{width:100%;min-height:78px;background:#0a1225;border:1px solid #2a3e69;color:#eef3ff;border-radius:10px;padding:12px;font:inherit;resize:vertical}
-    .note{font-size:.82rem;color:#8ea6d3;margin-top:8px}
-    .heroCard{position:relative;background:linear-gradient(160deg,#101a34,#0b1226);border:1px solid var(--line);border-radius:18px;padding:18px;overflow:hidden}
-    .glow{position:absolute;right:-44px;top:-42px;width:160px;height:160px;border-radius:50%;background:radial-gradient(circle,#3b82f655,transparent 68%)}
-    .miniGrid{display:grid;grid-template-columns:1fr 1fr;gap:10px}.mini{background:#0f1931;border:1px solid #253a68;border-radius:12px;padding:12px;font-size:.9rem}
-    section{padding:16px 0} h2{font-size:clamp(1.35rem,2.6vw,1.95rem);margin:0 0 10px} .muted{color:var(--muted)}
-    .panel,.card,.integration,.formWrap{background:var(--panel);border:1px solid var(--line);border-radius:14px}.panel,.card,.integration{padding:16px}
-    .split{display:grid;grid-template-columns:1fr 1fr;gap:12px}.grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(220px,1fr));gap:12px}
-    .integration{background:linear-gradient(120deg,#101c3a,#0d1730);border-color:#30456f;padding:18px}.integrationHead{display:flex;justify-content:space-between;align-items:center;gap:10px;flex-wrap:wrap}
-    .integrationTag{font-size:.78rem;color:#cde0ff;border:1px solid #3d5a93;background:#122041;padding:5px 10px;border-radius:999px}
-    .pillGrid{display:grid;grid-template-columns:repeat(auto-fit,minmax(150px,1fr));gap:12px;margin-top:12px}
-    .pill{display:flex;align-items:center;gap:10px;padding:12px;border:1px solid #38558b;background:linear-gradient(140deg,#101b36,#0b142b);border-radius:12px;color:#d9e6ff;font-weight:600;font-size:.92rem}.pill img{width:18px;height:18px;filter:invert(1) brightness(1.2)}
-    .visualBand{display:grid;grid-template-columns:repeat(auto-fit,minmax(230px,1fr));gap:12px}.visual{border:1px solid #2d436f;border-radius:14px;padding:14px;min-height:150px;background:linear-gradient(140deg,#111d3b,#0b1328)}
-    .visual .icon{margin-bottom:8px;display:inline-flex;align-items:center;justify-content:center;background:#122041;border:1px solid #315597;border-radius:10px;padding:7px 9px}.visual .icon img{width:18px;height:18px;display:block;filter:invert(1) brightness(1.2)}
-    .flow{display:grid;grid-template-columns:1fr auto 1fr auto 1fr;gap:10px;align-items:center}.flowNode{background:#0f1934;border:1px solid #2f4c82;border-radius:12px;padding:12px;text-align:center}.arrow{color:#84aef8;font-weight:800;text-align:center}
-    .steps{display:grid;grid-template-columns:repeat(auto-fit,minmax(220px,1fr));gap:12px}.step-num{display:inline-flex;width:30px;height:30px;align-items:center;justify-content:center;background:#122041;border:1px solid #315597;border-radius:50%;font-weight:700;color:#cde0ff;margin-bottom:8px}
-    .outputs{display:grid;grid-template-columns:220px 1fr;gap:12px}.output-nav{display:grid;gap:8px}.tabBtn{width:100%;text-align:left;border:1px solid #2c406f;background:#0f1934;color:#d8e6ff;padding:10px 12px;border-radius:10px;cursor:pointer;font-weight:600}.tabBtn.active{background:linear-gradient(90deg,#173267,#1f2f5e);border-color:#4d74ba}
-    .output-panel{background:#0b1428;border:1px solid #2b406f;border-radius:12px;padding:14px}.outputTitle{font-weight:700;margin-bottom:8px}.outputMock{white-space:pre-wrap;color:#c7d6f7;background:#091024;border:1px solid #253b69;border-radius:10px;padding:12px;font-size:.9rem}
-    .priceGrid{display:grid;grid-template-columns:repeat(auto-fit,minmax(230px,1fr));gap:12px}.price{font-size:1.7rem;font-weight:800;margin:.2rem 0;color:#fff}
-    .timeline{display:grid;grid-template-columns:repeat(auto-fit,minmax(200px,1fr));gap:10px}.timeline .card{background:#0b1328}
-    .fit{display:grid;grid-template-columns:1fr 1fr;gap:12px}.fit ul,.panel ul{margin:.3rem 0 0;padding-left:18px;color:var(--muted)}
-    .faq details{background:#0b1328;border:1px solid #2f446f;border-radius:10px;padding:12px 14px}.faq details+details{margin-top:8px}.faq summary{cursor:pointer;font-weight:700;color:#dce9ff}
-    .proof{display:grid;grid-template-columns:repeat(auto-fit,minmax(230px,1fr));gap:12px}.proof .card{border-color:#2f4f86}
-    .formWrap{margin:14px 0 24px;padding:20px}
-    footer{padding:16px 0 84px;color:#8ca0c9;border-top:1px solid var(--line)} .legal{display:flex;gap:14px;flex-wrap:wrap;margin-top:8px}.legal a{color:#bcd1ff;text-decoration:none;border-bottom:1px dashed transparent}.legal a:hover{border-bottom-color:#bcd1ff}
-    .mobileSticky{display:none;position:fixed;left:0;right:0;bottom:0;padding:10px 14px;background:rgba(7,11,22,.92);backdrop-filter: blur(8px);border-top:1px solid #2e466f;z-index:40}.mobileSticky .btn{width:100%}
-    @media(max-width:980px){.hero,.split,.fit,.outputs{grid-template-columns:1fr}.prompt{grid-template-columns:1fr}.flow{grid-template-columns:1fr}.arrow{transform:rotate(90deg)}.mobileSticky{display:block}}
+    :root{--bg:#070b16;--panel:#0d162d;--line:#253455;--text:#eef3ff;--muted:#aebada;--p:#3b82f6;--p2:#7c3aed}
+    *{box-sizing:border-box} body{margin:0;font-family:Inter,system-ui;background:radial-gradient(1000px 450px at 8% -8%,#1a2b58 0,transparent 62%),radial-gradient(900px 420px at 92% -18%,#2b1e54 0,transparent 60%),var(--bg);color:var(--text)}
+    .wrap{width:min(1160px,92vw);margin:auto}.nav{display:flex;justify-content:space-between;align-items:center;padding:18px 0;gap:12px;flex-wrap:wrap}.nav img{height:46px}
+    .links{display:flex;gap:12px;align-items:center;flex-wrap:wrap}.links a{color:#cfe0ff;text-decoration:none}
+    .btn{display:inline-flex;padding:11px 16px;border-radius:10px;text-decoration:none;font-weight:700}.btn.p{background:linear-gradient(90deg,var(--p),var(--p2));color:#fff}.btn.g{border:1px solid #415686;color:#e7efff}
+    .hero{display:grid;grid-template-columns:1.08fr .92fr;gap:16px;padding:18px 0}.k{display:inline-flex;background:#122041;border:1px solid #27437f;color:#9ec5ff;padding:6px 10px;border-radius:999px;font-size:.78rem;font-weight:700}
+    h1{font-size:clamp(2rem,5vw,3.4rem);line-height:1.04;margin:.45rem 0 .8rem}.muted{color:var(--muted)}
+    .card{background:var(--panel);border:1px solid var(--line);border-radius:14px;padding:16px}.grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(220px,1fr));gap:12px}
+    .flow{display:grid;grid-template-columns:1fr auto 1fr auto 1fr;gap:10px;align-items:center}.node{background:#0f1934;border:1px solid #2f4c82;border-radius:12px;padding:12px;text-align:center}.arrow{text-align:center;color:#84aef8;font-weight:800}
+    .prompt{margin:14px 0;background:#0b1328;border:1px solid #2b4070;border-radius:12px;padding:10px;display:grid;grid-template-columns:1fr auto;gap:10px}.prompt textarea{width:100%;min-height:74px;background:#0a1225;border:1px solid #2a3e69;color:#eef3ff;border-radius:10px;padding:12px;font:inherit}
+    .note{font-size:.82rem;color:#8ea6d3;margin-top:8px} section{padding:14px 0}
+    .pageCards{display:grid;grid-template-columns:repeat(auto-fit,minmax(240px,1fr));gap:12px}.pageCards .card h3{margin:.2rem 0}
+    .formWrap{margin:12px 0 20px;padding:18px}.legal{display:flex;gap:14px;flex-wrap:wrap;margin-top:8px}.legal a{color:#bcd1ff;text-decoration:none} footer{padding:16px 0 30px;border-top:1px solid var(--line);color:#8ca0c9}
+    @media(max-width:980px){.hero,.flow{grid-template-columns:1fr}.arrow{transform:rotate(90deg)}.prompt{grid-template-columns:1fr}}
   </style>
 </head>
 <body>
   <div class="wrap">
     <header class="nav">
       <img src="./assets/one-solution-logo-white.png" alt="One Solution" />
-      <a class="btn ghost" href="#demo-form">Request Orin Setup</a>
+      <div class="links">
+        <a href="./how-it-works.html">How It Works</a>
+        <a href="./use-cases.html">Use Cases</a>
+        <a href="./solutions.html">Solutions</a>
+        <a href="./pricing.html">Pricing</a>
+        <a href="./trust.html">Trust</a>
+        <a class="btn g" href="#demo-form">Request Orin Setup</a>
+      </div>
     </header>
 
     <section class="hero">
       <div>
-        <span class="kicker">ORIN BY ONE SOLUTION</span>
+        <span class="k">ORIN BY ONE SOLUTION</span>
         <h1>Done-for-you AI assistant setup + live support for real business workflows.</h1>
-        <p class="lead">Orin is configured by One Solution, customized to your use cases, and deployed in the systems your team already uses—without DIY setup burden.</p>
-
+        <p class="muted">Configured by One Solution. Customized for your use cases. Deployed where your team already works.</p>
         <div class="prompt">
-          <textarea id="heroPrompt" placeholder="Tell us what you want Orin to help automate first (ex: lead follow-up, CRM updates, reporting prep)..."></textarea>
-          <button id="buildPlanBtn" class="btn primary" type="button">Use This in Request</button>
+          <textarea id="heroPrompt" placeholder="Tell us what you want Orin to help automate first..."></textarea>
+          <button id="copyBtn" class="btn p" type="button" style="border:0;cursor:pointer">Use This in Request</button>
         </div>
-        <p class="note" id="promptNote">Write your use case first, then carry it into your request flow.</p>
-
-        <div class="trust"><span>$45 one-time setup</span><span>$50/month support</span><span>No contracts • Cancel anytime</span></div>
+        <p id="note" class="note">Write your use case first, then carry it into your request flow.</p>
       </div>
-
-      <aside class="heroCard">
-        <div class="glow"></div>
-        <h3 style="margin:0 0 10px">What you get immediately</h3>
-        <div class="miniGrid"><div class="mini">Done-for-you implementation</div><div class="mini">Workflow-specific setup</div><div class="mini">CRM + PM lane support</div><div class="mini">Live ticketed refinements</div></div>
-      </aside>
+      <div class="card">
+        <h3 style="margin-top:0">Quick value snapshot</h3>
+        <div class="grid">
+          <div class="card">$45 one-time setup</div>
+          <div class="card">$50/month support</div>
+          <div class="card">No contracts</div>
+          <div class="card">Cancel anytime</div>
+        </div>
+      </div>
     </section>
 
-    <section class="proof">
-      <article class="card"><h3>Faster speed-to-lead</h3><p class="muted">Clients use Orin to reduce response lag and keep high-intent opportunities active.</p></article>
-      <article class="card"><h3>Cleaner handoffs</h3><p class="muted">Workflow support reduces dropped follow-up and inconsistent pipeline movement.</p></article>
-      <article class="card"><h3>Operator-backed reliability</h3><p class="muted">Live issue ticketing and refinement support keeps systems useful over time.</p></article>
+    <section>
+      <div class="grid">
+        <article class="card"><h3>Faster speed-to-lead</h3><p class="muted">Reduce response lag and keep high-intent opportunities active.</p></article>
+        <article class="card"><h3>Cleaner handoffs</h3><p class="muted">Reduce dropped follow-up and inconsistent pipeline movement.</p></article>
+        <article class="card"><h3>Operator-backed reliability</h3><p class="muted">Live issue ticketing + refinement support.</p></article>
+      </div>
     </section>
 
-    <section class="integration">
-      <div class="integrationHead"><h2 style="margin:0">Works where your team already works</h2><span class="integrationTag">Live team communication lanes</span></div>
-      <p class="muted" style="margin:.45rem 0 0">Route requests, updates, and execution support directly inside active team channels.</p>
-      <div class="pillGrid"><div class="pill"><img src="https://cdn.jsdelivr.net/npm/simple-icons@v11/icons/slack.svg" alt="Slack"/>Slack</div><div class="pill"><img src="https://cdn.jsdelivr.net/npm/simple-icons@v11/icons/discord.svg" alt="Discord"/>Discord</div><div class="pill"><img src="https://cdn.jsdelivr.net/npm/simple-icons@v11/icons/telegram.svg" alt="Telegram"/>Telegram</div><div class="pill"><img src="https://cdn.jsdelivr.net/npm/simple-icons@v11/icons/microsoftteams.svg" alt="Microsoft Teams"/>Microsoft Teams</div><div class="pill"><img src="https://cdn.jsdelivr.net/npm/simple-icons@v11/icons/trello.svg" alt="Trello"/>Trello</div></div>
+    <section>
+      <h2>Team Apps → Orin → Deliverables</h2>
+      <div class="flow">
+        <div class="node">Team Apps<br><span class="muted">Slack • Discord • Teams • Telegram • Trello</span></div>
+        <div class="arrow">→</div>
+        <div class="node">Orin Assistant<br><span class="muted">Configured + supported by One Solution</span></div>
+        <div class="arrow">→</div>
+        <div class="node">Business Outputs<br><span class="muted">Summaries • Drafts • Task support • Reporting prep</span></div>
+      </div>
     </section>
 
-    <section class="split"><div class="panel"><h2 style="font-size:1.3rem">Before Orin</h2><ul><li>Manual copy/paste between tools</li><li>Inconsistent execution across team members</li><li>AI output with no operational follow-through</li><li>No fast support path when workflow issues appear</li></ul></div><div class="panel"><h2 style="font-size:1.3rem">After Orin</h2><ul><li>Configured assistant aligned to real workflows</li><li>Repeatable process support across the team</li><li>Integrated CRM/project communication lanes</li><li>Live ticketed support for iteration and reliability</li></ul></div></section>
+    <section>
+      <h2>Explore Orin</h2>
+      <div class="pageCards">
+        <a class="card" href="./how-it-works.html" style="text-decoration:none;color:inherit"><h3>How It Works</h3><p class="muted">Implementation path, timeline, and support model.</p></a>
+        <a class="card" href="./use-cases.html" style="text-decoration:none;color:inherit"><h3>Use Cases</h3><p class="muted">Industry examples, outcomes, and sample deliverables.</p></a>
+        <a class="card" href="./solutions.html" style="text-decoration:none;color:inherit"><h3>Solutions</h3><p class="muted">Pre-structured lanes by industry and workflow type.</p></a>
+        <a class="card" href="./pricing.html" style="text-decoration:none;color:inherit"><h3>Pricing</h3><p class="muted">Inclusions, exclusions, and billing FAQ.</p></a>
+        <a class="card" href="./trust.html" style="text-decoration:none;color:inherit"><h3>Trust</h3><p class="muted">Support model, operating posture, and trust FAQ.</p></a>
+      </div>
+    </section>
 
-    <section><h2>How Orin creates outcomes</h2><div class="visualBand"><article class="visual"><span class="icon"><img src="https://cdn.jsdelivr.net/npm/lucide-static@latest/icons/settings.svg" alt="Configured"/></span><h3>Configured for your business</h3><p class="muted">We set up the assistant around your real workflows before launch.</p></article><article class="visual"><span class="icon"><img src="https://cdn.jsdelivr.net/npm/lucide-static@latest/icons/network.svg" alt="Stack integrations"/></span><h3>Works in your stack</h3><p class="muted">Use Orin where your team already communicates and coordinates work.</p></article><article class="visual"><span class="icon"><img src="https://cdn.jsdelivr.net/npm/lucide-static@latest/icons/trending-up.svg" alt="Continuous improvement"/></span><h3>Continuous improvement</h3><p class="muted">Live support and ticketed refinements keep the system useful over time.</p></article></div></section>
+    <section class="formWrap card" id="demo-form">
+      <h2 style="margin-top:0">Request Orin Setup</h2>
+      <p class="muted">Submit your request and your CRM automation captures the lead and notifies your team.</p>
+      <iframe src="https://link.onesolutionapp.com/widget/form/CowOWlCpQDzIq8FGlDG9" style="width:100%;height:848px;border:none;border-radius:12px" id="inline-CowOWlCpQDzIq8FGlDG9" data-layout="{'id':'INLINE'}" data-trigger-type="alwaysShow" data-trigger-value="" data-activation-type="alwaysActivated" data-activation-value="" data-deactivation-type="neverDeactivate" data-deactivation-value="" data-form-name="Contact Us Orin Page Form" data-height="848" data-layout-iframe-id="inline-CowOWlCpQDzIq8FGlDG9" data-form-id="CowOWlCpQDzIq8FGlDG9" title="Contact Us Orin Page Form"></iframe>
+      <script src="https://link.onesolutionapp.com/js/form_embed.js"></script>
+    </section>
 
-    <section><h2>Team Apps → Orin → Deliverables</h2><div class="flow"><div class="flowNode">Team Apps<br><span class="muted">Slack • Discord • Teams • Telegram • Trello</span></div><div class="arrow">→</div><div class="flowNode">Orin Assistant<br><span class="muted">Configured + supported by One Solution</span></div><div class="arrow">→</div><div class="flowNode">Business Outputs<br><span class="muted">Summaries • Drafts • Task support • Reporting prep</span></div></div></section>
-
-    <section><h2>How it works</h2><div class="steps"><article class="card"><span class="step-num">1</span><h3>Submit your use case</h3><p class="muted">Share goals, bottlenecks, and the first workflow to improve.</p></article><article class="card"><span class="step-num">2</span><h3>We configure Orin</h3><p class="muted">One Solution sets up the assistant for your business context.</p></article><article class="card"><span class="step-num">3</span><h3>Deploy in your stack</h3><p class="muted">Use Orin inside your existing team and workflow lanes.</p></article><article class="card"><span class="step-num">4</span><h3>Refine continuously</h3><p class="muted">Ticketed support keeps Orin aligned as your business evolves.</p></article></div></section>
-
-    <section><h2>Real output, not generic AI answers</h2><div class="outputs"><div class="output-nav"><button class="tabBtn active" data-tab="research">Research Brief</button><button class="tabBtn" data-tab="followup">Follow-up Draft</button><button class="tabBtn" data-tab="report">Ops Summary</button></div><div class="output-panel"><div class="outputTitle" id="outputTitle">Research Brief Example</div><div class="outputMock" id="outputMock"></div></div></div></section>
-
-    <section id="pricing"><h2>Simple pricing</h2><div class="priceGrid"><article class="card"><h3>One-time setup</h3><div class="price">$45</div><p class="muted">Initial implementation and customization.</p></article><article class="card"><h3>Monthly support</h3><div class="price">$50/mo</div><p class="muted">Live support, ticketing, and continuous optimization.</p></article><article class="card"><h3>Terms</h3><div class="price" style="font-size:1.15rem">No long-term contract</div><p class="muted">Cancel anytime. Built to be practical and accessible.</p></article></div></section>
-
-    <section><h2>What’s included in ongoing support</h2><div class="grid"><article class="card"><h3>Ticketed adjustments</h3><p class="muted">Workflow updates and practical changes as your operations evolve.</p></article><article class="card"><h3>Use-case refinement</h3><p class="muted">Improve prompt strategy and task outputs based on team feedback.</p></article><article class="card"><h3>Operational continuity</h3><p class="muted">Keep Orin aligned as your CRM processes and priorities change.</p></article></div></section>
-
-    <section><h2>What happens after you submit</h2><div class="timeline"><article class="card"><h3>1) Request review</h3><p class="muted">The One Solution team reviews your use case and priorities.</p></article><article class="card"><h3>2) Setup plan</h3><p class="muted">We define your initial implementation plan and workflow scope.</p></article><article class="card"><h3>3) Launch + support</h3><p class="muted">Orin goes live and we continue with ticketed refinement support.</p></article></div></section>
-
-    <section class="fit"><article class="card"><h3>Best fit for</h3><ul><li>SMBs and operations-heavy teams</li><li>Agencies, consultants, and service providers</li><li>Leaders who want execution, not more tool complexity</li></ul></article><article class="card"><h3>Not ideal for</h3><ul><li>Set-and-forget expectations with zero feedback loop</li><li>Teams unwilling to test/refine workflows</li><li>Hype-only AI use with no business objective</li></ul></article></section>
-
-    <section class="faq"><h2>Frequently asked questions</h2><details><summary>How long does setup usually take?</summary><p class="muted">Most initial setups can be scoped quickly after request review. Timing depends on workflow complexity and integration needs.</p></details><details><summary>Can Orin work with our existing CRM stack?</summary><p class="muted">Yes. Orin is positioned to operate in One Solution CRM and across common communication/project lanes your team already uses.</p></details><details><summary>What happens if our workflow needs change?</summary><p class="muted">That’s exactly what ongoing support is for—ticketed refinements and updates keep Orin aligned over time.</p></details><details><summary>Can we cancel monthly support anytime?</summary><p class="muted">Yes. No long-term contract; cancel anytime.</p></details></section>
-
-    <section class="formWrap" id="demo-form"><h2 style="margin-top:0">Request Orin Setup</h2><p class="muted">Submit your request and your CRM automation captures the lead and notifies your team.</p><iframe src="https://link.onesolutionapp.com/widget/form/CowOWlCpQDzIq8FGlDG9" style="width:100%;height:848px;border:none;border-radius:12px" id="inline-CowOWlCpQDzIq8FGlDG9" data-layout="{'id':'INLINE'}" data-trigger-type="alwaysShow" data-trigger-value="" data-activation-type="alwaysActivated" data-activation-value="" data-deactivation-type="neverDeactivate" data-deactivation-value="" data-form-name="Contact Us Orin Page Form" data-height="848" data-layout-iframe-id="inline-CowOWlCpQDzIq8FGlDG9" data-form-id="CowOWlCpQDzIq8FGlDG9" title="Contact Us Orin Page Form"></iframe><script src="https://link.onesolutionapp.com/js/form_embed.js"></script><p class="note">Submissions route through your CRM automation.</p></section>
-
-    <footer><div>© <span id="y"></span> One Solution LLC • Orin by One Solution</div><div class="legal"><a href="https://my.onesolutionapp.com/privacy-policy/" target="_blank" rel="noopener noreferrer">Privacy Policy</a><a href="https://my.onesolutionapp.com/terms-of-service/" target="_blank" rel="noopener noreferrer">Terms of Service</a></div></footer>
+    <footer>
+      <div>© <span id="y"></span> One Solution LLC • Orin by One Solution</div>
+      <div class="legal">
+        <a href="https://my.onesolutionapp.com/privacy-policy/" target="_blank">Privacy Policy</a>
+        <a href="https://my.onesolutionapp.com/terms-of-service/" target="_blank">Terms of Service</a>
+      </div>
+    </footer>
   </div>
-
-  <div class="mobileSticky"><a href="#demo-form" class="btn primary">Request Orin Setup</a></div>
 
   <script>
     document.getElementById('y').textContent = new Date().getFullYear();
-    const outputs = {
-      research: { title: 'Research Brief Example', body: `Prospect Snapshot — Phoenix Home Services\n\n• Priority Segment: Residential remodelers (10–50 staff)\n• Core pain: Manual follow-up + scheduling handoff gaps\n• Suggested play: 3-step outreach + pipeline stage sync\n• Next action: Build owner-approved follow-up sequence` },
-      followup: { title: 'Follow-up Draft Example', body: `Subject: Quick follow-up on your workflow goals\n\nHi {{FirstName}},\n\nBased on your request, we can start with lead follow-up + CRM update automation first, then layer in reporting prep next.\n\nWould you like speed-to-lead or handoff consistency prioritized in phase 1?` },
-      report: { title: 'Ops Summary Example', body: `Weekly Workflow Summary\n\n• Leads processed: 48\n• Follow-ups generated: 41\n• Stage updates completed: 36\n• Open support tickets: 2\n\nPrimary bottleneck: delayed opportunity assignment in after-hours window.` }
-    };
-    const titleEl = document.getElementById('outputTitle');
-    const bodyEl = document.getElementById('outputMock');
-    const tabBtns = document.querySelectorAll('.tabBtn');
-    function setTab(key){ const item = outputs[key]; titleEl.textContent = item.title; bodyEl.textContent = item.body; tabBtns.forEach(btn => btn.classList.toggle('active', btn.dataset.tab === key)); }
-    setTab('research'); tabBtns.forEach(btn => btn.addEventListener('click', () => setTab(btn.dataset.tab)));
-    const prompt = document.getElementById('heroPrompt'); const promptBtn = document.getElementById('buildPlanBtn'); const promptNote = document.getElementById('promptNote');
-    promptBtn.addEventListener('click', async () => {
-      const text = (prompt.value || '').trim(); document.getElementById('demo-form').scrollIntoView({ behavior:'smooth', block:'start' });
-      if(!text){ promptNote.textContent = 'Add your use case first, then click again to carry it into your request flow.'; return; }
-      try { await navigator.clipboard.writeText(text); promptBtn.textContent = 'Copied — paste into request form'; promptNote.textContent = 'Prompt copied. Paste it into the Main Use Case Description field in the form below.'; }
-      catch { promptNote.textContent = 'Copy failed on this browser. Please manually copy your prompt before submitting.'; }
-      setTimeout(() => promptBtn.textContent = 'Use This in Request', 2600);
+    document.getElementById('copyBtn').addEventListener('click', async () => {
+      const t = (document.getElementById('heroPrompt').value || '').trim();
+      document.getElementById('demo-form').scrollIntoView({ behavior: 'smooth' });
+      if (!t) { document.getElementById('note').textContent = 'Add your use case first.'; return; }
+      try { await navigator.clipboard.writeText(t); document.getElementById('note').textContent = 'Copied. Paste into Main Use Case Description in the form.'; }
+      catch { document.getElementById('note').textContent = 'Please manually copy your use case before submitting.'; }
     });
   </script>
 </body>
