@@ -1,1237 +1,142 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="description" content="One Solution - AI-Powered Voice Technology to Automate Your Business and Boost Productivity">
-    <title>One Solution | AI Voice Technology for Business Automation</title>
-    <link rel="icon" type="image/jpeg" href="/assets/favicon-one-solution.jpg">
-    <style>
-        * {
-            margin: 0;
-            padding: 0;
-            box-sizing: border-box;
-        }
-        
-        body {
-            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, sans-serif;
-            line-height: 1.6;
-            color: #333;
-            overflow-x: hidden;
-        }
-        
-        /* Animated Background */
-        @keyframes gradient {
-            0% { background-position: 0% 50%; }
-            50% { background-position: 100% 50%; }
-            100% { background-position: 0% 50%; }
-        }
-        
-        .sticky-nav {
-            position: sticky;
-            top: 0;
-            z-index: 20;
-            width: 100%;
-            backdrop-filter: blur(12px);
-            background: rgba(255,255,255,0.88);
-            border-bottom: 1px solid rgba(31,39,64,0.08);
-            box-shadow: 0 8px 24px rgba(18, 24, 44, 0.08);
-        }
-        
-        .mobile-hero-logo {
-            display: none;
-            justify-content: center;
-            margin: 0 auto 24px;
-        }
-        
-        .mobile-hero-logo img {
-            max-width: 260px;
-            max-height: 58px;
-            width: auto;
-            height: auto;
-            filter: drop-shadow(0 8px 24px rgba(0,0,0,0.18));
-        }
-        
-        .sticky-nav-inner {
-            max-width: 1280px;
-            margin: 0 auto;
-            padding: 12px 24px;
-            display: flex;
-            align-items: center;
-            justify-content: space-between;
-            gap: 20px;
-        }
-        
-        .nav-brand img {
-            max-width: 210px;
-            max-height: 44px;
-            display: block;
-        }
-        
-        .nav-links {
-            display: flex;
-            align-items: center;
-            gap: 24px;
-            flex-wrap: wrap;
-        }
-        
-        .nav-links a {
-            color: #24304f;
-            font-weight: 600;
-            font-size: 0.98rem;
-            transition: opacity 0.2s ease;
-        }
-        
-        .nav-links a:hover {
-            opacity: 0.78;
-        }
-        
-        .nav-cta {
-            display: inline-block;
-            padding: 11px 20px;
-            border-radius: 999px;
-            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
-            color: #ffffff !important;
-            font-weight: 700 !important;
-            box-shadow: 0 10px 24px rgba(102,126,234,0.22);
-        }
-        
-        .nav-cta:hover {
-            opacity: 1 !important;
-            transform: translateY(-1px);
-        }
-        
-        /* Hero Section */
-        html {
-            scroll-behavior: smooth;
-        }
-        
-        .hero {
-            background: linear-gradient(-45deg, #667eea, #764ba2, #f093fb, #4facfe);
-            background-size: 400% 400%;
-            animation: gradient 15s ease infinite;
-            color: white;
-            padding: 170px 20px 120px;
-            text-align: center;
-            min-height: 100vh;
-            display: flex;
-            flex-direction: column;
-            justify-content: center;
-            align-items: center;
-            position: relative;
-            overflow: hidden;
-        }
-        
-        .hero::before {
-            content: '';
-            position: absolute;
-            top: 0;
-            left: 0;
-            right: 0;
-            bottom: 0;
-            background: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1440 320"><path fill="%23ffffff" fill-opacity="0.1" d="M0,96L48,112C96,128,192,160,288,160C384,160,480,128,576,122.7C672,117,768,139,864,138.7C960,139,1056,117,1152,101.3C1248,85,1344,75,1392,69.3L1440,64L1440,320L1392,320C1344,320,1248,320,1152,320C1056,320,960,320,864,320C768,320,672,320,576,320C480,320,384,320,288,320C192,320,96,320,48,320L0,320Z"></path></svg>') bottom repeat-x;
-            background-size: 100% auto;
-            opacity: 0.3;
-        }
-        
-        .hero-content {
-            position: relative;
-            z-index: 1;
-            width: 100%;
-            max-width: 980px;
-            margin: 0 auto;
-            text-align: center;
-        }
-        
-        .hero h1 {
-            font-size: 4rem;
-            margin: 0 auto 30px;
-            max-width: 920px;
-            font-weight: 800;
-            line-height: 1.1;
-            text-shadow: 0 2px 10px rgba(0,0,0,0.2);
-            animation: fadeInUp 1s ease;
-        }
-        
-        @keyframes fadeInUp {
-            from {
-                opacity: 0;
-                transform: translateY(30px);
-            }
-            to {
-                opacity: 1;
-                transform: translateY(0);
-            }
-        }
-        
-        .hero p {
-            font-size: 1.6rem;
-            margin: 0 auto 50px;
-            max-width: 800px;
-            opacity: 0.95;
-            animation: fadeInUp 1s ease 0.2s both;
-            text-shadow: 0 1px 5px rgba(0,0,0,0.1);
-            text-align: center;
-        }
-        
-        .cta-container {
-            animation: fadeInUp 1s ease 0.4s both;
-            display: flex;
-            justify-content: center;
-            align-items: center;
-            flex-wrap: wrap;
-        }
-        
-        .cta-button {
-            display: inline-block;
-            background: #fff;
-            color: #667eea;
-            padding: 20px 50px;
-            border-radius: 50px;
-            text-decoration: none;
-            font-size: 1.3rem;
-            font-weight: 700;
-            transition: all 0.3s ease;
-            box-shadow: 0 10px 30px rgba(0,0,0,0.3);
-            margin: 10px;
-            position: relative;
-            overflow: hidden;
-        }
-        
-        .cta-button::before {
-            content: '';
-            position: absolute;
-            top: 50%;
-            left: 50%;
-            width: 0;
-            height: 0;
-            border-radius: 50%;
-            background: rgba(255,255,255,0.3);
-            transform: translate(-50%, -50%);
-            transition: width 0.6s, height 0.6s;
-        }
-        
-        .cta-button:hover::before {
-            width: 300px;
-            height: 300px;
-        }
-        
-        .cta-button:hover {
-            transform: translateY(-3px);
-            box-shadow: 0 15px 40px rgba(0,0,0,0.4);
-        }
-        
-        .cta-button.secondary {
-            background: transparent;
-            color: white;
-            border: 3px solid white;
-        }
-        
-        /* Trust Strip */
-        .trust-strip {
-            background: #ffffff;
-            padding: 26px 20px;
-            border-top: 1px solid rgba(255,255,255,0.08);
-            border-bottom: 1px solid #e8ecff;
-        }
-        
-        .trust-strip-inner {
-            max-width: 1200px;
-            margin: 0 auto;
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
-            gap: 18px;
-            text-align: center;
-        }
-        
-        .trust-pill {
-            background: #f8faff;
-            border: 1px solid #e5eafc;
-            border-radius: 999px;
-            padding: 14px 18px;
-            font-weight: 600;
-            color: #42506b;
-        }
-        
-        /* Stats Section */
-        .stats {
-            background: #f8f9fa;
-            padding: 80px 20px;
-            text-align: center;
-        }
-        
-        .stats-grid {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
-            gap: 40px;
-            max-width: 1200px;
-            margin: 0 auto;
-        }
-        
-        .stat-card {
-            padding: 30px;
-        }
-        
-        .stat-number {
-            font-size: 3.5rem;
-            font-weight: 800;
-            color: #667eea;
-            margin-bottom: 10px;
-        }
-        
-        .stat-label {
-            font-size: 1.1rem;
-            color: #666;
-        }
-        
-        /* Features Section */
-        .features {
-            padding: 100px 20px;
-            max-width: 1400px;
-            margin: 0 auto;
-            background: linear-gradient(to bottom, #fff 0%, #f8f9fa 100%);
-        }
-        
-        .section-title {
-            text-align: center;
-            font-size: 3rem;
-            margin-bottom: 20px;
-            color: #333;
-            font-weight: 800;
-        }
-        
-        .section-subtitle {
-            text-align: center;
-            font-size: 1.3rem;
-            color: #666;
-            margin-bottom: 80px;
-            max-width: 700px;
-            margin-left: auto;
-            margin-right: auto;
-        }
-        
-        .features-grid {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
-            gap: 50px;
-        }
-        
-        .feature-card {
-            background: #fff;
-            padding: 50px;
-            border-radius: 20px;
-            text-align: center;
-            transition: all 0.4s ease;
-            box-shadow: 0 5px 20px rgba(0,0,0,0.08);
-            position: relative;
-            overflow: hidden;
-        }
-        
-        .feature-card::before {
-            content: '';
-            position: absolute;
-            top: 0;
-            left: 0;
-            width: 100%;
-            height: 5px;
-            background: linear-gradient(90deg, #667eea, #764ba2);
-            transform: scaleX(0);
-            transition: transform 0.4s ease;
-        }
-        
-        .feature-card:hover::before {
-            transform: scaleX(1);
-        }
-        
-        .feature-card:hover {
-            transform: translateY(-10px);
-            box-shadow: 0 20px 50px rgba(102, 126, 234, 0.25);
-        }
-        
-        .feature-icon {
-            font-size: 4rem;
-            margin-bottom: 25px;
-            display: block;
-        }
-        
-        .feature-card h3 {
-            font-size: 1.8rem;
-            margin-bottom: 20px;
-            color: #667eea;
-            font-weight: 700;
-        }
-        
-        .feature-card p {
-            color: #666;
-            line-height: 1.9;
-            font-size: 1.1rem;
-        }
-        
-        /* Pain Points Section */
-        .pain-points {
-            padding: 100px 20px;
-            background: linear-gradient(180deg, #ffffff 0%, #f5f8ff 100%);
-        }
-        
-        .pain-grid {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
-            gap: 28px;
-            max-width: 1280px;
-            margin: 0 auto;
-        }
-        
-        .pain-card {
-            background: #fff;
-            border: 1px solid #e8ecff;
-            border-radius: 22px;
-            padding: 30px;
-            box-shadow: 0 10px 30px rgba(31,39,64,0.06);
-        }
-        
-        .pain-icon {
-            width: 56px;
-            height: 56px;
-            display: inline-flex;
-            align-items: center;
-            justify-content: center;
-            border-radius: 16px;
-            margin-bottom: 16px;
-            font-size: 1.5rem;
-            background: linear-gradient(135deg, #eef2ff 0%, #f5eefe 100%);
-            color: #5d6df2;
-            box-shadow: inset 0 1px 0 rgba(255,255,255,0.7);
-        }
-        
-        .pain-card h3 {
-            font-size: 1.3rem;
-            color: #1f2740;
-            margin-bottom: 12px;
-        }
-        
-        .pain-card p {
-            color: #616b80;
-            line-height: 1.8;
-            font-size: 1rem;
-        }
-        
-        /* Use Cases Section */
-        .use-cases {
-            padding: 100px 20px;
-            background: linear-gradient(180deg, #f8f9ff 0%, #ffffff 100%);
-        }
-        
-        .use-cases-grid {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
-            gap: 28px;
-            max-width: 1300px;
-            margin: 0 auto;
-        }
-        
-        .use-case-card {
-            background: #fff;
-            border: 1px solid #e8ecff;
-            border-radius: 22px;
-            padding: 32px;
-            box-shadow: 0 10px 30px rgba(102,126,234,0.08);
-            transition: transform 0.25s ease, box-shadow 0.25s ease;
-        }
-        
-        .use-case-card:hover {
-            transform: translateY(-6px);
-            box-shadow: 0 18px 40px rgba(102,126,234,0.16);
-        }
-        
-        .use-case-icon {
-            width: 56px;
-            height: 56px;
-            font-size: 1.5rem;
-            margin: 0 auto 16px;
-            display: inline-flex;
-            align-items: center;
-            justify-content: center;
-            border-radius: 16px;
-            background: linear-gradient(135deg, #eef2ff 0%, #f5eefe 100%);
-            color: #5d6df2;
-            box-shadow: inset 0 1px 0 rgba(255,255,255,0.7);
-        }
-        
-        .use-case-card h3 {
-            font-size: 1.35rem;
-            color: #1f2740;
-            margin-bottom: 12px;
-        }
-        
-        .use-case-card p {
-            color: #616b80;
-            font-size: 1rem;
-            line-height: 1.8;
-        }
-        
-        /* How It Works Section */
-        .how-it-works {
-            padding: 100px 20px;
-            background: linear-gradient(180deg, #ffffff 0%, #f8faff 100%);
-        }
-        
-        .steps-grid {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
-            gap: 28px;
-            max-width: 1200px;
-            margin: 0 auto;
-        }
-        
-        .step-card {
-            background: #fff;
-            border: 1px solid #e8ecff;
-            border-radius: 22px;
-            padding: 32px;
-            box-shadow: 0 10px 30px rgba(31,39,64,0.07);
-        }
-        
-        .step-number {
-            width: 54px;
-            height: 54px;
-            display: inline-flex;
-            align-items: center;
-            justify-content: center;
-            border-radius: 50%;
-            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
-            color: white;
-            font-size: 1.2rem;
-            font-weight: 800;
-            margin-bottom: 18px;
-        }
-        
-        .step-card h3 {
-            color: #1f2740;
-            font-size: 1.35rem;
-            margin-bottom: 12px;
-        }
-        
-        .step-card p {
-            color: #616b80;
-            line-height: 1.8;
-        }
-        
-        /* Pricing Teaser Section */
-        .pricing-teaser {
-            padding: 100px 20px;
-            background: linear-gradient(135deg, #111827 0%, #1f2a44 100%);
-            color: white;
-            text-align: center;
-        }
-        
-        .pricing-teaser p {
-            font-size: 1.18rem;
-            max-width: 860px;
-            margin: 0 auto 26px;
-            opacity: 0.94;
-            line-height: 1.9;
-        }
-        
-        .pricing-badge {
-            display: inline-block;
-            margin-bottom: 18px;
-            padding: 8px 14px;
-            border-radius: 999px;
-            background: rgba(255,255,255,0.12);
-            border: 1px solid rgba(255,255,255,0.16);
-            font-size: 0.82rem;
-            font-weight: 700;
-            letter-spacing: 0.04em;
-            text-transform: uppercase;
-        }
-        
-        /* Testimonial Section */
-        .testimonials {
-            padding: 100px 20px;
-            background: #ffffff;
-        }
-        
-        .testimonials-grid {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
-            gap: 28px;
-            max-width: 1300px;
-            margin: 0 auto;
-        }
-        
-        .testimonial-card {
-            background: linear-gradient(180deg, #ffffff 0%, #f8faff 100%);
-            border: 1px solid #e8ecff;
-            border-radius: 22px;
-            padding: 30px;
-            box-shadow: 0 10px 30px rgba(31,39,64,0.07);
-            position: relative;
-            overflow: hidden;
-        }
-        
-        .testimonial-card::before {
-            content: '';
-            position: absolute;
-            top: 0;
-            left: 0;
-            width: 100%;
-            height: 4px;
-            background: linear-gradient(90deg, #667eea 0%, #764ba2 100%);
-        }
-        
-        .review-badge {
-            display: inline-flex;
-            align-items: center;
-            gap: 8px;
-            margin-bottom: 14px;
-            padding: 8px 12px;
-            border-radius: 999px;
-            background: #eef2ff;
-            color: #4b57d1;
-            font-size: 0.82rem;
-            font-weight: 700;
-        }
-        
-        .testimonial-stars {
-            color: #f5b301;
-            font-size: 1.1rem;
-            margin-bottom: 16px;
-            letter-spacing: 0.08em;
-        }
-        
-        .testimonial-card h3 {
-            color: #1f2740;
-            margin-bottom: 10px;
-            font-size: 1.2rem;
-        }
-        
-        .testimonial-card p {
-            color: #616b80;
-            line-height: 1.8;
-            font-size: 1rem;
-        }
-        
-        .testimonial-note {
-            max-width: 850px;
-            margin: 28px auto 0;
-            text-align: center;
-            color: #6b7280;
-            font-size: 0.96rem;
-        }
-        
-        /* Outcomes Section */
-        .outcomes {
-            padding: 90px 20px;
-            background: linear-gradient(135deg, #1b2240 0%, #2d3768 100%);
-            color: white;
-        }
-        
-        .outcomes-grid {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
-            gap: 22px;
-            max-width: 1200px;
-            margin: 0 auto;
-        }
-        
-        .outcome-card {
-            background: rgba(255,255,255,0.08);
-            border: 1px solid rgba(255,255,255,0.12);
-            border-radius: 20px;
-            padding: 26px;
-            text-align: center;
-            backdrop-filter: blur(8px);
-        }
-        
-        .outcome-card strong {
-            display: block;
-            font-size: 1.15rem;
-            margin-bottom: 8px;
-        }
-        
-        .outcome-card p {
-            font-size: 0.98rem;
-            opacity: 0.92;
-            line-height: 1.7;
-        }
-        
-        /* Industries Section */
-        .industries {
-            padding: 100px 20px;
-            background: linear-gradient(180deg, #f8f9ff 0%, #eef2ff 100%);
-        }
-        
-        .industries-grid {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-            gap: 28px;
-            max-width: 1300px;
-            margin: 0 auto;
-        }
-        
-        .industry-card {
-            background: #fff;
-            border-radius: 22px;
-            padding: 32px;
-            border: 1px solid #e5eafc;
-            box-shadow: 0 12px 32px rgba(102,126,234,0.08);
-        }
-        
-        .industry-card h3 {
-            font-size: 1.35rem;
-            color: #1f2740;
-            margin-bottom: 14px;
-        }
-        
-        .industry-card p {
-            color: #616b80;
-            line-height: 1.8;
-            margin-bottom: 14px;
-        }
-        
-        .industry-card ul {
-            padding-left: 18px;
-            color: #4b5563;
-        }
-        
-        .industry-card li {
-            margin-bottom: 8px;
-        }
-        
-        /* FAQ Section */
-        .faq {
-            padding: 100px 20px;
-            background: #ffffff;
-        }
-        
-        .faq-list {
-            max-width: 1000px;
-            margin: 0 auto;
-            display: grid;
-            gap: 18px;
-        }
-        
-        .faq-item {
-            background: linear-gradient(180deg, #ffffff 0%, #f8faff 100%);
-            border: 1px solid #e8ecff;
-            border-radius: 18px;
-            padding: 24px 26px;
-            box-shadow: 0 8px 24px rgba(31,39,64,0.05);
-        }
-        
-        .faq-item h3 {
-            color: #1f2740;
-            font-size: 1.15rem;
-            margin-bottom: 10px;
-        }
-        
-        .faq-item p {
-            color: #616b80;
-            line-height: 1.8;
-        }
-        
-        /* Integration Section */
-        .integrations {
-            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
-            color: white;
-            padding: 100px 20px;
-            text-align: center;
-            position: relative;
-        }
-        
-        .integrations h2 {
-            font-size: 3rem;
-            margin-bottom: 30px;
-            font-weight: 800;
-        }
-        
-        .integrations p {
-            font-size: 1.4rem;
-            margin-bottom: 50px;
-            max-width: 900px;
-            margin-left: auto;
-            margin-right: auto;
-            line-height: 1.8;
-        }
-        
-        .integration-logos {
-            display: flex;
-            justify-content: center;
-            align-items: center;
-            flex-wrap: wrap;
-            gap: 40px;
-            margin-bottom: 50px;
-        }
-        
-        .integration-logo {
-            background: rgba(255,255,255,0.1);
-            padding: 20px 40px;
-            border-radius: 15px;
-            font-size: 1.2rem;
-            font-weight: 600;
-            backdrop-filter: blur(10px);
-        }
-        
-        /* CTA Section */
-        .cta-section {
-            background: #1a1a2e;
-            color: white;
-            padding: 100px 20px;
-            text-align: center;
-        }
-        
-        .cta-section h2 {
-            font-size: 3rem;
-            margin-bottom: 25px;
-            font-weight: 800;
-        }
-        
-        .cta-section p {
-            font-size: 1.3rem;
-            margin-bottom: 50px;
-            opacity: 0.9;
-            max-width: 700px;
-            margin-left: auto;
-            margin-right: auto;
-        }
-        
-        /* Footer */
-        footer {
-            background: #0f0f1e;
-            color: white;
-            padding: 50px 20px;
-            text-align: center;
-        }
-        
-        footer a {
-            color: #667eea;
-            text-decoration: none;
-            transition: color 0.3s ease;
-        }
-        
-        footer a:hover {
-            color: #764ba2;
-        }
-        
-        footer p {
-            margin: 10px 0;
-        }
-        
-        /* Responsive */
-        @media (max-width: 768px) {
-            .sticky-nav {
-                display: none;
-            }
-            
-            .mobile-hero-logo {
-                display: flex;
-            }
-            
-            .sticky-nav-inner {
-                justify-content: center;
-                text-align: center;
-            }
-            
-            .nav-links {
-                display: none;
-            }
-            
-            .hero {
-                padding: 120px 20px 100px;
-            }
-            
-            .hero h1 {
-                font-size: 2.5rem;
-            }
-            
-            .hero p {
-                font-size: 1.2rem;
-            }
-            
-            .section-title {
-                font-size: 2rem;
-            }
-            
-            .features-grid {
-                grid-template-columns: 1fr;
-            }
-        }
-    </style>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Orin by One Solution | Done-for-You AI Business Assistant</title>
+  <meta name="description" content="Orin by One Solution is a done-for-you AI business assistant: setup, customization, CRM/workflow integration, and live support." />
+  <link rel="icon" href="./assets/favicon-one-solution.jpg" />
+  <style>
+    :root {--bg:#070b16;--panel:#0d162d;--panel2:#0b1328;--text:#eef3ff;--muted:#aebada;--line:#253455;--primary:#3b82f6;--primary2:#7c3aed;--accent:#22c55e}
+    *{box-sizing:border-box} html,body{margin:0;padding:0}
+    body{font-family:Inter,system-ui,-apple-system,Segoe UI,Roboto,sans-serif;color:var(--text);line-height:1.54;background:radial-gradient(1000px 450px at 8% -8%, #1a2b58 0%, transparent 62%),radial-gradient(900px 420px at 92% -18%, #2b1e54 0%, transparent 60%),var(--bg)}
+    .wrap{width:min(1160px,92vw);margin:auto}
+    .nav{display:flex;align-items:center;justify-content:space-between;padding:18px 0}.nav img{height:46px}
+    .btn{display:inline-flex;align-items:center;justify-content:center;gap:8px;padding:12px 18px;border-radius:10px;text-decoration:none;font-weight:700;cursor:pointer;border:0;transition:.2s ease}
+    .btn.primary{background:linear-gradient(90deg,var(--primary),var(--primary2));color:#fff}.btn.primary:hover{transform:translateY(-1px);filter:brightness(1.06)}
+    .btn.ghost{border:1px solid #415686;color:#e7efff;background:transparent}
+    .hero{padding:18px 0;display:grid;grid-template-columns:1.08fr .92fr;gap:18px;align-items:center}
+    .kicker{display:inline-flex;background:#122041;border:1px solid #27437f;color:#9ec5ff;padding:6px 10px;border-radius:999px;font-size:.78rem;font-weight:700}
+    h1{font-size:clamp(2rem,5vw,3.5rem);line-height:1.04;margin:.45rem 0 .85rem}.lead{color:var(--muted);font-size:1.04rem;max-width:720px}
+    .trust{display:flex;gap:10px;flex-wrap:wrap;color:#c5d7ff;font-size:.9rem;margin-top:12px}.trust span{background:#102043;border:1px solid #2f4f88;padding:5px 9px;border-radius:999px}
+    .prompt{margin:16px 0 10px;background:var(--panel2);border:1px solid #2b4070;border-radius:12px;padding:10px;display:grid;grid-template-columns:1fr auto;gap:10px}
+    .prompt textarea{width:100%;min-height:78px;background:#0a1225;border:1px solid #2a3e69;color:#eef3ff;border-radius:10px;padding:12px;font:inherit;resize:vertical}
+    .note{font-size:.82rem;color:#8ea6d3;margin-top:8px}
+    .heroCard{position:relative;background:linear-gradient(160deg,#101a34,#0b1226);border:1px solid var(--line);border-radius:18px;padding:18px;overflow:hidden}
+    .glow{position:absolute;right:-44px;top:-42px;width:160px;height:160px;border-radius:50%;background:radial-gradient(circle,#3b82f655,transparent 68%)}
+    .miniGrid{display:grid;grid-template-columns:1fr 1fr;gap:10px}.mini{background:#0f1931;border:1px solid #253a68;border-radius:12px;padding:12px;font-size:.9rem}
+    section{padding:16px 0} h2{font-size:clamp(1.35rem,2.6vw,1.95rem);margin:0 0 10px} .muted{color:var(--muted)}
+    .panel,.card,.integration,.formWrap{background:var(--panel);border:1px solid var(--line);border-radius:14px}.panel,.card,.integration{padding:16px}
+    .split{display:grid;grid-template-columns:1fr 1fr;gap:12px}.grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(220px,1fr));gap:12px}
+    .integration{background:linear-gradient(120deg,#101c3a,#0d1730);border-color:#30456f;padding:18px}.integrationHead{display:flex;justify-content:space-between;align-items:center;gap:10px;flex-wrap:wrap}
+    .integrationTag{font-size:.78rem;color:#cde0ff;border:1px solid #3d5a93;background:#122041;padding:5px 10px;border-radius:999px}
+    .pillGrid{display:grid;grid-template-columns:repeat(auto-fit,minmax(150px,1fr));gap:12px;margin-top:12px}
+    .pill{display:flex;align-items:center;gap:10px;padding:12px;border:1px solid #38558b;background:linear-gradient(140deg,#101b36,#0b142b);border-radius:12px;color:#d9e6ff;font-weight:600;font-size:.92rem}.pill img{width:18px;height:18px;filter:invert(1) brightness(1.2)}
+    .visualBand{display:grid;grid-template-columns:repeat(auto-fit,minmax(230px,1fr));gap:12px}.visual{border:1px solid #2d436f;border-radius:14px;padding:14px;min-height:150px;background:linear-gradient(140deg,#111d3b,#0b1328)}
+    .visual .icon{margin-bottom:8px;display:inline-flex;align-items:center;justify-content:center;background:#122041;border:1px solid #315597;border-radius:10px;padding:7px 9px}.visual .icon img{width:18px;height:18px;display:block;filter:invert(1) brightness(1.2)}
+    .flow{display:grid;grid-template-columns:1fr auto 1fr auto 1fr;gap:10px;align-items:center}.flowNode{background:#0f1934;border:1px solid #2f4c82;border-radius:12px;padding:12px;text-align:center}.arrow{color:#84aef8;font-weight:800;text-align:center}
+    .steps{display:grid;grid-template-columns:repeat(auto-fit,minmax(220px,1fr));gap:12px}.step-num{display:inline-flex;width:30px;height:30px;align-items:center;justify-content:center;background:#122041;border:1px solid #315597;border-radius:50%;font-weight:700;color:#cde0ff;margin-bottom:8px}
+    .outputs{display:grid;grid-template-columns:220px 1fr;gap:12px}.output-nav{display:grid;gap:8px}.tabBtn{width:100%;text-align:left;border:1px solid #2c406f;background:#0f1934;color:#d8e6ff;padding:10px 12px;border-radius:10px;cursor:pointer;font-weight:600}.tabBtn.active{background:linear-gradient(90deg,#173267,#1f2f5e);border-color:#4d74ba}
+    .output-panel{background:#0b1428;border:1px solid #2b406f;border-radius:12px;padding:14px}.outputTitle{font-weight:700;margin-bottom:8px}.outputMock{white-space:pre-wrap;color:#c7d6f7;background:#091024;border:1px solid #253b69;border-radius:10px;padding:12px;font-size:.9rem}
+    .priceGrid{display:grid;grid-template-columns:repeat(auto-fit,minmax(230px,1fr));gap:12px}.price{font-size:1.7rem;font-weight:800;margin:.2rem 0;color:#fff}
+    .timeline{display:grid;grid-template-columns:repeat(auto-fit,minmax(200px,1fr));gap:10px}.timeline .card{background:#0b1328}
+    .fit{display:grid;grid-template-columns:1fr 1fr;gap:12px}.fit ul,.panel ul{margin:.3rem 0 0;padding-left:18px;color:var(--muted)}
+    .faq details{background:#0b1328;border:1px solid #2f446f;border-radius:10px;padding:12px 14px}.faq details+details{margin-top:8px}.faq summary{cursor:pointer;font-weight:700;color:#dce9ff}
+    .proof{display:grid;grid-template-columns:repeat(auto-fit,minmax(230px,1fr));gap:12px}.proof .card{border-color:#2f4f86}
+    .formWrap{margin:14px 0 24px;padding:20px}
+    footer{padding:16px 0 84px;color:#8ca0c9;border-top:1px solid var(--line)} .legal{display:flex;gap:14px;flex-wrap:wrap;margin-top:8px}.legal a{color:#bcd1ff;text-decoration:none;border-bottom:1px dashed transparent}.legal a:hover{border-bottom-color:#bcd1ff}
+    .mobileSticky{display:none;position:fixed;left:0;right:0;bottom:0;padding:10px 14px;background:rgba(7,11,22,.92);backdrop-filter: blur(8px);border-top:1px solid #2e466f;z-index:40}.mobileSticky .btn{width:100%}
+    @media(max-width:980px){.hero,.split,.fit,.outputs{grid-template-columns:1fr}.prompt{grid-template-columns:1fr}.flow{grid-template-columns:1fr}.arrow{transform:rotate(90deg)}.mobileSticky{display:block}}
+  </style>
 </head>
 <body>
-    <header class="sticky-nav">
-        <div class="sticky-nav-inner">
-            <a class="nav-brand" href="/" aria-label="One Solution home">
-                <img src="/assets/one-solution-logo-header-final.png" alt="One Solution logo">
-            </a>
-            <nav class="nav-links" aria-label="Primary navigation">
-                <a href="/integrations.html">Integrations</a>
-                <a href="/packages.html">Packages</a>
-                <a href="https://link.onesolutionapp.com/widget/bookings/demo-appt-c9ee15e6-9c4b-4a6f-b9a4-5cb0588cc9c2">Contact</a>
-                <a class="nav-cta" href="https://link.onesolutionapp.com/widget/bookings/demo-appt-c9ee15e6-9c4b-4a6f-b9a4-5cb0588cc9c2">Schedule a Demo</a>
-            </nav>
-        </div>
+  <div class="wrap">
+    <header class="nav">
+      <img src="./assets/one-solution-logo-white.png" alt="One Solution" />
+      <a class="btn ghost" href="#demo-form">Request Orin Setup</a>
     </header>
 
-    <!-- Hero Section -->
     <section class="hero">
-        <div class="hero-content">
-            <div class="mobile-hero-logo">
-                <img src="/assets/one-solution-logo-header-final.png" alt="One Solution logo">
-            </div>
-            <h1>AI Voice & Automation for Service Businesses That Need More Leads, Faster Follow-Up, and Better Conversion</h1>
-            <p>One Solution helps businesses capture more opportunities, respond faster, automate follow-up, and connect their CRM, messaging, scheduling, and communication tools into one growth-focused system.</p>
-            <div class="cta-container">
-                <a href="/packages.html" class="cta-button">Get Started</a>
-                <a href="https://link.onesolutionapp.com/widget/bookings/demo-appt-c9ee15e6-9c4b-4a6f-b9a4-5cb0588cc9c2" class="cta-button secondary">Schedule a Demo</a>
-            </div>
+      <div>
+        <span class="kicker">ORIN BY ONE SOLUTION</span>
+        <h1>Done-for-you AI assistant setup + live support for real business workflows.</h1>
+        <p class="lead">Orin is configured by One Solution, customized to your use cases, and deployed in the systems your team already uses—without DIY setup burden.</p>
+
+        <div class="prompt">
+          <textarea id="heroPrompt" placeholder="Tell us what you want Orin to help automate first (ex: lead follow-up, CRM updates, reporting prep)..."></textarea>
+          <button id="buildPlanBtn" class="btn primary" type="button">Use This in Request</button>
         </div>
+        <p class="note" id="promptNote">Write your use case first, then carry it into your request flow.</p>
+
+        <div class="trust"><span>$45 one-time setup</span><span>$50/month support</span><span>No contracts • Cancel anytime</span></div>
+      </div>
+
+      <aside class="heroCard">
+        <div class="glow"></div>
+        <h3 style="margin:0 0 10px">What you get immediately</h3>
+        <div class="miniGrid"><div class="mini">Done-for-you implementation</div><div class="mini">Workflow-specific setup</div><div class="mini">CRM + PM lane support</div><div class="mini">Live ticketed refinements</div></div>
+      </aside>
     </section>
 
-    <!-- Trust Strip -->
-    <section class="trust-strip">
-        <div class="trust-strip-inner">
-            <div class="trust-pill">Works with your current CRM and tools</div>
-            <div class="trust-pill">Built for service businesses and growth teams</div>
-            <div class="trust-pill">Guided setup with real implementation support</div>
-            <div class="trust-pill">Designed to reduce missed leads and delayed follow-up</div>
-        </div>
+    <section class="proof">
+      <article class="card"><h3>Faster speed-to-lead</h3><p class="muted">Clients use Orin to reduce response lag and keep high-intent opportunities active.</p></article>
+      <article class="card"><h3>Cleaner handoffs</h3><p class="muted">Workflow support reduces dropped follow-up and inconsistent pipeline movement.</p></article>
+      <article class="card"><h3>Operator-backed reliability</h3><p class="muted">Live issue ticketing and refinement support keeps systems useful over time.</p></article>
     </section>
 
-    <!-- Stats Section -->
-    <section class="stats">
-        <div class="stats-grid">
-            <div class="stat-card">
-                <div class="stat-number">24/7</div>
-                <div class="stat-label">Always Available</div>
-            </div>
-            <div class="stat-card">
-                <div class="stat-number">1000+</div>
-                <div class="stat-label">CRM Integrations</div>
-            </div>
-            <div class="stat-card">
-                <div class="stat-number">80%</div>
-                <div class="stat-label">Time Saved</div>
-            </div>
-            <div class="stat-card">
-                <div class="stat-number">99.9%</div>
-                <div class="stat-label">Uptime</div>
-            </div>
-        </div>
+    <section class="integration">
+      <div class="integrationHead"><h2 style="margin:0">Works where your team already works</h2><span class="integrationTag">Live team communication lanes</span></div>
+      <p class="muted" style="margin:.45rem 0 0">Route requests, updates, and execution support directly inside active team channels.</p>
+      <div class="pillGrid"><div class="pill"><img src="https://cdn.jsdelivr.net/npm/simple-icons@v11/icons/slack.svg" alt="Slack"/>Slack</div><div class="pill"><img src="https://cdn.jsdelivr.net/npm/simple-icons@v11/icons/discord.svg" alt="Discord"/>Discord</div><div class="pill"><img src="https://cdn.jsdelivr.net/npm/simple-icons@v11/icons/telegram.svg" alt="Telegram"/>Telegram</div><div class="pill"><img src="https://cdn.jsdelivr.net/npm/simple-icons@v11/icons/microsoftteams.svg" alt="Microsoft Teams"/>Microsoft Teams</div><div class="pill"><img src="https://cdn.jsdelivr.net/npm/simple-icons@v11/icons/trello.svg" alt="Trello"/>Trello</div></div>
     </section>
 
-    <!-- Features Section -->
-    <section class="features">
-        <h2 class="section-title">Why Choose One Solution?</h2>
-        <p class="section-subtitle">Powerful AI technology designed to scale your business operations effortlessly</p>
-        <div class="features-grid">
-            <div class="feature-card">
-                <span class="feature-icon">🤖</span>
-                <h3>AI-Powered Voice</h3>
-                <p>Natural conversations that handle customer inquiries, appointments, and support 24/7 without human intervention</p>
-            </div>
-            <div class="feature-card">
-                <span class="feature-icon">🔗</span>
-                <h3>Seamless Integration</h3>
-                <p>Connect with thousands of CRMs, calendars, and business tools. Works with GoHighLevel, Salesforce, HubSpot, and more</p>
-            </div>
-            <div class="feature-card">
-                <span class="feature-icon">📈</span>
-                <h3>Boost Productivity</h3>
-                <p>Free your team from repetitive tasks. Focus on high-value work while AI handles routine communications</p>
-            </div>
-            <div class="feature-card">
-                <span class="feature-icon">💼</span>
-                <h3>Business Intelligence</h3>
-                <p>Real-time insights and analytics on every interaction. Make data-driven decisions to grow your business</p>
-            </div>
-            <div class="feature-card">
-                <span class="feature-icon">⚡</span>
-                <h3>Lightning Fast Setup</h3>
-                <p>Go live in minutes, not weeks. Simple configuration with no technical expertise required</p>
-            </div>
-            <div class="feature-card">
-                <span class="feature-icon">🛡️</span>
-                <h3>Enterprise Security</h3>
-                <p>Bank-level encryption and compliance with GDPR, HIPAA, and industry standards</p>
-            </div>
-        </div>
-    </section>
+    <section class="split"><div class="panel"><h2 style="font-size:1.3rem">Before Orin</h2><ul><li>Manual copy/paste between tools</li><li>Inconsistent execution across team members</li><li>AI output with no operational follow-through</li><li>No fast support path when workflow issues appear</li></ul></div><div class="panel"><h2 style="font-size:1.3rem">After Orin</h2><ul><li>Configured assistant aligned to real workflows</li><li>Repeatable process support across the team</li><li>Integrated CRM/project communication lanes</li><li>Live ticketed support for iteration and reliability</li></ul></div></section>
 
-    <!-- Pain Points Section -->
-    <section class="pain-points">
-        <h2 class="section-title">Why Businesses Start Looking for a Better System</h2>
-        <p class="section-subtitle">Most teams do not need more software. They need fewer missed opportunities, faster response times, and a workflow that actually works together.</p>
-        <div class="pain-grid">
-            <div class="pain-card">
-                <div class="pain-icon">⏱️</div>
-                <h3>Leads Go Cold Too Fast</h3>
-                <p>When response time slips, potential customers move on. Slow follow-up, missed calls, and inconsistent outreach quietly cost businesses revenue every week.</p>
-            </div>
-            <div class="pain-card">
-                <div class="pain-icon">🔗</div>
-                <h3>Too Many Tools, Not Enough Alignment</h3>
-                <p>CRMs, calendars, texting, email, phone systems, and lead forms often live in separate places. That creates confusion, duplicate work, and missed handoffs.</p>
-            </div>
-            <div class="pain-card">
-                <div class="pain-icon">📝</div>
-                <h3>Manual Follow-Up Breaks Down</h3>
-                <p>Even strong teams struggle to stay consistent when reminders, check-ins, and outreach depend entirely on people remembering every next step.</p>
-            </div>
-            <div class="pain-card">
-                <div class="pain-icon">🌙</div>
-                <h3>After-Hours Opportunities Get Lost</h3>
-                <p>Businesses that only respond during office hours leave too much on the table. Prospects still reach out at night, on weekends, and when your staff is busy.</p>
-            </div>
-        </div>
-    </section>
+    <section><h2>How Orin creates outcomes</h2><div class="visualBand"><article class="visual"><span class="icon"><img src="https://cdn.jsdelivr.net/npm/lucide-static@latest/icons/settings.svg" alt="Configured"/></span><h3>Configured for your business</h3><p class="muted">We set up the assistant around your real workflows before launch.</p></article><article class="visual"><span class="icon"><img src="https://cdn.jsdelivr.net/npm/lucide-static@latest/icons/network.svg" alt="Stack integrations"/></span><h3>Works in your stack</h3><p class="muted">Use Orin where your team already communicates and coordinates work.</p></article><article class="visual"><span class="icon"><img src="https://cdn.jsdelivr.net/npm/lucide-static@latest/icons/trending-up.svg" alt="Continuous improvement"/></span><h3>Continuous improvement</h3><p class="muted">Live support and ticketed refinements keep the system useful over time.</p></article></div></section>
 
-    <!-- Use Cases Section -->
-    <section class="use-cases">
-        <h2 class="section-title">Popular Use Cases</h2>
-        <p class="section-subtitle">Show prospects exactly how One Solution helps businesses respond faster, capture more opportunities, and automate follow-up without adding more manual work.</p>
-        <div class="use-cases-grid">
-            <div class="use-case-card">
-                <span class="use-case-icon">📲</span>
-                <h3>Missed Call Text-Back</h3>
-                <p>Automatically respond when calls are missed so leads do not disappear after hours, during busy periods, or when your team is tied up.</p>
-            </div>
-            <div class="use-case-card">
-                <span class="use-case-icon">🎯</span>
-                <h3>Lead Capture & Routing</h3>
-                <p>Capture inquiries from calls, forms, and campaigns, then route them to the right person, pipeline, or follow-up sequence instantly.</p>
-            </div>
-            <div class="use-case-card">
-                <span class="use-case-icon">📅</span>
-                <h3>Appointment Booking</h3>
-                <p>Let customers book consultations, estimates, and service calls faster with streamlined scheduling tied into your existing calendar workflows.</p>
-            </div>
-            <div class="use-case-card">
-                <span class="use-case-icon">🔁</span>
-                <h3>Follow-Up Automation</h3>
-                <p>Keep prospects engaged with consistent reminders, nurturing sequences, and status-based outreach that happens automatically.</p>
-            </div>
-            <div class="use-case-card">
-                <span class="use-case-icon">💬</span>
-                <h3>Customer Reactivation</h3>
-                <p>Reconnect with older leads and past customers using timely outreach campaigns designed to revive dormant opportunities.</p>
-            </div>
-            <div class="use-case-card">
-                <span class="use-case-icon">🌙</span>
-                <h3>After-Hours Response</h3>
-                <p>Stay responsive even when your office is closed, giving customers answers and next steps while your team is offline.</p>
-            </div>
-        </div>
-    </section>
+    <section><h2>Team Apps → Orin → Deliverables</h2><div class="flow"><div class="flowNode">Team Apps<br><span class="muted">Slack • Discord • Teams • Telegram • Trello</span></div><div class="arrow">→</div><div class="flowNode">Orin Assistant<br><span class="muted">Configured + supported by One Solution</span></div><div class="arrow">→</div><div class="flowNode">Business Outputs<br><span class="muted">Summaries • Drafts • Task support • Reporting prep</span></div></div></section>
 
-    <!-- How It Works Section -->
-    <section class="how-it-works">
-        <h2 class="section-title">How It Works</h2>
-        <p class="section-subtitle">A simple process designed to help you improve response speed, automate follow-up, and connect the tools your business already uses.</p>
-        <div class="steps-grid">
-            <div class="step-card">
-                <div class="step-number">1</div>
-                <h3>We Review Your Workflow</h3>
-                <p>We look at how your leads currently come in, where follow-up breaks down, and which systems your team already depends on every day.</p>
-            </div>
-            <div class="step-card">
-                <div class="step-number">2</div>
-                <h3>We Connect and Configure</h3>
-                <p>We align your CRM, messaging, calling, scheduling, and automation flows so the right actions happen faster and with less manual effort.</p>
-            </div>
-            <div class="step-card">
-                <div class="step-number">3</div>
-                <h3>You Capture More Opportunities</h3>
-                <p>With stronger response times, better lead handling, and more consistent follow-up, your business is positioned to convert more of the opportunities you already generate.</p>
-            </div>
-        </div>
-    </section>
+    <section><h2>How it works</h2><div class="steps"><article class="card"><span class="step-num">1</span><h3>Submit your use case</h3><p class="muted">Share goals, bottlenecks, and the first workflow to improve.</p></article><article class="card"><span class="step-num">2</span><h3>We configure Orin</h3><p class="muted">One Solution sets up the assistant for your business context.</p></article><article class="card"><span class="step-num">3</span><h3>Deploy in your stack</h3><p class="muted">Use Orin inside your existing team and workflow lanes.</p></article><article class="card"><span class="step-num">4</span><h3>Refine continuously</h3><p class="muted">Ticketed support keeps Orin aligned as your business evolves.</p></article></div></section>
 
-    <!-- Pricing Teaser Section -->
-    <section class="pricing-teaser">
-        <span class="pricing-badge">Flexible Pricing</span>
-        <h2 class="section-title" style="color:white;">Not Every Business Needs the Same Setup</h2>
-        <p>Your pricing should match your workflow, lead volume, and integration needs. One Solution currently offers packages ranging from focused Voice AI solutions to broader CRM, AI SMS, automation, and AI calling setups. Plans start at <strong>$900/month</strong> for Voice AI, with higher-tier options for businesses that need a more complete sales and follow-up system.</p>
-        <div>
-            <a href="/packages.html" class="cta-button">See Plans</a>
-            <a href="https://link.onesolutionapp.com/widget/bookings/demo-appt-c9ee15e6-9c4b-4a6f-b9a4-5cb0588cc9c2" class="cta-button secondary">Talk to Sales</a>
-        </div>
-    </section>
+    <section><h2>Real output, not generic AI answers</h2><div class="outputs"><div class="output-nav"><button class="tabBtn active" data-tab="research">Research Brief</button><button class="tabBtn" data-tab="followup">Follow-up Draft</button><button class="tabBtn" data-tab="report">Ops Summary</button></div><div class="output-panel"><div class="outputTitle" id="outputTitle">Research Brief Example</div><div class="outputMock" id="outputMock"></div></div></div></section>
 
-    <!-- Testimonial Section -->
-    <section class="testimonials">
-        <h2 class="section-title">What Clients Say About One Solution</h2>
-        <p class="section-subtitle">Real feedback from Google reviews highlighting responsiveness, professionalism, and the value clients feel they receive from the One Solution team.</p>
-        <div class="testimonials-grid">
-            <div class="testimonial-card">
-                <div class="review-badge">Google Review</div>
-                <div class="testimonial-stars">★★★★★</div>
-                <h3>Chris</h3>
-                <p>“OneSolutionApp and specifically Gabe is the one you want in your corner. Their goal and focus is making sure you get more than you paid for. He most definitely goes above and beyond for his clients and their customer experience.”</p>
-            </div>
-            <div class="testimonial-card">
-                <div class="review-badge">Google Review</div>
-                <div class="testimonial-stars">★★★★★</div>
-                <h3>Daniel Jiles · Sunflower Casita</h3>
-                <p>“We love Gabe over here at Sunflower Casita! Thank you for all you do Gabe!”</p>
-            </div>
-            <div class="testimonial-card">
-                <div class="review-badge">Google Review</div>
-                <div class="testimonial-stars">★★★★★</div>
-                <h3>Karen Niemczyk</h3>
-                <p>“Very professional and knowledgeable.”</p>
-            </div>
-        </div>
-    </section>
+    <section id="pricing"><h2>Simple pricing</h2><div class="priceGrid"><article class="card"><h3>One-time setup</h3><div class="price">$45</div><p class="muted">Initial implementation and customization.</p></article><article class="card"><h3>Monthly support</h3><div class="price">$50/mo</div><p class="muted">Live support, ticketing, and continuous optimization.</p></article><article class="card"><h3>Terms</h3><div class="price" style="font-size:1.15rem">No long-term contract</div><p class="muted">Cancel anytime. Built to be practical and accessible.</p></article></div></section>
 
-    <!-- Outcomes Section -->
-    <section class="outcomes">
-        <h2 class="section-title" style="color:white;">What Better Systems Create</h2>
-        <p class="section-subtitle" style="color:rgba(255,255,255,0.85); max-width: 820px;">When response speed, communication, and automation improve, the business starts feeling more controlled, more consistent, and more scalable.</p>
-        <div class="outcomes-grid">
-            <div class="outcome-card">
-                <strong>Faster Response Times</strong>
-                <p>Reach leads while they are still paying attention instead of after momentum has already been lost.</p>
-            </div>
-            <div class="outcome-card">
-                <strong>More Booked Appointments</strong>
-                <p>Turn more inquiries into scheduled calls, consultations, estimates, and next steps.</p>
-            </div>
-            <div class="outcome-card">
-                <strong>Better Follow-Up Consistency</strong>
-                <p>Create a reliable process instead of leaving communication to memory, sticky notes, or manual catch-up.</p>
-            </div>
-            <div class="outcome-card">
-                <strong>Fewer Missed Opportunities</strong>
-                <p>Reduce the quiet revenue leaks caused by disconnected tools, delayed replies, and dropped handoffs.</p>
-            </div>
-        </div>
-    </section>
+    <section><h2>What’s included in ongoing support</h2><div class="grid"><article class="card"><h3>Ticketed adjustments</h3><p class="muted">Workflow updates and practical changes as your operations evolve.</p></article><article class="card"><h3>Use-case refinement</h3><p class="muted">Improve prompt strategy and task outputs based on team feedback.</p></article><article class="card"><h3>Operational continuity</h3><p class="muted">Keep Orin aligned as your CRM processes and priorities change.</p></article></div></section>
 
-    <!-- Industries Section -->
-    <section class="industries">
-        <h2 class="section-title">Built for High-Value Service Industries</h2>
-        <p class="section-subtitle">One Solution works especially well for businesses that depend on speed-to-lead, appointment setting, follow-up consistency, and operational visibility.</p>
-        <div class="industries-grid">
-            <div class="industry-card">
-                <h3>Accounting & Tax</h3>
-                <p>Capture leads during busy seasons, route inquiries correctly, and automate appointment reminders so your team can stay focused on client work instead of inbox cleanup.</p>
-                <ul>
-                    <li>Tax consultation scheduling</li>
-                    <li>Lead intake and qualification</li>
-                    <li>Client reminder workflows</li>
-                </ul>
-            </div>
-            <div class="industry-card">
-                <h3>Insurance</h3>
-                <p>Improve response times for quote requests, policy inquiries, and follow-up campaigns while making sure no opportunity sits untouched for too long.</p>
-                <ul>
-                    <li>Quote request follow-up</li>
-                    <li>Renewal and nurture automation</li>
-                    <li>Lead routing by product line</li>
-                </ul>
-            </div>
-            <div class="industry-card">
-                <h3>Home Services</h3>
-                <p>Handle inbound calls faster, convert more estimate requests, and keep crews booked with stronger scheduling and after-hours response systems.</p>
-                <ul>
-                    <li>Missed-call text-back</li>
-                    <li>Estimate request capture</li>
-                    <li>Booking and dispatch support</li>
-                </ul>
-            </div>
-            <div class="industry-card">
-                <h3>Real Estate</h3>
-                <p>Stay on top of new inquiries, automate follow-up on listings and buyer leads, and create more consistent communication throughout the sales cycle.</p>
-                <ul>
-                    <li>Buyer and seller lead nurture</li>
-                    <li>Showing and consultation booking</li>
-                    <li>Pipeline follow-up automation</li>
-                </ul>
-            </div>
-            <div class="industry-card">
-                <h3>Financial Services</h3>
-                <p>Support trust-based client relationships with more organized scheduling, lead management, and communication workflows that feel professional and timely.</p>
-                <ul>
-                    <li>Consultation request handling</li>
-                    <li>Reminder and re-engagement flows</li>
-                    <li>CRM-centered communication tracking</li>
-                </ul>
-            </div>
-            <div class="industry-card">
-                <h3>Construction & Field Teams</h3>
-                <p>Keep up with estimate requests, project inquiries, and team coordination while reducing missed opportunities caused by delayed response times.</p>
-                <ul>
-                    <li>Project inquiry intake</li>
-                    <li>Lead routing to estimators</li>
-                    <li>Follow-up sequences for open bids</li>
-                </ul>
-            </div>
-        </div>
-    </section>
+    <section><h2>What happens after you submit</h2><div class="timeline"><article class="card"><h3>1) Request review</h3><p class="muted">The One Solution team reviews your use case and priorities.</p></article><article class="card"><h3>2) Setup plan</h3><p class="muted">We define your initial implementation plan and workflow scope.</p></article><article class="card"><h3>3) Launch + support</h3><p class="muted">Orin goes live and we continue with ticketed refinement support.</p></article></div></section>
 
-    <!-- FAQ Section -->
-    <section class="faq">
-        <h2 class="section-title">Frequently Asked Questions</h2>
-        <p class="section-subtitle">Answering the biggest questions prospects usually have before they decide to book a conversation.</p>
-        <div class="faq-list">
-            <div class="faq-item">
-                <h3>Do I need to replace my current CRM?</h3>
-                <p>Not necessarily. One Solution is designed to work with the systems many businesses already use, helping improve workflow and automation without forcing a complete reset.</p>
-            </div>
-            <div class="faq-item">
-                <h3>Can I use Voice AI without the full CRM package?</h3>
-                <p>Yes. Your packages already include a Voice AI option for businesses that want focused voice automation without adopting the broader CRM and communication stack.</p>
-            </div>
-            <div class="faq-item">
-                <h3>How long does setup usually take?</h3>
-                <p>That depends on your current systems and what you want connected, but the goal is always practical implementation that gets value in place quickly rather than dragging the process out.</p>
-            </div>
-            <div class="faq-item">
-                <h3>What types of businesses is this best for?</h3>
-                <p>It works especially well for service businesses that depend on speed-to-lead, appointment booking, follow-up consistency, and strong customer communication.</p>
-            </div>
-            <div class="faq-item">
-                <h3>What if my software is not listed on the integrations page?</h3>
-                <p>That does not automatically rule it out. The integrations page is curated, and broader compatibility can often be supported through flexible connection layers like Zapier and similar workflow tools.</p>
-            </div>
-            <div class="faq-item">
-                <h3>Is this only for larger companies?</h3>
-                <p>No. The offer is positioned for real businesses that want better systems, clearer follow-up, and more automation without unnecessary complexity.</p>
-            </div>
-        </div>
-    </section>
+    <section class="fit"><article class="card"><h3>Best fit for</h3><ul><li>SMBs and operations-heavy teams</li><li>Agencies, consultants, and service providers</li><li>Leaders who want execution, not more tool complexity</li></ul></article><article class="card"><h3>Not ideal for</h3><ul><li>Set-and-forget expectations with zero feedback loop</li><li>Teams unwilling to test/refine workflows</li><li>Hype-only AI use with no business objective</li></ul></article></section>
 
-    <!-- Integration Section -->
-    <section class="integrations">
-        <h2>Works With Your Favorite Tools</h2>
-        <p>One Solution integrates seamlessly with thousands of CRMs, marketing platforms, and business software. From appointment scheduling to lead nurturing, we've got you covered.</p>
-        <div class="integration-logos">
-            <div class="integration-logo">GoHighLevel</div>
-            <div class="integration-logo">Salesforce</div>
-            <div class="integration-logo">HubSpot</div>
-            <div class="integration-logo">Zapier</div>
-            <div class="integration-logo">1000+ More</div>
-        </div>
-        <a href="/integrations.html" class="cta-button">View All Integrations</a>
-    </section>
+    <section class="faq"><h2>Frequently asked questions</h2><details><summary>How long does setup usually take?</summary><p class="muted">Most initial setups can be scoped quickly after request review. Timing depends on workflow complexity and integration needs.</p></details><details><summary>Can Orin work with our existing CRM stack?</summary><p class="muted">Yes. Orin is positioned to operate in One Solution CRM and across common communication/project lanes your team already uses.</p></details><details><summary>What happens if our workflow needs change?</summary><p class="muted">That’s exactly what ongoing support is for—ticketed refinements and updates keep Orin aligned over time.</p></details><details><summary>Can we cancel monthly support anytime?</summary><p class="muted">Yes. No long-term contract; cancel anytime.</p></details></section>
 
-    <!-- CTA Section -->
-    <section class="cta-section">
-        <h2>Ready to Automate Your Business?</h2>
-        <p>Explore the right package for your business, then schedule a conversation to map the best workflow for your team.</p>
-        <div>
-            <a href="/packages.html" class="cta-button">View Packages</a>
-            <a href="https://link.onesolutionapp.com/widget/bookings/demo-appt-c9ee15e6-9c4b-4a6f-b9a4-5cb0588cc9c2" class="cta-button secondary">Talk to Sales</a>
-        </div>
-    </section>
+    <section class="formWrap" id="demo-form"><h2 style="margin-top:0">Request Orin Setup</h2><p class="muted">Submit your request and your CRM automation captures the lead and notifies your team.</p><iframe src="https://link.onesolutionapp.com/widget/form/CowOWlCpQDzIq8FGlDG9" style="width:100%;height:848px;border:none;border-radius:12px" id="inline-CowOWlCpQDzIq8FGlDG9" data-layout="{'id':'INLINE'}" data-trigger-type="alwaysShow" data-trigger-value="" data-activation-type="alwaysActivated" data-activation-value="" data-deactivation-type="neverDeactivate" data-deactivation-value="" data-form-name="Contact Us Orin Page Form" data-height="848" data-layout-iframe-id="inline-CowOWlCpQDzIq8FGlDG9" data-form-id="CowOWlCpQDzIq8FGlDG9" title="Contact Us Orin Page Form"></iframe><script src="https://link.onesolutionapp.com/js/form_embed.js"></script><p class="note">Submissions route through your CRM automation.</p></section>
 
-    <!-- Footer -->
-    <footer>
-        <p><strong>One Solution LLC</strong></p>
-        <p>AI Voice, CRM, and automation systems designed to help service businesses respond faster and convert more opportunities.</p>
-        <p><a href="https://galagasolutions.github.io/">Home</a> | <a href="https://galagasolutions.github.io/integrations.html">Integrations</a> | <a href="https://galagasolutions.github.io/packages.html">Packages</a> | <a href="https://link.onesolutionapp.com/widget/bookings/demo-appt-c9ee15e6-9c4b-4a6f-b9a4-5cb0588cc9c2">Schedule a Demo</a></p>
-        <p>Phoenix, Arizona | <a href="mailto:one_solution_support@agentmail.to">one_solution_support@agentmail.to</a></p>
-    </footer>
+    <footer><div>© <span id="y"></span> One Solution LLC • Orin by One Solution</div><div class="legal"><a href="https://my.onesolutionapp.com/privacy-policy/" target="_blank" rel="noopener noreferrer">Privacy Policy</a><a href="https://my.onesolutionapp.com/terms-of-service/" target="_blank" rel="noopener noreferrer">Terms of Service</a></div></footer>
+  </div>
+
+  <div class="mobileSticky"><a href="#demo-form" class="btn primary">Request Orin Setup</a></div>
+
+  <script>
+    document.getElementById('y').textContent = new Date().getFullYear();
+    const outputs = {
+      research: { title: 'Research Brief Example', body: `Prospect Snapshot — Phoenix Home Services\n\n• Priority Segment: Residential remodelers (10–50 staff)\n• Core pain: Manual follow-up + scheduling handoff gaps\n• Suggested play: 3-step outreach + pipeline stage sync\n• Next action: Build owner-approved follow-up sequence` },
+      followup: { title: 'Follow-up Draft Example', body: `Subject: Quick follow-up on your workflow goals\n\nHi {{FirstName}},\n\nBased on your request, we can start with lead follow-up + CRM update automation first, then layer in reporting prep next.\n\nWould you like speed-to-lead or handoff consistency prioritized in phase 1?` },
+      report: { title: 'Ops Summary Example', body: `Weekly Workflow Summary\n\n• Leads processed: 48\n• Follow-ups generated: 41\n• Stage updates completed: 36\n• Open support tickets: 2\n\nPrimary bottleneck: delayed opportunity assignment in after-hours window.` }
+    };
+    const titleEl = document.getElementById('outputTitle');
+    const bodyEl = document.getElementById('outputMock');
+    const tabBtns = document.querySelectorAll('.tabBtn');
+    function setTab(key){ const item = outputs[key]; titleEl.textContent = item.title; bodyEl.textContent = item.body; tabBtns.forEach(btn => btn.classList.toggle('active', btn.dataset.tab === key)); }
+    setTab('research'); tabBtns.forEach(btn => btn.addEventListener('click', () => setTab(btn.dataset.tab)));
+    const prompt = document.getElementById('heroPrompt'); const promptBtn = document.getElementById('buildPlanBtn'); const promptNote = document.getElementById('promptNote');
+    promptBtn.addEventListener('click', async () => {
+      const text = (prompt.value || '').trim(); document.getElementById('demo-form').scrollIntoView({ behavior:'smooth', block:'start' });
+      if(!text){ promptNote.textContent = 'Add your use case first, then click again to carry it into your request flow.'; return; }
+      try { await navigator.clipboard.writeText(text); promptBtn.textContent = 'Copied — paste into request form'; promptNote.textContent = 'Prompt copied. Paste it into the Main Use Case Description field in the form below.'; }
+      catch { promptNote.textContent = 'Copy failed on this browser. Please manually copy your prompt before submitting.'; }
+      setTimeout(() => promptBtn.textContent = 'Use This in Request', 2600);
+    });
+  </script>
 </body>
 </html>
