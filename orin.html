@@ -1,0 +1,193 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Orin by One Solution | Done-for-You AI Business Assistant</title>
+  <meta name="description" content="Orin by One Solution is a done-for-you AI business assistant. Fully set up, customized to your workflow, and backed by live support." />
+  <link rel="icon" href="./assets/favicon-one-solution.jpg" />
+  <style>
+    :root {
+      --bg: #0b1220;
+      --panel: #111a2e;
+      --text: #eef3ff;
+      --muted: #b5c1da;
+      --primary: #3b82f6;
+      --primary-2: #2563eb;
+      --line: #24314f;
+      --ok: #16a34a;
+    }
+    * { box-sizing: border-box; }
+    body {
+      margin: 0;
+      font-family: Inter, system-ui, -apple-system, Segoe UI, Roboto, sans-serif;
+      background: radial-gradient(circle at 15% -10%, #1a2950 0%, var(--bg) 45%);
+      color: var(--text);
+      line-height: 1.55;
+    }
+    .wrap { width: min(1120px, 92vw); margin: 0 auto; }
+    .nav { display:flex; align-items:center; justify-content:space-between; padding: 22px 0; }
+    .nav img { height: 44px; }
+    .btn { display:inline-block; padding: 12px 18px; border-radius: 10px; text-decoration:none; font-weight:600; }
+    .btn.primary { background: var(--primary); color: #fff; }
+    .btn.primary:hover { background: var(--primary-2); }
+    .btn.ghost { border:1px solid #3a4c75; color: var(--text); }
+    .hero { padding: 34px 0 46px; }
+    .kicker { color: #93c5fd; font-weight: 700; letter-spacing: .03em; text-transform: uppercase; font-size: 12px; }
+    h1 { font-size: clamp(2rem, 4.8vw, 3.2rem); line-height: 1.08; margin: 8px 0 16px; }
+    .lead { color: var(--muted); font-size: 1.08rem; max-width: 760px; }
+    .cta { display:flex; gap: 12px; flex-wrap: wrap; margin-top: 24px; }
+    .price { margin-top: 22px; color: #dbe7ff; font-weight: 600; }
+    section { padding: 26px 0; }
+    h2 { margin: 0 0 12px; font-size: clamp(1.4rem, 2.8vw, 2rem); }
+    p, li { color: var(--muted); }
+    .grid { display:grid; gap: 14px; grid-template-columns: repeat(auto-fit, minmax(220px, 1fr)); }
+    .card {
+      background: linear-gradient(180deg, rgba(255,255,255,.02), rgba(255,255,255,.01));
+      border: 1px solid var(--line);
+      border-radius: 14px;
+      padding: 18px;
+    }
+    .card h3 { margin: 0 0 8px; font-size: 1.03rem; }
+    .split { display:grid; gap:20px; grid-template-columns: 1.1fr .9fr; }
+    .list { margin: 0; padding-left: 20px; }
+    .badge { display:inline-block; font-size:.78rem; color:#d1fae5; background: rgba(22,163,74,.16); border:1px solid rgba(22,163,74,.35); border-radius: 999px; padding: 5px 10px; margin-bottom:10px; }
+    .faq details { border:1px solid var(--line); border-radius: 10px; padding: 12px 14px; background: var(--panel); }
+    .faq details + details { margin-top: 10px; }
+    .faq summary { cursor:pointer; font-weight:600; color: #e6eeff; }
+    .panel { background: var(--panel); border:1px solid var(--line); border-radius: 14px; padding: 20px; }
+    .final { text-align:center; padding: 42px 0 56px; }
+    footer { border-top:1px solid var(--line); padding: 20px 0 28px; color: #8fa4cc; font-size: .92rem; }
+    @media (max-width: 860px){ .split { grid-template-columns: 1fr; } }
+  </style>
+</head>
+<body>
+  <div class="wrap">
+    <header class="nav">
+      <a href="./index.html"><img src="./assets/one-solution-logo-header-clean.png" alt="One Solution"></a>
+      <a class="btn ghost" href="./packages.html">See Packages</a>
+    </header>
+
+    <section class="hero">
+      <div class="kicker">Orin by One Solution</div>
+      <h1>Your Done-for-You AI Business Assistant</h1>
+      <p class="lead">Get a fully set up AI assistant customized for your workflow—without technical setup burden. One Solution handles setup, tailors skillsets to your business, and provides live support with issue ticketing as your needs evolve.</p>
+      <div class="cta">
+        <a class="btn primary" href="#get-started">Get Orin Setup</a>
+        <a class="btn ghost" href="#pricing">View Pricing</a>
+      </div>
+      <div class="price">$45 one-time setup + $50/month • No contracts • Cancel anytime</div>
+    </section>
+
+    <section>
+      <div class="split">
+        <div>
+          <h2>Why businesses choose Orin</h2>
+          <p>Most owners know AI can help, but they do not have extra time to configure tools, train systems, and maintain workflows. Orin solves that by delivering a business-ready assistant configured for real operations, not generic demos.</p>
+          <p><strong>Core value:</strong> Instead of giving your business another tool to learn, One Solution delivers a customized assistant aligned to your workflow and backed by real human support.</p>
+        </div>
+        <div class="panel">
+          <div class="badge">Support Promise</div>
+          <p>Live support and issue ticketing from the One Solution success team.</p>
+          <p>Follow-up on support requests within <strong>24 hours</strong> (or faster when possible).</p>
+        </div>
+      </div>
+    </section>
+
+    <section>
+      <h2>Primary benefits</h2>
+      <div class="grid">
+        <article class="card"><h3>Save Time</h3><p>Reduce repetitive digital work, summaries, drafting, prep, and admin support.</p></article>
+        <article class="card"><h3>Reduce Setup Burden</h3><p>One Solution handles setup and customization before delivery.</p></article>
+        <article class="card"><h3>Improve Consistency</h3><p>Support repeatable workflows and standardized execution across teams.</p></article>
+        <article class="card"><h3>Stay Organized</h3><p>Assist with planning, notes, summaries, retrieval, and workflow support.</p></article>
+        <article class="card"><h3>Ongoing Support</h3><p>You’re not left alone after setup—live help and ticketing are included.</p></article>
+        <article class="card"><h3>Flexible by Industry</h3><p>Useful for agencies, consultants, real estate, insurance, accounting, contractors, and more.</p></article>
+      </div>
+    </section>
+
+    <section>
+      <h2>Common use cases</h2>
+      <div class="split">
+        <div class="panel">
+          <ul class="list">
+            <li>Market/prospect/competitor research support</li>
+            <li>Outreach prep and follow-up drafting</li>
+            <li>Business summaries and reporting prep</li>
+            <li>Task organization and meeting prep</li>
+            <li>SOP and recurring workflow support</li>
+            <li>Document and content summarization</li>
+          </ul>
+        </div>
+        <div class="panel">
+          <h3>Agency-specific support</h3>
+          <ul class="list">
+            <li>Prospecting research</li>
+            <li>Competitor snapshots</li>
+            <li>Campaign planning support</li>
+            <li>Ad and landing page review support</li>
+            <li>Client prep summaries</li>
+            <li>Internal process + reporting prep</li>
+          </ul>
+        </div>
+      </div>
+    </section>
+
+    <section>
+      <h2>What’s included</h2>
+      <div class="panel">
+        <ul class="list">
+          <li>Done-for-you setup by One Solution</li>
+          <li>Customization based on your intended use cases</li>
+          <li>Onboarding and delivery support</li>
+          <li>Live support from the One Solution success team</li>
+          <li>Issue ticketing for troubleshooting, adjustments, and feature requests</li>
+          <li>Ongoing refinement as business needs evolve</li>
+        </ul>
+      </div>
+    </section>
+
+    <section id="pricing">
+      <h2>Simple pricing</h2>
+      <div class="grid">
+        <article class="card">
+          <h3>One-Time Setup</h3>
+          <p><strong style="font-size:1.4rem;color:#fff;">$45</strong></p>
+          <p>Initial done-for-you implementation and assistant configuration.</p>
+        </article>
+        <article class="card">
+          <h3>Monthly Subscription</h3>
+          <p><strong style="font-size:1.4rem;color:#fff;">$50 / month</strong></p>
+          <p>Includes support, issue ticketing, and ongoing assistant refinement.</p>
+        </article>
+        <article class="card">
+          <h3>Terms</h3>
+          <p>No long-term contracts. Cancel anytime. Offered as an add-on to One Solution services.</p>
+        </article>
+      </div>
+    </section>
+
+    <section class="faq">
+      <h2>FAQ</h2>
+      <details><summary>Is Orin replacing a full team member?</summary><p>No. Orin is a support tool for repetitive digital work, organization, and workflow assistance.</p></details>
+      <details><summary>Do I need to configure everything myself?</summary><p>No. One Solution handles setup and customization before delivery.</p></details>
+      <details><summary>Can Orin be tailored to my industry?</summary><p>Yes. Orin is designed to adapt across industries and business models.</p></details>
+      <details><summary>Can I cancel anytime?</summary><p>Yes. There are no long-term contracts.</p></details>
+    </section>
+
+    <section class="final" id="get-started">
+      <h2>Get Orin by One Solution</h2>
+      <p class="lead" style="margin:0 auto 18px;">Launch your done-for-you AI assistant with guided setup, practical customization, and real support.</p>
+      <div class="cta" style="justify-content:center;">
+        <a class="btn primary" href="mailto:one_solution_support@agentmail.to?subject=Orin%20Setup%20Request">Start My Setup</a>
+        <a class="btn ghost" href="./integrations.html">Explore Integrations</a>
+      </div>
+    </section>
+
+    <footer>
+      © <span id="year"></span> One Solution LLC • Orin by One Solution
+    </footer>
+  </div>
+  <script>document.getElementById('year').textContent = new Date().getFullYear();</script>
+</body>
+</html>
