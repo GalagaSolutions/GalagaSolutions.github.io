@@ -9,20 +9,45 @@
   <link rel="icon" href="./assets/favicon-one-solution.jpg" />
   <link rel="stylesheet" href="./assets/orin-theme.css" />
   <style>
-    .hero{display:grid;grid-template-columns:1.02fr .98fr;gap:24px;align-items:center}
-    .eyebrow{display:inline-flex;background:#122041;border:1px solid #27437f;color:#9ec5ff;padding:6px 10px;border-radius:999px;font-size:.78rem;font-weight:700;margin-bottom:10px}
-    .hero h1{max-width:16ch}
-    .sub{max-width:60ch}
-    .ctaRow{display:flex;gap:10px;flex-wrap:wrap;margin-top:14px}
-    .chipRow{display:flex;gap:8px;flex-wrap:wrap;margin-top:12px}
+    .hero{display:grid;grid-template-columns:1.02fr .98fr;gap:26px;align-items:center;padding-top:18px}
+    .eyebrow{display:inline-flex;background:#122041;border:1px solid #315597;color:#b9d3ff;padding:6px 10px;border-radius:999px;font-size:.78rem;font-weight:700;margin-bottom:12px;letter-spacing:.03em}
+    .heroKicker{font-size:.92rem;color:#8fb4ff;text-transform:uppercase;letter-spacing:.12em;margin-bottom:10px}
+    .hero h1{max-width:12ch;margin-bottom:14px}
+    .hero h1 span{display:block}
+    .heroAccent{background:linear-gradient(90deg,#ffffff 0%,#d7e5ff 38%,#8cc1ff 72%,#a78bfa 100%);-webkit-background-clip:text;background-clip:text;color:transparent}
+    .sub{max-width:60ch;font-size:1.03rem}
+    .ctaRow{display:flex;gap:10px;flex-wrap:wrap;margin-top:16px}
+    .heroNote{margin-top:12px;padding:11px 13px;border:1px solid #355b9e;border-radius:12px;background:linear-gradient(135deg,rgba(18,32,65,.95),rgba(19,43,87,.9));color:#dce9ff;font-size:.93rem;box-shadow:0 10px 30px rgba(15,25,52,.24)}
+    .heroStats{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:10px;margin-top:14px}
+    .heroStat{border:1px solid #2f4f89;background:linear-gradient(145deg,#0e1831,#0b1226);border-radius:14px;padding:12px}
+    .heroStat b{display:block;font-size:1.28rem;line-height:1.05;color:#f4f8ff;margin-bottom:4px}
+    .heroStat span{display:block;font-size:.85rem;color:#a9bbdf}
+    .chipRow{display:flex;gap:8px;flex-wrap:wrap;margin-top:14px}
     .chip{font-size:.8rem;border:1px solid #315597;background:#122041;color:#d6e7ff;padding:5px 9px;border-radius:999px}
 
-    .mock{border:1px solid #35538f;border-radius:18px;padding:16px;background:linear-gradient(145deg,#0f1c3b,#0a1228);position:relative;overflow:hidden}
-    .mock:after{content:'';position:absolute;right:-34px;top:-34px;width:140px;height:140px;border-radius:50%;background:radial-gradient(circle,rgba(59,130,246,.35),transparent 70%)}
-    .mockTop{display:grid;grid-template-columns:1fr 1fr;gap:10px}
-    .mini{background:#102042;border:1px solid #35538f;border-radius:10px;padding:10px;font-size:.86rem;color:#d8e7ff}
-    .mini b{display:block;margin-bottom:4px}
-    .miniLine{height:7px;border-radius:6px;background:#2d4576;margin-top:6px}
+    .heroVisual{border:1px solid #3a5fa8;border-radius:22px;padding:18px;background:
+      radial-gradient(circle at 82% 8%, rgba(124,58,237,.32), transparent 28%),
+      radial-gradient(circle at 12% 0%, rgba(59,130,246,.22), transparent 32%),
+      linear-gradient(145deg,#0e1933,#091122);position:relative;overflow:hidden;box-shadow:0 18px 46px rgba(8,14,30,.42)}
+    .heroVisual:after{content:'';position:absolute;right:-44px;top:-44px;width:160px;height:160px;border-radius:50%;background:radial-gradient(circle,rgba(59,130,246,.42),transparent 72%)}
+    .signalBar{display:inline-flex;align-items:center;gap:8px;padding:7px 10px;border-radius:999px;border:1px solid #355da5;background:#101f42;color:#dbe8ff;font-size:.82rem;font-weight:700;margin-bottom:14px}
+    .signalBar i{display:inline-flex;width:9px;height:9px;border-radius:50%;background:#34d399;box-shadow:0 0 0 6px rgba(52,211,153,.12)}
+    .heroVisualGrid{display:grid;grid-template-columns:1.15fr .85fr;gap:12px;position:relative;z-index:1}
+    .workflowCard{border:1px solid #2e4c85;background:rgba(16,28,57,.92);border-radius:16px;padding:14px;color:#dce8ff}
+    .workflowCard.primary{background:linear-gradient(160deg,rgba(20,41,83,.98),rgba(13,22,45,.98));border-color:#4a73c0}
+    .workflowCard.compact{padding:12px}
+    .workflowCard h3{margin:0 0 6px;font-size:1rem}
+    .workflowMeta{display:flex;gap:8px;flex-wrap:wrap;margin:10px 0 0}
+    .workflowMeta span{font-size:.76rem;padding:4px 8px;border-radius:999px;background:#152a52;border:1px solid #345b9f;color:#cfe0ff}
+    .workflowLines{margin-top:10px}
+    .workflowLines div{height:8px;border-radius:999px;background:#21365f;margin:7px 0}
+    .workflowLines div.sm{width:68%}
+    .miniGrid{display:grid;gap:12px}
+    .queueList{display:grid;gap:8px;margin-top:8px}
+    .queueItem{display:flex;align-items:center;justify-content:space-between;gap:8px;font-size:.84rem;padding:8px 9px;border-radius:10px;background:#0d1831;border:1px solid #213b69}
+    .queueItem strong{font-weight:700;color:#eef4ff}
+    .pillStatus{font-size:.72rem;padding:3px 7px;border-radius:999px;background:#173767;border:1px solid #3d6cb6;color:#cfe1ff}
+    .heroSideNote{margin-top:12px;color:#9db4de;font-size:.85rem}
 
     .systemStrip{display:grid;grid-template-columns:repeat(auto-fit,minmax(120px,1fr));gap:10px}
     .sys{display:flex;align-items:center;justify-content:center;gap:8px;padding:10px;border:1px solid #38558b;background:linear-gradient(140deg,#101b36,#0b142b);border-radius:12px;color:#d9e6ff;font-weight:600;font-size:.9rem}
@@ -32,7 +57,8 @@
     .deliver{border:1px solid #2f4e87;background:#0d1a34;border-radius:14px;padding:14px}
     .deliverHead{display:flex;justify-content:space-between;align-items:center;margin-bottom:8px}
     .badge{font-size:.72rem;background:#173767;border:1px solid #3d6cb6;color:#cfe1ff;padding:3px 7px;border-radius:999px}
-    .l{height:8px;border-radius:6px;background:#1a2a4b;margin:7px 0}.l.sm{width:65%}
+    .l{height:8px;border-radius:6px;background:#1a2a4b;margin:7px 0}
+    .l.sm{width:65%}
 
     .timeline{display:grid;grid-template-columns:repeat(auto-fit,minmax(170px,1fr));gap:10px}
     .step{padding:12px;border:1px solid #2f4c82;background:#0f1934;border-radius:12px}
@@ -50,13 +76,22 @@
 
     .pricingBand{display:grid;grid-template-columns:repeat(auto-fit,minmax(230px,1fr));gap:12px}
 
+    .finalCtaCard{text-align:center;padding:26px 20px;background:
+      radial-gradient(circle at top, rgba(59,130,246,.12), transparent 42%),
+      linear-gradient(160deg,#0f1a35,#0a1227);border-color:#33558f}
+    .finalCtaCard h2{margin-bottom:10px}
+    .ctaStack{display:flex;justify-content:center;align-items:center;gap:12px;flex-wrap:wrap;margin-top:16px}
+    .ctaStack .btn{min-width:240px}
+    .finalNote{font-size:.9rem;margin-top:10px}
+
     @media(max-width:980px){
-      .hero,.compare,.arch{grid-template-columns:1fr}
+      .hero,.compare,.arch,.heroVisualGrid{grid-template-columns:1fr}
       .arr{transform:rotate(90deg)}
       .hero h1{max-width:unset}
       .sub{max-width:unset}
       .chipRow{margin-top:10px}
-      .ctaRow .btn{width:100%}
+      .ctaRow .btn,.ctaStack .btn{width:100%;min-width:0}
+      .heroStats{grid-template-columns:1fr}
     }
   </style>
   <meta property="og:title" content="Orin by One Solution" />
@@ -83,11 +118,22 @@
     <section class="hero">
       <div>
         <span class="eyebrow">ORIN BY ONE SOLUTION</span>
-        <h1>Deploy Orin in your business without building it yourself</h1>
-        <p class="muted sub">Most teams know AI could help, but setup and maintenance kill momentum. Orin is configured and supported by One Solution, so your team gets operational AI support without technical overhead.</p>
+        <div class="heroKicker">Done-for-you AI deployment for real business operations</div>
+        <h1>
+          <span>Launch Orin as a</span>
+          <span class="heroAccent">real working system</span>
+          <span>inside your business</span>
+        </h1>
+        <p class="muted sub">Most teams do not need another AI tool to babysit. They need a configured workflow system that helps with follow-up, research, summaries, and team execution. One Solution sets up Orin around your operation and supports it after launch.</p>
         <div class="ctaRow">
           <a class="btn p" href="https://link.onesolutionapp.com/widget/form/CowOWlCpQDzIq8FGlDG9" target="_blank" rel="noopener noreferrer">Request Orin Setup</a>
           <a class="btn g" href="./pricing.html">View Pricing</a>
+        </div>
+        <div class="heroNote">⚡ Fast launch path: most teams can activate an initial Orin workflow lane in days, not months.</div>
+        <div class="heroStats">
+          <div class="heroStat"><b>DFY</b><span>Configured by One Solution, not left as DIY</span></div>
+          <div class="heroStat"><b>24h</b><span>Typical support follow-up target after launch</span></div>
+          <div class="heroStat"><b>5+</b><span>Communication lanes supported across common team stacks</span></div>
         </div>
         <div class="chipRow">
           <span class="chip">Done-for-you setup</span>
@@ -96,13 +142,46 @@
           <span class="chip">Built around your workflow</span>
         </div>
       </div>
-      <aside class="mock">
-        <div class="mockTop">
-          <div class="mini"><b>Request Input</b>Lead response + follow-up<div class="miniLine"></div></div>
-          <div class="mini"><b>Orin Runtime</b>Scoped workflow lane<div class="miniLine"></div></div>
-          <div class="mini"><b>Support Ticket</b>Refinement in queue<div class="miniLine"></div></div>
-          <div class="mini"><b>Output Queue</b>Research + Draft + Summary<div class="miniLine"></div></div>
+
+      <aside class="heroVisual">
+        <div class="signalBar"><i></i> Deployment lane active</div>
+        <div class="heroVisualGrid">
+          <article class="workflowCard primary">
+            <h3>Lead Response Workflow</h3>
+            <p class="muted">Incoming request → Orin drafts follow-up, prepares next-step recommendation, and keeps the team moving.</p>
+            <div class="workflowMeta">
+              <span>CRM-triggered</span>
+              <span>Team-ready output</span>
+              <span>Supported post-launch</span>
+            </div>
+            <div class="workflowLines">
+              <div></div>
+              <div class="sm"></div>
+              <div></div>
+            </div>
+          </article>
+
+          <div class="miniGrid">
+            <article class="workflowCard compact">
+              <h3>Support Queue</h3>
+              <div class="queueList">
+                <div class="queueItem"><strong>Prompt refinement</strong><span class="pillStatus">queued</span></div>
+                <div class="queueItem"><strong>Workflow tuning</strong><span class="pillStatus">active</span></div>
+                <div class="queueItem"><strong>Ops handoff fix</strong><span class="pillStatus">reviewed</span></div>
+              </div>
+            </article>
+
+            <article class="workflowCard compact">
+              <h3>Business Outputs</h3>
+              <div class="queueList">
+                <div class="queueItem"><strong>Research brief</strong><span class="pillStatus">ready</span></div>
+                <div class="queueItem"><strong>Follow-up draft</strong><span class="pillStatus">ready</span></div>
+                <div class="queueItem"><strong>Ops summary</strong><span class="pillStatus">ready</span></div>
+              </div>
+            </article>
+          </div>
         </div>
+        <p class="heroSideNote">Configured around your workflow, deployed into your stack, and supported after launch.</p>
       </aside>
     </section>
 
@@ -199,13 +278,16 @@
     </section>
 
     <section>
-      <h2>Ready to deploy Orin in your workflow?</h2>
-      <p class="muted">Get a done-for-you AI assistant customized by One Solution and supported after launch.</p>
-      <div class="ctaRow">
-        <a class="btn p" href="https://link.onesolutionapp.com/widget/form/CowOWlCpQDzIq8FGlDG9" target="_blank" rel="noopener noreferrer">Request Orin Setup</a>
-        <a class="btn g" href="./how-it-works.html">See Implementation Flow</a>
+      <div class="card finalCtaCard">
+        <span class="eyebrow">READY TO START</span>
+        <h2>Ready to deploy Orin in your workflow?</h2>
+        <p class="muted">Get a done-for-you AI operator configured by One Solution, launched into your workflow, and supported after go-live.</p>
+        <div class="ctaStack">
+          <a class="btn p" href="https://link.onesolutionapp.com/widget/form/CowOWlCpQDzIq8FGlDG9" target="_blank" rel="noopener noreferrer">Request Orin Setup</a>
+          <a class="btn g" href="./how-it-works.html">See Implementation Flow</a>
+        </div>
+        <p class="muted finalNote">No long-term contract. Cancel anytime.</p>
       </div>
-      <p class="muted" style="font-size:.9rem;margin-top:8px">No long-term contract. Cancel anytime.</p>
     </section>
 
     <footer>
@@ -216,8 +298,6 @@
       </div>
     </footer>
   </div>
-
-  <div class="mobileSticky"><a class="btn p" href="https://link.onesolutionapp.com/widget/form/CowOWlCpQDzIq8FGlDG9" target="_blank" rel="noopener noreferrer">Request Orin Setup</a></div>
 
   <script>
     document.getElementById('y').textContent = new Date().getFullYear();
