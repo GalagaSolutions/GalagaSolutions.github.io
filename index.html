@@ -64,7 +64,54 @@
     /* Pricing band */
     .pricingBand{display:grid;grid-template-columns:repeat(auto-fit,minmax(230px,1fr));gap:12px}
 
-    /* Final CTA Card - Fixed alignment */
+    /* Proof Strip */
+    .proofStrip{text-align:center;padding:50px 30px;background:linear-gradient(180deg,rgba(59,130,246,0.06),transparent);border-radius:20px;border:1px solid rgba(59,130,246,0.12);margin:30px 0}
+    .proofStrip h3{font-size:1.6rem;margin-bottom:8px}
+    .proofStrip .subtext{font-size:.95rem;color:var(--muted);margin-bottom:35px}
+    .proofStats{display:grid;grid-template-columns:repeat(3,1fr);gap:30px;margin-top:30px}
+    .proofStat{text-align:center}
+    .proofStat .number{font-size:2.8rem;font-weight:800;background:linear-gradient(90deg,#fff,#8cc1ff);-webkit-background-clip:text;background-clip:text;color:transparent;line-height:1.1;margin-bottom:10px}
+    .proofStat .label{font-size:.9rem;color:#a9bbdf;line-height:1.4}
+
+    /* Value Cards */
+    .valueCard{background:linear-gradient(145deg,#0d1a34,#0b1428);border:1px solid #2f4e87;border-radius:16px;padding:24px;transition:all .3s ease;height:100%;display:flex;flex-direction:column}
+    .valueCard:hover{transform:translateY(-4px);border-color:#4a73c0;box-shadow:0 12px 30px rgba(0,0,0,0.25)}
+    .valueCard h3{margin-bottom:12px;font-size:1.15rem}
+    .valueCard p.muted{margin-bottom:8px;flex-grow:1}
+    .valueCard .supportLine{font-size:.85rem;color:#8fb4ff;margin-top:auto;padding-top:12px;border-top:1px solid #2f4e87}
+
+    /* Industry Cards */
+    .industryCard{background:linear-gradient(145deg,#0d1a34,#0b1428);border:1px solid #2f4e87;border-radius:16px;padding:22px;transition:all .3s ease;height:100%;display:flex;flex-direction:column}
+    .industryCard:hover{transform:translateY(-4px);border-color:#4a73c0;box-shadow:0 12px 30px rgba(0,0,0,0.25)}
+    .industryCard h3{margin-bottom:12px;font-size:1.1rem}
+    .industryCard .problem{color:#f87171;font-size:.85rem;margin-bottom:6px}
+    .industryCard .solution{color:#8fb4ff;font-size:.9rem;margin-bottom:6px;flex-grow:1}
+    .industryCard .outcome{color:#34d399;font-size:.85rem;margin-top:auto;padding-top:10px;border-top:1px solid #2f4e87}
+
+    /* Trust Band */
+    .trustBand{display:grid;grid-template-columns:repeat(4,1fr);gap:16px}
+    .trustCard{text-align:center;padding:28px 20px;background:linear-gradient(145deg,#0d1a34,#0b1428);border:1px solid #2f4e87;border-radius:16px;transition:all .3s ease}
+    .trustCard:hover{transform:translateY(-4px);border-color:#4a73c0;box-shadow:0 12px 30px rgba(0,0,0,0.25)}
+    .trustCard .icon{width:44px;height:44px;margin:0 auto 14px;background:linear-gradient(135deg,#122041,#1a3055);border-radius:12px;display:flex;align-items:center;justify-content:center;font-size:.9rem;font-weight:700;color:#b9d3ff}
+    .trustCard h4{font-size:1rem;margin-bottom:8px}
+    .trustCard p{font-size:.85rem;color:#a9bbdf;line-height:1.4}
+
+    /* Pricing Reassurance */
+    .pricingReassurance{background:linear-gradient(145deg,#0f1a35,#0a1227);border:1px solid #33558f;border-radius:18px;padding:35px 30px;margin-top:30px}
+    .pricingReassurance h3{text-align:center;margin-bottom:25px}
+    .billingFlow{text-align:center;font-size:1.1rem;color:#dce9ff;margin-bottom:30px;padding:18px;background:rgba(47,107,255,0.1);border-radius:12px;border:1px solid rgba(47,107,255,0.2)}
+    .purchaseSteps{display:grid;grid-template-columns:repeat(4,1fr);gap:20px;margin:25px 0}
+    .purchaseStep{text-align:center}
+    .purchaseStep .num{width:36px;height:36px;background:linear-gradient(135deg,#2f6bff,#1f5af5);border-radius:50%;display:flex;align-items:center;justify-content:center;margin:0 auto 10px;font-weight:700;font-size:.9rem;color:#fff}
+    .purchaseStep h4{font-size:.9rem;margin-bottom:6px}
+    .purchaseStep p{font-size:.8rem;color:#a9bbdf;line-height:1.3}
+    .decisionHelper{text-align:center;font-size:.95rem;color:#8fb4ff;margin-top:25px;padding-top:25px;border-top:1px solid #2f4e87}
+    .ctaClarify{display:grid;grid-template-columns:1fr 1fr;gap:20px;margin-top:20px}
+    .ctaClarify .clarify{text-align:center;padding:15px;background:rgba(16,31,66,0.5);border-radius:10px}
+    .ctaClarify .clarify strong{display:block;color:#dce9ff;margin-bottom:4px}
+    .ctaClarify .clarify span{font-size:.85rem;color:#a9bbdf}
+
+    /* Final CTA Card */
     .finalCtaCard{text-align:center;padding:40px 30px;background:radial-gradient(circle at top,rgba(59,130,246,.15),transparent 42%),linear-gradient(160deg,#0f1a35,#0a1227);border:1px solid #33558f;border-radius:18px;position:relative;overflow:hidden}
     .finalCtaCard::before{content:'';position:absolute;top:0;left:0;right:0;height:1px;background:linear-gradient(90deg,transparent,rgba(124,58,237,0.5),transparent)}
     .finalCtaCard h2{margin-bottom:12px}
@@ -84,6 +131,10 @@
       .ctaStack{flex-direction:column}
       .ctaStack .btn{width:100%;max-width:400px}
       .heroVisualContainer{padding:10px 0}
+      .proofStats{grid-template-columns:1fr;gap:20px}
+      .trustBand{grid-template-columns:repeat(2,1fr)}
+      .purchaseSteps{grid-template-columns:repeat(2,1fr)}
+      .ctaClarify{grid-template-columns:1fr}
     }
   </style>
   <meta property="og:title" content="Orion by One Solution" />
@@ -118,8 +169,8 @@
         </h1>
         <p class="muted sub">One Solution sets up Orion around your operation, deploys it into your stack, and supports it after launch. No DIY configuration. No technical burden on your team.</p>
         <div class="ctaRow">
-          <a class="btn p" href="https://link.onesolutionapp.com/widget/form/CowOWlCpQDzIq8FGlDG9" target="_blank" rel="noopener noreferrer">Request Orion Setup</a>
-          <a class="btn g" href="./pricing.html">View Pricing</a>
+          <a class="btn p" href="./pricing.html">View Pricing</a>
+          <a class="btn g" href="https://link.onesolutionapp.com/widget/form/CowOWlCpQDzIq8FGlDG9" target="_blank" rel="noopener noreferrer">Request Orion Setup</a>
         </div>
         <div class="heroNote">⚡ Fast launch path: most teams can activate an initial Orion workflow lane in days, not months.</div>
         <div class="chipRow">
@@ -292,11 +343,11 @@
       </div>
     </section>
 
-    <!-- NEW PROOF STRIP SECTION -->
+    <!-- PROOF STRIP SECTION -->
     <section>
       <div class="proofStrip">
         <h3>Example operational improvements</h3>
-        <p class="subtext">Example operational improvements from workflow configurations similar to those used with Orion.</p>
+        <p class="subtext">From workflows similar to those supported by Orion</p>
         <div class="proofStats">
           <div class="proofStat">
             <span class="number">~6hr → &lt;1hr</span>
@@ -316,10 +367,22 @@
 
     <section>
       <h2>Why teams choose Orion over DIY setup</h2>
-      <div class="grid">
-        <article class="card"><h3>Fast deployment</h3><p class="muted">Designed for rollout in days, not months.</p></article>
-        <article class="card"><h3>Guided implementation</h3><p class="muted">Configured and supported instead of left as DIY.</p></article>
-        <article class="card"><h3>Visible operational impact</h3><p class="muted">Built around measurable gains in speed and consistency.</p></article>
+      <div class="grid" style="grid-template-columns:repeat(auto-fit,minmax(300px,1fr));">
+        <article class="valueCard">
+          <h3>Launch in Days, Not Months</h3>
+          <p class="muted">Orion is designed for rapid activation. Most teams have their first workflow lane running within days of setup.</p>
+          <div class="supportLine">Scoped, configured, and deployed by One Solution</div>
+        </article>
+        <article class="valueCard">
+          <h3>Done-for-You Setup</h3>
+          <p class="muted">No DIY configuration burden. One Solution handles the technical setup, workflow mapping, and integration.</p>
+          <div class="supportLine">Supported configuration, not self-service</div>
+        </article>
+        <article class="valueCard">
+          <h3>Real Workflow Improvements</h3>
+          <p class="muted">Built around measurable gains in speed, consistency, and execution quality across your team's daily operations.</p>
+          <div class="supportLine">Practical outcomes, not theoretical benefits</div>
+        </article>
       </div>
     </section>
 
@@ -336,14 +399,45 @@
 
     <section>
       <h2>Built for real teams across multiple industries</h2>
-      <div class="grid">
-        <article class="card"><h3>Marketing & Ad Agencies</h3><p class="muted">Prep, research, and follow-up support.</p></article>
-        <article class="card"><h3>Service Businesses</h3><p class="muted">Speed-to-lead and handoff consistency support.</p></article>
-        <article class="card"><h3>Insurance Teams</h3><p class="muted">Recurring communication and pipeline support.</p></article>
-        <article class="card"><h3>Real Estate Teams</h3><p class="muted">Inquiry handling and response prep acceleration.</p></article>
-        <article class="card"><h3>Tax & Accounting Firms</h3><p class="muted">Recurring workflow and admin support.</p></article>
-        <article class="card"><h3>Growing SMBs</h3><p class="muted">Cross-team task support and cleaner execution.</p></article>
+      <div class="grid" style="grid-template-columns:repeat(auto-fit,minmax(300px,1fr));">
+        <article class="industryCard">
+          <h3>Marketing & Ad Agencies</h3>
+          <div class="problem">Problem: Inconsistent client prep and follow-up</div>
+          <div class="solution">Orion setup: Research + draft support + internal coordination</div>
+          <div class="outcome">First improvement: Faster prep and consistent delivery rhythm</div>
+        </article>
+        <article class="industryCard">
+          <h3>Home Services</h3>
+          <div class="problem">Problem: Response lag and handoff leakage</div>
+          <div class="solution">Orion setup: Lead follow-up support + ops summaries</div>
+          <div class="outcome">First improvement: Better speed-to-lead, fewer dropped opportunities</div>
+        </article>
+        <article class="industryCard">
+          <h3>Insurance Teams</h3>
+          <div class="problem">Problem: Repetitive admin + communication drift</div>
+          <div class="solution">Orion setup: Renewal/follow-up drafting support</div>
+          <div class="outcome">First improvement: Cleaner communication cadence</div>
+        </article>
+        <article class="industryCard">
+          <h3>Real Estate Teams</h3>
+          <div class="problem">Problem: High inquiry volume coordination</div>
+          <div class="solution">Orion setup: Response prep + team support summaries</div>
+          <div class="outcome">First improvement: Improved responsiveness and throughput</div>
+        </article>
+        <article class="industryCard">
+          <h3>Tax & Accounting Firms</h3>
+          <div class="problem">Problem: Seasonal admin overload</div>
+          <div class="solution">Orion setup: Intake support + recurring workflow assistance</div>
+          <div class="outcome">First improvement: Reduced admin drag during peak periods</div>
+        </article>
+        <article class="industryCard">
+          <h3>Ops Teams</h3>
+          <div class="problem">Problem: Too many systems, low execution consistency</div>
+          <div class="solution">Orion setup: Cross-team workflow support lane</div>
+          <div class="outcome">First improvement: Clearer execution and consistency</div>
+        </article>
       </div>
+      <p class="muted" style="text-align:center;margin-top:20px;font-size:.9rem;">These are examples of fit. Orion can be configured for other workflow-heavy businesses.</p>
     </section>
 
     <section>
@@ -365,51 +459,95 @@
       </div>
     </section>
 
-    <!-- EXPANDED TRUST BAND SECTION -->
+    <!-- TRUST BAND SECTION -->
     <section>
       <h2>Supported by a real team after launch</h2>
       <div class="trustBand">
         <article class="trustCard">
-          <div class="icon">🎫</div>
+          <div class="icon">TS</div>
           <h4>Ticketed Support</h4>
-          <p>Structured requests with tracking</p>
+          <p>Structured requests with clear tracking</p>
         </article>
         <article class="trustCard">
-          <div class="icon">⚡</div>
+          <div class="icon">SB</div>
           <h4>Same-Day Blocker Handling</h4>
-          <p>Active operational issues prioritized</p>
+          <p>Active operational issues prioritized when possible</p>
         </article>
         <article class="trustCard">
-          <div class="icon">🕐</div>
+          <div class="icon">24</div>
           <h4>24h Standard Follow-Up</h4>
-          <p>Typical response target</p>
+          <p>Typical response target for standard requests</p>
         </article>
         <article class="trustCard">
-          <div class="icon">🔄</div>
+          <div class="icon">OR</div>
           <h4>Ongoing Refinement</h4>
-          <p>Continuous alignment support</p>
+          <p>Continuous alignment as your workflow evolves</p>
         </article>
       </div>
+      <p class="muted" style="text-align:center;margin-top:25px;font-size:.9rem;">Configured by One Solution • Built around real workflows • No long-term contract</p>
     </section>
 
     <section>
-      <h2>Simple pricing</h2>
+      <h2>Simple, transparent pricing</h2>
       <div class="pricingBand">
-        <article class="card"><h3>One-time setup</h3><p class="muted"><b>$45</b> setup fee</p></article>
-        <article class="card"><h3>Ongoing support</h3><p class="muted"><b>$50/month</b> with ticketed refinement</p></article>
-        <article class="card"><h3>Terms</h3><p class="muted">No long-term contract. Cancel anytime.</p></article>
+        <article class="card"><h3>One-time setup</h3><p class="muted" style="font-size:1.4rem;font-weight:700;color:#dce9ff;">$45</p><p class="muted">Setup fee to launch Orion</p></article>
+        <article class="card"><h3>Ongoing support</h3><p class="muted" style="font-size:1.4rem;font-weight:700;color:#dce9ff;">$50/month</p><p class="muted">Ticketed refinement & support</p></article>
+        <article class="card"><h3>Terms</h3><p class="muted" style="font-size:1.1rem;font-weight:600;color:#dce9ff;">No contracts</p><p class="muted">Cancel anytime</p></article>
       </div>
-      <p class="ctaCenter" style="margin-top:14px"><a class="btn p" href="https://checkout.stripe.com/c/pay/cs_live_b1SCjREghERx0UHyYOIUXezzKmCp5Lll2F70ppTW7xs60TiRoELA8FusKu#fidnandhYHdWcXxpYCc%2FJ2FgY2RwaXEnKSdkdWxOYHwnPyd1blppbHNgWjA0UU4waDBVV09oRj1odTZUdVJSTXRudFNnYHdtVkhyYjZmSWZrPHNpU2t2a2BAZ2NCNmdQZmtLSEJQczFmZkFEVk5GcWpyYj1qbn9kYE9ASUxdaVdya2BLNTVQfE5MQj1SQCcpJ2N3amhWYHdzYHcnP3F3cGApJ2dkZm5id2pwa2FGamlqdyc%2FJyZjY2NjY2MnKSdpZHxqcHFRfHVgJz8naHBpcWxabHFgaCcpJ2BrZGdpYFVpZGZgbWppYWB3dic%2FcXdwYHgl" target="_blank" rel="noopener noreferrer">Purchase Orion Setup</a></p>
+      
+      <!-- PRICING REASSURANCE BLOCK -->
+      <div class="pricingReassurance">
+        <div class="billingFlow">$45 one-time setup to launch Orion, then $50/month for ongoing support and refinement</div>
+        
+        <h3 style="text-align:center;margin-bottom:25px;">What happens after you purchase</h3>
+        <div class="purchaseSteps">
+          <div class="purchaseStep">
+            <div class="num">1</div>
+            <h4>Intake begins</h4>
+            <p>We review your workflow goals and priorities</p>
+          </div>
+          <div class="purchaseStep">
+            <div class="num">2</div>
+            <h4>Setup starts</h4>
+            <p>One Solution configures Orion for your stack</p>
+          </div>
+          <div class="purchaseStep">
+            <div class="num">3</div>
+            <h4>Launch window</h4>
+            <p>Your first workflow lane goes live</p>
+          </div>
+          <div class="purchaseStep">
+            <div class="num">4</div>
+            <h4>Support continues</h4>
+            <p>Ticketed refinement keeps Orion aligned</p>
+          </div>
+        </div>
+        
+        <div class="decisionHelper">Best for businesses that want managed AI workflow support without building it internally.</div>
+        
+        <div class="ctaClarify">
+          <div class="clarify">
+            <strong>Request Orion Setup</strong>
+            <span>Scope your use case first</span>
+          </div>
+          <div class="clarify">
+            <strong>View Pricing</strong>
+            <span>See commercial details and purchase</span>
+          </div>
+        </div>
+      </div>
+      
+      <p class="ctaCenter" style="margin-top:30px"><a class="btn p" href="https://checkout.stripe.com/c/pay/cs_live_b1SCjREghERx0UHyYOIUXezzKmCp5Lll2F70ppTW7xs60TiRoELA8FusKu#fidnandhYHdWcXxpYCc%2FJ2FgY2RwaXEnKSdkdWxOYHwnPyd1blppbHNgWjA0UU4waDBVV09oRj1odTZUdVJSTXRudFNnYHdtVkhyYjZmSWZrPHNpU2t2a2BAZ2NCNmdQZmtLSEJQczFmZkFEVk5GcWpyYj1qbn9kYE9ASUxdaVdya2BLNTVQfE5MQj1SQCcpJ2N3amhWYHdzYHcnP3F3cGApJ2dkZm5id2pwa2FGamlqdyc%2FJyZjY2NjY2MnKSdpZHxqcHFRfHVgJz8naHBpcWxabHFgaCcpJ2BrZGdpYFVpZGZgbWppYWB3dic%2FcXdwYHgl" target="_blank" rel="noopener noreferrer">Purchase Orion Setup</a></p>
     </section>
 
     <section>
       <div class="card finalCtaCard">
         <span class="eyebrow">READY TO START</span>
-        <h2>Ready to deploy Orion in your workflow?</h2>
+        <h2>Launch Orion with done-for-you setup and ongoing support</h2>
         <p class="muted">Get a done-for-you AI operator configured by One Solution, launched into your workflow, and supported after go-live.</p>
         <div class="ctaStack">
-          <a class="btn p" href="https://link.onesolutionapp.com/widget/form/CowOWlCpQDzIq8FGlDG9" target="_blank" rel="noopener noreferrer">Request Orion Setup</a>
-          <a class="btn g" href="./how-it-works.html">See Implementation Flow</a>
+          <a class="btn p" href="./pricing.html">View Pricing</a>
+          <a class="btn g" href="https://link.onesolutionapp.com/widget/form/CowOWlCpQDzIq8FGlDG9" target="_blank" rel="noopener noreferrer">Request Orion Setup</a>
         </div>
         <p class="muted finalNote">No long-term contract. Cancel anytime.</p>
       </div>
