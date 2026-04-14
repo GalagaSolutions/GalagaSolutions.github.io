@@ -266,7 +266,7 @@ footer {
 
 .menuToggle span { display: block; line-height: 1; }
 
-/* ===== PRODUCT MOCKUP STYLES ===== */
+/* ===== PRODUCT MOCKUP STYLES - SIMPLIFIED CALM PREMIUM ===== */
 .productMockup {
   display: grid;
   grid-template-columns: 1fr 1.4fr 1fr;
@@ -345,7 +345,6 @@ footer {
   border-radius: 50%;
   background: #34d399;
   box-shadow: 0 0 0 4px rgba(52, 211, 153, 0.2);
-  animation: pulseGreen 2s ease-in-out infinite;
 }
 
 .flowLine {
@@ -353,24 +352,6 @@ footer {
   background: linear-gradient(90deg, #2e4c85, #4a73c0, #2e4c85);
   margin: 8px 0;
   border-radius: 1px;
-  position: relative;
-  overflow: hidden;
-}
-
-.flowLine::after {
-  content: '';
-  position: absolute;
-  top: 0;
-  left: -100%;
-  width: 100%;
-  height: 100%;
-  background: linear-gradient(90deg, transparent, rgba(124, 192, 255, 0.6), transparent);
-  animation: flowMove 2s linear infinite;
-}
-
-@keyframes flowMove {
-  0% { left: -100%; }
-  100% { left: 100%; }
 }
 
 .floatingChip {
@@ -385,7 +366,6 @@ footer {
   display: flex;
   align-items: center;
   gap: 6px;
-  animation: floatChip 6s ease-in-out infinite;
   z-index: 10;
 }
 
@@ -395,17 +375,12 @@ footer {
   filter: invert(1) brightness(1.2);
 }
 
-.floatingChip.slack { top: -15px; left: 10%; animation-delay: 0s; }
-.floatingChip.teams { top: 10%; right: -20px; animation-delay: 1s; }
-.floatingChip.telegram { bottom: 30%; right: -25px; animation-delay: 2s; }
-.floatingChip.crm { bottom: -10px; right: 20%; animation-delay: 3s; }
-.floatingChip.trello { bottom: 20%; left: -20px; animation-delay: 4s; }
-.floatingChip.email { top: 25%; left: -25px; animation-delay: 5s; }
-
-@keyframes floatChip {
-  0%, 100% { transform: translateY(0); }
-  50% { transform: translateY(-6px); }
-}
+.floatingChip.slack { top: -15px; left: 10%; }
+.floatingChip.teams { top: 10%; right: -20px; }
+.floatingChip.telegram { bottom: 30%; right: -25px; }
+.floatingChip.crm { bottom: -10px; right: 20%; }
+.floatingChip.trello { bottom: 20%; left: -20px; }
+.floatingChip.email { top: 25%; left: -25px; }
 
 .supportBadge {
   position: absolute;
@@ -433,17 +408,6 @@ footer {
   border-radius: 50%;
   background: white;
   box-shadow: 0 0 0 3px rgba(255, 255, 255, 0.3);
-  animation: pulseWhite 2s ease-in-out infinite;
-}
-
-@keyframes pulseWhite {
-  0%, 100% { box-shadow: 0 0 0 3px rgba(255, 255, 255, 0.3); }
-  50% { box-shadow: 0 0 0 6px rgba(255, 255, 255, 0.15); }
-}
-
-@keyframes pulseGreen {
-  0%, 100% { box-shadow: 0 0 0 4px rgba(52, 211, 153, 0.2); }
-  50% { box-shadow: 0 0 0 8px rgba(52, 211, 153, 0.1); }
 }
 
 /* ===== DELIVERABLE CARDS ===== */
@@ -585,55 +549,67 @@ footer {
   border-color: #4a73c0;
 }
 
-/* ===== PROOF STRIP ===== */
+/* ===== PROOF STRIP - PREMIUM METRIC CARDS ===== */
 .proofStrip {
   background: linear-gradient(145deg, #0e1831, #0b1226);
   border: 1px solid #2f4f89;
-  border-radius: 18px;
-  padding: 30px;
+  border-radius: 20px;
+  padding: 40px;
   text-align: center;
 }
 
 .proofStrip h3 {
-  font-size: 1.1rem;
+  font-size: 1.25rem;
   color: #e7efff;
   margin-bottom: 8px;
+  font-weight: 600;
 }
 
 .proofStrip .subtext {
-  font-size: 0.9rem;
-  color: #9db4de;
-  margin-bottom: 24px;
+  font-size: 0.95rem;
+  color: #8fb4ff;
+  margin-bottom: 32px;
 }
 
 .proofStats {
   display: grid;
   grid-template-columns: repeat(3, 1fr);
-  gap: 20px;
+  gap: 24px;
 }
 
 .proofStat {
-  text-align: center;
+  background: linear-gradient(145deg, #0f1a36, #0d1428);
+  border: 1px solid #2e4c85;
+  border-radius: 16px;
+  padding: 28px 20px;
+  transition: all 0.3s ease;
+}
+
+.proofStat:hover {
+  transform: translateY(-4px);
+  border-color: #4a73c0;
+  box-shadow: 0 12px 30px rgba(0, 0, 0, 0.25);
 }
 
 .proofStat .number {
-  font-size: 2rem;
+  font-size: 2.4rem;
   font-weight: 800;
-  background: linear-gradient(90deg, #ffffff, #8cc1ff);
+  background: linear-gradient(135deg, #ffffff 0%, #8cc1ff 50%, #a78bfa 100%);
   -webkit-background-clip: text;
   background-clip: text;
   color: transparent;
   display: block;
-  margin-bottom: 8px;
+  margin-bottom: 12px;
+  line-height: 1.1;
 }
 
 .proofStat .label {
   font-size: 0.9rem;
   color: #aebada;
-  line-height: 1.4;
+  line-height: 1.5;
 }
 
-/* ===== TRUST BAND ===== */
+/* ===== TRUST BAND - CLEAN TEXT-FOCUSED CARDS ===== */
 .trustBand {
   display: grid;
   grid-template-columns: repeat(4, 1fr);
@@ -643,8 +619,8 @@ footer {
 .trustCard {
   background: linear-gradient(145deg, #0d1a34, #0b1428);
   border: 1px solid #2f4e87;
-  border-radius: 14px;
-  padding: 20px;
+  border-radius: 16px;
+  padding: 24px 20px;
   text-align: center;
   transition: all 0.3s ease;
 }
@@ -656,26 +632,247 @@ footer {
 }
 
 .trustCard .icon {
-  width: 48px;
-  height: 48px;
+  width: 44px;
+  height: 44px;
   border-radius: 12px;
-  background: linear-gradient(135deg, #122041, #1a3055);
+  background: linear-gradient(135deg, #1a3055, #244070);
+  border: 1px solid #3d6cb6;
   display: flex;
   align-items: center;
   justify-content: center;
-  font-size: 1.5rem;
-  margin: 0 auto 12px;
+  margin: 0 auto 14px;
+}
+
+.trustCard .icon svg {
+  width: 22px;
+  height: 22px;
+  color: #8cc1ff;
 }
 
 .trustCard h4 {
   font-size: 0.95rem;
   color: #e7efff;
   margin: 0 0 8px;
+  font-weight: 600;
 }
 
 .trustCard p {
-  font-size: 0.8rem;
+  font-size: 0.82rem;
   color: #9db4de;
+  margin: 0;
+  line-height: 1.5;
+}
+
+/* ===== PRICING REASSURANCE BLOCK ===== */
+.pricingReassurance {
+  background: linear-gradient(145deg, #0e1831, #0b1226);
+  border: 1px solid #2f4f89;
+  border-radius: 20px;
+  padding: 40px;
+  margin-top: 30px;
+}
+
+.pricingReassurance .billingFlow {
+  text-align: center;
+  margin-bottom: 32px;
+}
+
+.pricingReassurance .billingFlow h3 {
+  font-size: 1.4rem;
+  color: #e7efff;
+  margin-bottom: 8px;
+  font-weight: 600;
+}
+
+.pricingReassurance .billingFlow p {
+  font-size: 1.1rem;
+  color: #8fb4ff;
+  margin: 0;
+}
+
+.pricingReassurance .billingFlow .priceHighlight {
+  background: linear-gradient(135deg, #ffffff 0%, #8cc1ff 100%);
+  -webkit-background-clip: text;
+  background-clip: text;
+  color: transparent;
+  font-weight: 700;
+}
+
+.pricingSteps {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 16px;
+  margin-bottom: 32px;
+}
+
+.pricingStep {
+  background: linear-gradient(145deg, #0f1a36, #0d1428);
+  border: 1px solid #2e4c85;
+  border-radius: 14px;
+  padding: 20px;
+  text-align: left;
+  transition: all 0.3s ease;
+}
+
+.pricingStep:hover {
+  transform: translateY(-3px);
+  border-color: #4a73c0;
+}
+
+.pricingStep .stepNum {
+  width: 28px;
+  height: 28px;
+  border-radius: 50%;
+  background: linear-gradient(135deg, #1a3055, #244070);
+  border: 1px solid #3d6cb6;
+  color: #8cc1ff;
+  font-size: 0.85rem;
+  font-weight: 700;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-bottom: 12px;
+}
+
+.pricingStep h4 {
+  font-size: 0.95rem;
+  color: #e7efff;
+  margin: 0 0 6px;
+  font-weight: 600;
+}
+
+.pricingStep p {
+  font-size: 0.85rem;
+  color: #9db4de;
+  margin: 0;
+  line-height: 1.5;
+}
+
+.decisionHelper {
+  background: linear-gradient(145deg, #0f1a36, #0d1428);
+  border: 1px solid #2e4c85;
+  border-radius: 14px;
+  padding: 20px 24px;
+  margin-bottom: 24px;
+}
+
+.decisionHelper p {
+  font-size: 0.95rem;
+  color: #aebada;
+  margin: 0;
+  text-align: center;
+}
+
+.decisionHelper strong {
+  color: #e7efff;
+}
+
+.ctaClarify {
+  display: flex;
+  justify-content: center;
+  gap: 16px;
+  flex-wrap: wrap;
+}
+
+.ctaClarify .btn {
+  min-width: 200px;
+  padding: 12px 24px;
+}
+
+/* ===== VALUE CARDS - WHY TEAMS CHOOSE ===== */
+.valueCard {
+  background: linear-gradient(145deg, #0d1a34, #0b1428);
+  border: 1px solid #2f4e87;
+  border-radius: 16px;
+  padding: 28px;
+  transition: all 0.3s ease;
+}
+
+.valueCard:hover {
+  transform: translateY(-4px);
+  border-color: #4a73c0;
+  box-shadow: 0 12px 30px rgba(0, 0, 0, 0.25);
+}
+
+.valueCard h3 {
+  font-size: 1.1rem;
+  color: #e7efff;
+  margin-bottom: 12px;
+  font-weight: 600;
+}
+
+.valueCard .primaryText {
+  font-size: 0.95rem;
+  color: #aebada;
+  margin-bottom: 12px;
+  line-height: 1.6;
+}
+
+.valueCard .secondaryText {
+  font-size: 0.85rem;
+  color: #8fb4ff;
+  font-style: italic;
+  margin: 0;
+}
+
+/* ===== INDUSTRY CARDS - PROBLEM/SOLUTION/OUTCOME ===== */
+.industryCard {
+  background: linear-gradient(145deg, #0d1a34, #0b1428);
+  border: 1px solid #2f4e87;
+  border-radius: 16px;
+  padding: 24px;
+  transition: all 0.3s ease;
+}
+
+.industryCard:hover {
+  transform: translateY(-4px);
+  border-color: #4a73c0;
+  box-shadow: 0 12px 30px rgba(0, 0, 0, 0.25);
+}
+
+.industryCard h3 {
+  font-size: 1.05rem;
+  color: #e7efff;
+  margin-bottom: 16px;
+  font-weight: 600;
+}
+
+.industryCard .problem,
+.industryCard .solution,
+.industryCard .outcome {
+  margin-bottom: 12px;
+}
+
+.industryCard .problem:last-child,
+.industryCard .solution:last-child,
+.industryCard .outcome:last-child {
+  margin-bottom: 0;
+}
+
+.industryCard .label {
+  font-size: 0.7rem;
+  text-transform: uppercase;
+  letter-spacing: 0.08em;
+  font-weight: 700;
+  margin-bottom: 4px;
+}
+
+.industryCard .problem .label {
+  color: #f87171;
+}
+
+.industryCard .solution .label {
+  color: #60a5fa;
+}
+
+.industryCard .outcome .label {
+  color: #34d399;
+}
+
+.industryCard .text {
+  font-size: 0.88rem;
+  color: #aebada;
+  line-height: 1.5;
   margin: 0;
 }
 
@@ -752,7 +949,7 @@ footer {
   }
 
   .proofStat .number {
-    font-size: 1.6rem;
+    font-size: 1.8rem;
   }
 
   /* Mobile trust band */
@@ -762,18 +959,40 @@ footer {
   }
 
   .trustCard {
-    padding: 16px;
+    padding: 18px;
   }
 
   .trustCard .icon {
-    width: 40px;
-    height: 40px;
-    font-size: 1.2rem;
+    width: 36px;
+    height: 36px;
+  }
+
+  .trustCard .icon svg {
+    width: 18px;
+    height: 18px;
+  }
+
+  /* Mobile pricing steps */
+  .pricingSteps {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  .pricingReassurance {
+    padding: 24px;
   }
 }
 
-@media (max-width: 480px) {
+@media (max-width: 640px) {
   .trustBand {
     grid-template-columns: 1fr;
+  }
+
+  .pricingSteps {
+    grid-template-columns: 1fr;
+  }
+
+  .ctaClarify .btn {
+    width: 100%;
+    max-width: 320px;
   }
 }
