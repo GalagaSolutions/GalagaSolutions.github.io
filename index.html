@@ -66,7 +66,33 @@
     .orion-hero-v3__integration-chip{display:inline-flex;align-items:center;justify-content:center;min-height:24px;padding:4px 10px;border-radius:999px;background:rgba(11,18,36,0.6);border:1px solid rgba(49,85,151,0.15);color:var(--orion-muted);font-size:0.68rem;font-weight:500;opacity:0.7}
     @media(max-width:1120px){.orion-hero-v3__inner{grid-template-columns:1fr}}
     @media(max-width:900px){.orion-hero-v3__runtime-grid{grid-template-columns:1fr}.orion-hero-v3__panel{min-height:auto}}
-    @media(max-width:640px){.orion-hero-v3{padding:52px 0 36px}.orion-hero-v3__inner{width:min(100%,calc(100% - 32px))}.orion-hero-v3__chips{grid-template-columns:1fr}.orion-hero-v3__cta-row{flex-direction:column}.orion-hero-v3__btn{width:100%}.orion-hero-v3__runtime-head{flex-direction:column;align-items:flex-start}}
+    @media(max-width:640px){
+      .orion-hero-v3{padding:36px 0 24px}
+      .orion-hero-v3__inner{width:min(100%,calc(100% - 24px));gap:20px}
+      .orion-hero-v3__title{font-size:clamp(1.9rem,7vw,2.4rem);margin-bottom:10px}
+      .orion-hero-v3__subtext{font-size:0.92rem;line-height:1.5;margin-bottom:14px}
+      .orion-hero-v3__proof{font-size:0.82rem;padding:9px 12px;margin-bottom:12px}
+      .orion-hero-v3__chips{grid-template-columns:1fr;gap:8px;max-width:100%}
+      .orion-hero-v3__chip{min-height:40px;padding:9px 11px;font-size:0.85rem}
+      .orion-hero-v3__cta-row{flex-direction:column;gap:10px;margin-bottom:14px}
+      .orion-hero-v3__btn{width:100%;min-height:46px;padding:12px 18px}
+      .orion-hero-v3__visual{padding-top:0}
+      .orion-hero-v3__runtime{padding:10px;border-radius:20px}
+      .orion-hero-v3__runtime-head{margin-bottom:6px;padding-bottom:6px}
+      .orion-hero-v3__runtime-title{font-size:0.9rem}
+      .orion-hero-v3__runtime-subtitle{font-size:0.72rem}
+      .orion-hero-v3__support-badge{font-size:0.72rem;padding:5px 8px}
+      .orion-hero-v3__panel{padding:9px;min-height:auto}
+      .orion-hero-v3__panel-head{margin-bottom:6px;font-size:0.82rem}
+      .orion-hero-v3__request-text{font-size:0.8rem;line-height:1.4}
+      .orion-hero-v3__state{padding:8px 9px;margin-bottom:5px}
+      .orion-hero-v3__state h3{font-size:0.8rem}
+      .orion-hero-v3__state p{font-size:0.72rem}
+      .orion-hero-v3__output-card{padding:9px;margin-bottom:6px}
+      .orion-hero-v3__output-head h3{font-size:0.8rem}
+      .orion-hero-v3__integrations{margin-top:8px;gap:5px}
+      .orion-hero-v3__integration-chip{min-height:22px;padding:4px 8px;font-size:0.65rem}
+    }
 
     /* System strip with glassmorphism */
     .systemStrip{display:grid;grid-template-columns:repeat(auto-fit,minmax(120px,1fr));gap:10px}
@@ -167,10 +193,34 @@
       .ctaStack{flex-direction:column}
       .ctaStack .btn{width:100%;max-width:400px}
       .heroVisualContainer{padding:10px 0}
-      .proofStats{grid-template-columns:1fr;gap:20px}
-      .trustBand{grid-template-columns:repeat(2,1fr)}
-      .purchaseSteps{grid-template-columns:repeat(2,1fr)}
+      .proofStats{grid-template-columns:1fr;gap:16px}
+      .trustBand{grid-template-columns:repeat(2,1fr);gap:12px}
+      .purchaseSteps{grid-template-columns:repeat(2,1fr);gap:14px}
       .ctaClarify{grid-template-columns:1fr}
+      section{padding:40px 0}
+      h2{font-size:1.6rem;margin-bottom:20px}
+      .grid{gap:14px}
+      .card{padding:18px}
+    }
+    @media(max-width:640px){
+      section{padding:32px 0}
+      h2{font-size:1.4rem;margin-bottom:16px}
+      .grid{grid-template-columns:1fr;gap:12px}
+      .card{padding:16px}
+      .deliverGrid{grid-template-columns:1fr}
+      .deliverableCard{padding:16px}
+      .valueCard{padding:18px}
+      .industryCard{padding:16px}
+      .trustCard{padding:18px 14px}
+      .trustBand{grid-template-columns:1fr}
+      .proofStrip{padding:36px 20px}
+      .proofStat .number{font-size:2.2rem}
+      .timeline{grid-template-columns:1fr;gap:8px}
+      .step{padding:10px}
+      .pricingBand{grid-template-columns:1fr}
+      .pricingReassurance{padding:24px 18px}
+      .purchaseSteps{grid-template-columns:1fr;gap:12px}
+      .finalCtaCard{padding:28px 20px}
     }
   </style>
   <meta property="og:title" content="Orion by One Solution" />
