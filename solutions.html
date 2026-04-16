@@ -101,34 +101,41 @@
     }
 
     .orion-solutions-v2__value-card {
-      padding: 20px;
+      padding: 22px;
       border-radius: var(--orion-radius-lg);
-      background: linear-gradient(180deg, rgba(13, 26, 52, 0.88), rgba(11, 18, 36, 0.92));
-      border: 1px solid rgba(47, 78, 135, 0.32);
-      box-shadow: var(--orion-shadow-lg);
+      background: linear-gradient(180deg, rgba(13, 26, 52, 0.9), rgba(11, 18, 36, 0.94));
+      border: 1px solid rgba(47, 78, 135, 0.38);
+      box-shadow: var(--orion-shadow-lg), 0 0 0 1px rgba(140, 193, 255, 0.04);
+      transition: transform 0.2s ease, box-shadow 0.2s ease;
+    }
+
+    .orion-solutions-v2__value-card:hover {
+      transform: translateY(-2px);
+      box-shadow: 0 20px 44px rgba(0, 0, 0, 0.32), 0 0 0 1px rgba(140, 193, 255, 0.06);
     }
 
     .orion-solutions-v2__value-icon {
-      width: 12px;
-      height: 12px;
+      width: 14px;
+      height: 14px;
       border-radius: 999px;
-      margin-bottom: 14px;
+      margin-bottom: 16px;
       background: linear-gradient(135deg, #8cc1ff, #2f6bff);
-      box-shadow: 0 0 0 4px rgba(47, 107, 255, 0.1);
+      box-shadow: 0 0 0 5px rgba(47, 107, 255, 0.12), 0 0 20px rgba(140, 193, 255, 0.3);
     }
 
     .orion-solutions-v2__value-card h2 {
-      margin: 0 0 10px;
-      font-size: 1.15rem;
-      line-height: 1.2;
+      margin: 0 0 12px;
+      font-size: 1.18rem;
+      line-height: 1.25;
       letter-spacing: -0.02em;
+      color: var(--orion-headline);
     }
 
     .orion-solutions-v2__value-card p {
       margin: 0;
       color: var(--orion-body);
-      font-size: 0.94rem;
-      line-height: 1.65;
+      font-size: 0.92rem;
+      line-height: 1.6;
     }
 
     .orion-solutions-v2__grid {
@@ -139,12 +146,25 @@
     }
 
     .orion-solutions-v2__card {
-      padding: 20px;
+      padding: 22px;
       border-radius: var(--orion-radius-lg);
       background: linear-gradient(180deg, rgba(13, 26, 52, 0.88), rgba(11, 18, 36, 0.92));
       border: 1px solid rgba(47, 78, 135, 0.34);
       box-shadow: var(--orion-shadow-lg);
+      transition: transform 0.2s ease, box-shadow 0.2s ease;
     }
+
+    .orion-solutions-v2__card:hover {
+      transform: translateY(-2px);
+      box-shadow: 0 20px 44px rgba(0, 0, 0, 0.3);
+    }
+
+    .orion-solutions-v2__card:nth-child(1) { border-color: rgba(96, 165, 250, 0.35); }
+    .orion-solutions-v2__card:nth-child(2) { border-color: rgba(52, 211, 153, 0.3); }
+    .orion-solutions-v2__card:nth-child(3) { border-color: rgba(251, 191, 36, 0.3); }
+    .orion-solutions-v2__card:nth-child(4) { border-color: rgba(167, 139, 250, 0.3); }
+    .orion-solutions-v2__card:nth-child(5) { border-color: rgba(96, 165, 250, 0.35); }
+    .orion-solutions-v2__card:nth-child(6) { border-color: rgba(52, 211, 153, 0.3); }
 
     .orion-solutions-v2__card-top {
       display: flex;
@@ -177,35 +197,36 @@
     }
 
     .orion-solutions-v2__card-block + .orion-solutions-v2__card-block {
-      margin-top: 16px;
+      margin-top: 14px;
     }
 
     .orion-solutions-v2__label {
       display: inline-block;
-      margin-bottom: 6px;
+      margin-bottom: 5px;
       color: var(--orion-headline);
-      font-size: 0.88rem;
+      font-size: 0.85rem;
       font-weight: 800;
       letter-spacing: -0.01em;
+      text-transform: uppercase;
     }
 
     .orion-solutions-v2__card-block p {
       margin: 0;
       color: var(--orion-body);
-      font-size: 0.96rem;
-      line-height: 1.7;
+      font-size: 0.93rem;
+      line-height: 1.55;
     }
 
     .orion-solutions-v2__custom {
       display: flex;
       align-items: center;
       justify-content: space-between;
-      gap: 28px;
-      padding: 28px;
+      gap: 40px;
+      padding: 32px 36px;
       border-radius: var(--orion-radius-xl);
-      background: linear-gradient(180deg, rgba(13, 26, 52, 0.88), rgba(11, 18, 36, 0.94));
-      border: 1px solid rgba(47, 78, 135, 0.34);
-      box-shadow: var(--orion-shadow-lg);
+      background: linear-gradient(145deg, rgba(13, 26, 52, 0.92), rgba(11, 18, 36, 0.96));
+      border: 1px solid rgba(47, 78, 135, 0.4);
+      box-shadow: var(--orion-shadow-lg), 0 0 0 1px rgba(140, 193, 255, 0.04);
     }
 
     .orion-solutions-v2__custom-content {
@@ -288,49 +309,102 @@
 
     @media (max-width: 760px) {
       .orion-solutions-v2 {
-        padding: 64px 0 56px;
+        padding: 52px 0 44px;
       }
 
       .orion-solutions-v2__inner {
-        width: min(100%, calc(100% - 30px));
+        width: min(100%, calc(100% - 24px));
       }
 
       .orion-solutions-v2__hero {
-        margin-bottom: 30px;
+        margin-bottom: 26px;
+      }
+
+      .orion-solutions-v2__title {
+        font-size: clamp(2rem, 6.5vw, 2.8rem);
       }
 
       .orion-solutions-v2__subtext {
-        font-size: 1rem;
+        font-size: 0.96rem;
+        line-height: 1.6;
+      }
+
+      .orion-solutions-v2__value-band {
+        gap: 12px;
+        margin-bottom: 28px;
+      }
+
+      .orion-solutions-v2__value-card {
+        padding: 18px;
+      }
+
+      .orion-solutions-v2__value-card h2 {
+        font-size: 1.1rem;
+      }
+
+      .orion-solutions-v2__value-card p {
+        font-size: 0.9rem;
       }
 
       .orion-solutions-v2__grid {
         grid-template-columns: 1fr;
-        gap: 14px;
+        gap: 12px;
+        margin-bottom: 32px;
       }
 
-      .orion-solutions-v2__card,
-      .orion-solutions-v2__value-card,
-      .orion-solutions-v2__custom {
+      .orion-solutions-v2__card {
         padding: 18px;
       }
 
       .orion-solutions-v2__card-top {
         align-items: flex-start;
         flex-direction: column;
-        gap: 10px;
+        gap: 8px;
+        margin-bottom: 14px;
+      }
+
+      .orion-solutions-v2__card-top h3 {
+        font-size: 1.2rem;
       }
 
       .orion-solutions-v2__lane-tag {
         white-space: normal;
+        font-size: 0.7rem;
+        padding: 5px 9px;
+      }
+
+      .orion-solutions-v2__card-block + .orion-solutions-v2__card-block {
+        margin-top: 12px;
+      }
+
+      .orion-solutions-v2__card-block p {
+        font-size: 0.9rem;
+        line-height: 1.5;
+      }
+
+      .orion-solutions-v2__custom {
+        padding: 22px;
+        gap: 20px;
+      }
+
+      .orion-solutions-v2__custom h2 {
+        font-size: 1.5rem;
+      }
+
+      .orion-solutions-v2__custom p {
+        font-size: 0.95rem;
       }
 
       .orion-solutions-v2__custom-actions {
         width: 100%;
         flex-direction: column;
+        gap: 10px;
       }
 
       .orion-solutions-v2__btn {
         width: 100%;
+        min-height: 48px;
+        padding: 12px 18px;
       }
     }
   </style>
