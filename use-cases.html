@@ -1,8 +1,702 @@
-<!doctype html><html lang='en'><head><meta charset='UTF-8'><meta name='viewport' content='width=device-width,initial-scale=1'><title>Orion Playbooks | One Solution</title>
-  <link rel="canonical" href="https://orin.onesolutionapp.com/use-cases.html" />
-  <meta name="description" content="Orion by One Solution — done-for-you AI operator setup, support, and deployment for real business workflows." /><link rel='icon' href='./assets/favicon-one-solution.jpg'><link rel='stylesheet' href='./assets/orin-theme.css'><style>.toolbar{display:flex;gap:8px;flex-wrap:wrap;margin-bottom:10px}.filter{padding:8px 10px;border:1px solid #355182;background:#0f1934;color:#d8e6ff;border-radius:999px;cursor:pointer;font-weight:600}.filter.active{background:linear-gradient(90deg,#173267,#1f2f5e)}.grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(260px,1fr));gap:12px}.pill{display:inline-flex;background:#122041;border:1px solid #27437f;color:#9ec5ff;padding:5px 9px;border-radius:999px;font-size:.78rem;margin-right:6px}.playbook{transition:.2s ease}.playbook.hide{display:none}</style>  <meta property="og:title" content="Orion by One Solution" />
-  <meta property="og:description" content="Done-for-you AI operator setup, support, and deployment for real business workflows." />
-  <meta property="og:type" content="website" />
-  <meta property="og:url" content="https://orin.onesolutionapp.com/use-cases.html" />
-</head><body><div class='wrap'><header class='nav'><a href='./index.html'><img src='./assets/one-solution-logo-white.png' alt='One Solution'></a><button class='menuToggle' type='button' aria-label='Open menu' aria-expanded='false'><span class='menuIcon'><span></span></span></button><div class='links'><a href='./index.html'>Home</a><a href='./how-it-works.html'>How It Works</a><a href='./solutions.html'>Solutions</a><a class='active' href='./use-cases.html'>Playbooks</a><a href='./pricing.html'>Pricing</a><a href='./trust.html'>Trust</a><a class='btn g' href='https://link.onesolutionapp.com/widget/form/CowOWlCpQDzIq8FGlDG9' target='_blank' rel='noopener noreferrer'>Request Orion Setup</a></div></header><section><h1>Orion Playbooks</h1><p class='muted'>Function-based playbooks your team can run repeatedly. Filter by workflow category.</p></section><section><div class='visualShowcase'><article class='visualTile'><span class='visualIcon'>🧩</span><h3>Modular Playbooks</h3><p class='muted'>Activate only the workflows you need now, then expand as your operation matures.</p></article><article class='visualTile'><span class='visualIcon'>🚀</span><h3>Execution Speed</h3><p class='muted'>Turn recurring tasks into repeatable playbooks your team can use immediately.</p></article></div></section><section><div class='toolbar'><button class='filter active' data-filter='all'>All</button><button class='filter' data-filter='sales'>Sales</button><button class='filter' data-filter='ops'>Operations</button><button class='filter' data-filter='research'>Research</button></div><div class='grid'><article class='card playbook' data-cat='sales'><h3>Lead Follow-Up Playbook</h3><p class='muted'><span class='pill'>Trigger</span>New lead or missed touchpoint</p><p class='muted'><span class='pill'>Output</span>Follow-up draft + next-step recommendation</p><p class='muted'><span class='pill'>Result</span>Better speed-to-lead and fewer dropped opportunities</p></article><article class='card playbook' data-cat='research'><h3>Research Brief Playbook</h3><p class='muted'><span class='pill'>Trigger</span>New prospect/account prep</p><p class='muted'><span class='pill'>Output</span>Market/prospect/competitor summary</p><p class='muted'><span class='pill'>Result</span>Faster preparation with stronger context</p></article><article class='card playbook' data-cat='ops'><h3>Pipeline Support Playbook</h3><p class='muted'><span class='pill'>Trigger</span>Stage-change lag or handoff gap</p><p class='muted'><span class='pill'>Output</span>Action summary + proposed next move</p><p class='muted'><span class='pill'>Result</span>Improved pipeline hygiene and team coordination</p></article><article class='card playbook' data-cat='ops'><h3>Reporting Prep Playbook</h3><p class='muted'><span class='pill'>Trigger</span>Weekly/monthly ops review</p><p class='muted'><span class='pill'>Output</span>Ops summary with bottlenecks</p><p class='muted'><span class='pill'>Result</span>Faster reporting cycles with actionable clarity</p></article><article class='card playbook' data-cat='sales'><h3>Meeting Prep Playbook</h3><p class='muted'><span class='pill'>Trigger</span>Upcoming client/internal meeting</p><p class='muted'><span class='pill'>Output</span>Agenda draft + context notes</p><p class='muted'><span class='pill'>Result</span>Cleaner meetings and stronger follow-through</p></article><article class='card playbook' data-cat='ops'><h3>SOP Support Playbook</h3><p class='muted'><span class='pill'>Trigger</span>Recurring workflow inconsistency</p><p class='muted'><span class='pill'>Output</span>Structured process draft + checklist</p><p class='muted'><span class='pill'>Result</span>More repeatable execution quality</p></article></div></section><section><h2>Anonymized results snapshot</h2><div class='grid'><article class='card'><h3>Service Business</h3><p class='muted'>Response lag dropped from ~6 hours to under 1 hour after follow-up playbook rollout.</p></article><article class='card'><h3>Agency Team</h3><p class='muted'>Weekly prep workload reduced ~35% using research + meeting prep playbooks.</p></article><article class='card'><h3>Ops Team</h3><p class='muted'>Pipeline handoff misses reduced by ~40% with stage-support playbook deployment.</p></article></div></section><footer><div>© <span id='y'></span> One Solution LLC • Orion by One Solution</div><div class='legal'><a href='https://my.onesolutionapp.com/privacy-policy/' target='_blank'>Privacy Policy</a><a href='https://my.onesolutionapp.com/terms-of-service/' target='_blank'>Terms of Service</a></div></footer></div><script>document.getElementById('y').textContent=new Date().getFullYear();const btns=[...document.querySelectorAll('.filter')];const cards=[...document.querySelectorAll('.playbook')];btns.forEach((b)=>{b.addEventListener('click',()=>{btns.forEach(x=>x.classList.remove('active'));b.classList.add('active');const f=b.dataset.filter;cards.forEach(c=>c.classList.toggle('hide',!(f==='all'||c.dataset.cat===f)));});});const menuBtn=document.querySelector('.menuToggle');const menuLinks=document.querySelector('.links');if(menuBtn&&menuLinks){menuBtn.addEventListener('click',()=>{const o=menuLinks.classList.toggle('open');menuBtn.classList.toggle('open',o);menuBtn.setAttribute('aria-expanded',o?'true':'false');});}const navEl=document.querySelector('.nav');
-(function(){if(!navEl||window.innerWidth>980)return;let lastY=window.scrollY||0;let ticking=false;window.addEventListener('scroll',()=>{if(ticking)return;ticking=true;requestAnimationFrame(()=>{const y=window.scrollY||0;const delta=y-lastY;const menuOpen=document.querySelector('.links')?.classList.contains('open');if(menuOpen){navEl.classList.remove('nav-hidden');lastY=y;ticking=false;return;}if(y<20){navEl.classList.remove('nav-hidden');}else if(delta>4){navEl.classList.add('nav-hidden');}else if(delta<-4){navEl.classList.remove('nav-hidden');}lastY=y;ticking=false;});},{passive:true});})();</script></body></html>
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Orion Playbooks | One Solution</title>
+  <link rel="canonical" href="https://orin.onesolutionapp.com/use-cases.html">
+  <meta name="description" content="Orion by One Solution — done-for-you AI operator setup, support, and deployment for real business workflows.">
+  <link rel="icon" href="./assets/favicon-one-solution.jpg">
+  <link rel="stylesheet" href="./assets/orin-theme.css">
+  <style>
+    /* Playbooks Page v2 Styles */
+    .orion-playbooks-v2 {
+      --orion-bg: #070b16;
+      --orion-panel: #0b1224;
+      --orion-panel-2: #0d1a34;
+      --orion-border: #1e2d4d;
+      --orion-border-2: #2f4e87;
+      --orion-border-3: #315597;
+      --orion-blue: #2f6bff;
+      --orion-blue-2: #1f5af5;
+      --orion-headline: #f4f8ff;
+      --orion-body: #dce9ff;
+      --orion-muted: #9db4de;
+      --orion-muted-2: #8fb4ff;
+      --orion-success: #34d399;
+      --orion-warning: #fbbf24;
+      --orion-radius-xl: 28px;
+      --orion-radius-lg: 20px;
+      --orion-radius-md: 14px;
+      --orion-shadow-lg: 0 16px 38px rgba(0, 0, 0, 0.28);
+
+      position: relative;
+      padding: 78px 0 72px;
+      color: var(--orion-headline);
+      background:
+        radial-gradient(circle at top right, rgba(140, 193, 255, 0.05), transparent 26%),
+        radial-gradient(circle at top left, rgba(167, 139, 250, 0.04), transparent 20%);
+    }
+
+    .orion-playbooks-v2__inner {
+      width: min(1240px, calc(100% - 48px));
+      margin: 0 auto;
+    }
+
+    .orion-playbooks-v2__hero {
+      max-width: 860px;
+      margin-bottom: 42px;
+    }
+
+    .orion-playbooks-v2__eyebrow {
+      display: inline-flex;
+      align-items: center;
+      gap: 10px;
+      padding: 8px 14px;
+      border-radius: 999px;
+      border: 1px solid rgba(140, 180, 255, 0.22);
+      background: rgba(13, 26, 52, 0.75);
+      color: var(--orion-muted-2);
+      font-size: 12px;
+      font-weight: 700;
+      letter-spacing: 0.14em;
+      text-transform: uppercase;
+      margin-bottom: 18px;
+    }
+
+    .orion-playbooks-v2__eyebrow-dot {
+      width: 8px;
+      height: 8px;
+      border-radius: 50%;
+      background: linear-gradient(135deg, #ffffff, #8cc1ff);
+      box-shadow: 0 0 14px rgba(140, 193, 255, 0.5);
+    }
+
+    .orion-playbooks-v2__title {
+      margin: 0 0 14px;
+      font-size: clamp(2.4rem, 5vw, 4.4rem);
+      line-height: 1;
+      letter-spacing: -0.045em;
+    }
+
+    .orion-playbooks-v2__subtext {
+      margin: 0 0 12px;
+      max-width: 64ch;
+      color: var(--orion-body);
+      font-size: 1.04rem;
+      line-height: 1.72;
+    }
+
+    .orion-playbooks-v2__note {
+      margin: 0;
+      color: var(--orion-muted);
+      font-size: 0.95rem;
+      line-height: 1.6;
+    }
+
+    .orion-playbooks-v2__value-band {
+      display: grid;
+      grid-template-columns: repeat(3, minmax(0, 1fr));
+      gap: 16px;
+      margin-bottom: 42px;
+    }
+
+    .orion-playbooks-v2__value-card {
+      padding: 22px;
+      border-radius: var(--orion-radius-lg);
+      background: linear-gradient(180deg, rgba(13, 26, 52, 0.9), rgba(11, 18, 36, 0.94));
+      border: 1px solid rgba(47, 78, 135, 0.38);
+      box-shadow: var(--orion-shadow-lg), 0 0 0 1px rgba(140, 193, 255, 0.04);
+    }
+
+    .orion-playbooks-v2__value-icon {
+      width: 14px;
+      height: 14px;
+      border-radius: 999px;
+      margin-bottom: 16px;
+      background: linear-gradient(135deg, #8cc1ff, #2f6bff);
+      box-shadow: 0 0 0 5px rgba(47, 107, 255, 0.12), 0 0 20px rgba(140, 193, 255, 0.3);
+    }
+
+    .orion-playbooks-v2__value-card h2 {
+      margin: 0 0 12px;
+      font-size: 1.18rem;
+      line-height: 1.25;
+      letter-spacing: -0.02em;
+      color: var(--orion-headline);
+    }
+
+    .orion-playbooks-v2__value-card p {
+      margin: 0;
+      color: var(--orion-body);
+      font-size: 0.92rem;
+      line-height: 1.6;
+    }
+
+    .orion-playbooks-v2__grid {
+      display: grid;
+      grid-template-columns: repeat(4, minmax(0, 1fr));
+      gap: 16px;
+      margin-bottom: 48px;
+    }
+
+    .orion-playbooks-v2__card {
+      padding: 20px;
+      border-radius: var(--orion-radius-lg);
+      background: linear-gradient(180deg, rgba(13, 26, 52, 0.88), rgba(11, 18, 36, 0.92));
+      border: 1px solid rgba(47, 78, 135, 0.34);
+      box-shadow: var(--orion-shadow-lg);
+    }
+
+    .orion-playbooks-v2__card:nth-child(1) { border-color: rgba(96, 165, 250, 0.35); }
+    .orion-playbooks-v2__card:nth-child(2) { border-color: rgba(52, 211, 153, 0.3); }
+    .orion-playbooks-v2__card:nth-child(3) { border-color: rgba(251, 191, 36, 0.3); }
+    .orion-playbooks-v2__card:nth-child(4) { border-color: rgba(167, 139, 250, 0.3); }
+    .orion-playbooks-v2__card:nth-child(5) { border-color: rgba(96, 165, 250, 0.35); }
+    .orion-playbooks-v2__card:nth-child(6) { border-color: rgba(52, 211, 153, 0.3); }
+    .orion-playbooks-v2__card:nth-child(7) { border-color: rgba(251, 191, 36, 0.3); }
+    .orion-playbooks-v2__card:nth-child(8) { border-color: rgba(167, 139, 250, 0.3); }
+
+    .orion-playbooks-v2__card h3 {
+      margin: 0 0 16px;
+      font-size: 1.15rem;
+      letter-spacing: -0.02em;
+      line-height: 1.2;
+      color: var(--orion-headline);
+    }
+
+    .orion-playbooks-v2__card-block + .orion-playbooks-v2__card-block {
+      margin-top: 12px;
+      padding-top: 12px;
+      border-top: 1px solid rgba(47, 78, 135, 0.2);
+    }
+
+    .orion-playbooks-v2__label {
+      display: block;
+      margin-bottom: 4px;
+      color: var(--orion-muted);
+      font-size: 0.75rem;
+      font-weight: 700;
+      letter-spacing: 0.04em;
+      text-transform: uppercase;
+    }
+
+    .orion-playbooks-v2__card-block p {
+      margin: 0;
+      color: var(--orion-body);
+      font-size: 0.9rem;
+      line-height: 1.5;
+    }
+
+    .orion-playbooks-v2__proof {
+      margin-bottom: 48px;
+    }
+
+    .orion-playbooks-v2__proof-header {
+      text-align: center;
+      margin-bottom: 28px;
+    }
+
+    .orion-playbooks-v2__proof-header h2 {
+      margin: 0;
+      font-size: clamp(1.8rem, 3vw, 2.4rem);
+      letter-spacing: -0.03em;
+    }
+
+    .orion-playbooks-v2__proof-visual {
+      padding: 24px;
+      border-radius: var(--orion-radius-xl);
+      background: linear-gradient(180deg, rgba(13, 26, 52, 0.9), rgba(11, 18, 36, 0.94));
+      border: 1px solid rgba(47, 78, 135, 0.4);
+      box-shadow: var(--orion-shadow-lg);
+    }
+
+    .orion-playbooks-v2__chat-preview {
+      background: rgba(7, 11, 22, 0.6);
+      border-radius: 16px;
+      padding: 20px;
+      border: 1px solid rgba(49, 85, 151, 0.3);
+    }
+
+    .orion-playbooks-v2__chat-line {
+      display: flex;
+      align-items: flex-start;
+      gap: 12px;
+      margin-bottom: 14px;
+    }
+
+    .orion-playbooks-v2__chat-avatar {
+      width: 32px;
+      height: 32px;
+      border-radius: 8px;
+      background: linear-gradient(135deg, rgba(47, 107, 255, 0.3), rgba(167, 139, 250, 0.2));
+      border: 1px solid rgba(140, 193, 255, 0.25);
+      display: grid;
+      place-items: center;
+      color: var(--orion-headline);
+      font-size: 0.8rem;
+      font-weight: 700;
+      flex-shrink: 0;
+    }
+
+    .orion-playbooks-v2__chat-content {
+      flex: 1;
+    }
+
+    .orion-playbooks-v2__chat-sender {
+      font-size: 0.85rem;
+      font-weight: 700;
+      color: var(--orion-headline);
+      margin-bottom: 4px;
+    }
+
+    .orion-playbooks-v2__chat-text {
+      font-size: 0.88rem;
+      color: var(--orion-body);
+      line-height: 1.5;
+    }
+
+    .orion-playbooks-v2__chat-status {
+      display: inline-flex;
+      align-items: center;
+      gap: 6px;
+      margin-top: 6px;
+      font-size: 0.78rem;
+      color: var(--orion-success);
+    }
+
+    .orion-playbooks-v2__cta {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 40px;
+      padding: 32px 36px;
+      border-radius: var(--orion-radius-xl);
+      background: linear-gradient(145deg, rgba(13, 26, 52, 0.92), rgba(11, 18, 36, 0.96));
+      border: 1px solid rgba(47, 78, 135, 0.4);
+      box-shadow: var(--orion-shadow-lg), 0 0 0 1px rgba(140, 193, 255, 0.04);
+    }
+
+    .orion-playbooks-v2__cta-content {
+      max-width: 760px;
+    }
+
+    .orion-playbooks-v2__cta-eyebrow {
+      display: inline-block;
+      margin-bottom: 10px;
+      color: var(--orion-muted-2);
+      font-size: 0.78rem;
+      font-weight: 800;
+      letter-spacing: 0.1em;
+      text-transform: uppercase;
+    }
+
+    .orion-playbooks-v2__cta h2 {
+      margin: 0 0 12px;
+      font-size: clamp(1.8rem, 3vw, 2.4rem);
+      letter-spacing: -0.03em;
+      line-height: 1.05;
+    }
+
+    .orion-playbooks-v2__cta p {
+      margin: 0;
+      color: var(--orion-body);
+      font-size: 1rem;
+      line-height: 1.7;
+    }
+
+    .orion-playbooks-v2__cta-actions {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 12px;
+    }
+
+    .orion-playbooks-v2__btn {
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      min-height: 52px;
+      padding: 14px 20px;
+      border-radius: 14px;
+      font-size: 0.96rem;
+      font-weight: 700;
+      text-decoration: none;
+      transition: transform 0.18s ease, box-shadow 0.18s ease;
+    }
+
+    .orion-playbooks-v2__btn:hover {
+      transform: translateY(-1px);
+    }
+
+    .orion-playbooks-v2__btn--primary {
+      background: linear-gradient(135deg, var(--orion-blue), var(--orion-blue-2));
+      color: #fff;
+      box-shadow: 0 12px 24px rgba(47, 107, 255, 0.3);
+    }
+
+    .orion-playbooks-v2__btn--secondary {
+      background: rgba(13, 26, 52, 0.9);
+      border: 1px solid rgba(140, 180, 255, 0.22);
+      color: var(--orion-headline);
+    }
+
+    @media (max-width: 1120px) {
+      .orion-playbooks-v2__value-band {
+        grid-template-columns: 1fr;
+      }
+
+      .orion-playbooks-v2__grid {
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+      }
+
+      .orion-playbooks-v2__cta {
+        flex-direction: column;
+        align-items: flex-start;
+      }
+    }
+
+    @media (max-width: 760px) {
+      .orion-playbooks-v2 {
+        padding: 52px 0 44px;
+      }
+
+      .orion-playbooks-v2__inner {
+        width: min(100%, calc(100% - 24px));
+      }
+
+      .orion-playbooks-v2__hero {
+        margin-bottom: 30px;
+      }
+
+      .orion-playbooks-v2__title {
+        font-size: clamp(2rem, 6.5vw, 2.8rem);
+      }
+
+      .orion-playbooks-v2__value-band {
+        gap: 12px;
+        margin-bottom: 32px;
+      }
+
+      .orion-playbooks-v2__value-card {
+        padding: 18px;
+      }
+
+      .orion-playbooks-v2__grid {
+        grid-template-columns: 1fr;
+        gap: 12px;
+        margin-bottom: 36px;
+      }
+
+      .orion-playbooks-v2__card {
+        padding: 18px;
+      }
+
+      .orion-playbooks-v2__proof {
+        margin-bottom: 36px;
+      }
+
+      .orion-playbooks-v2__proof-visual {
+        padding: 18px;
+      }
+
+      .orion-playbooks-v2__cta {
+        padding: 22px;
+        gap: 20px;
+      }
+
+      .orion-playbooks-v2__cta h2 {
+        font-size: 1.5rem;
+      }
+
+      .orion-playbooks-v2__cta-actions {
+        width: 100%;
+        flex-direction: column;
+      }
+
+      .orion-playbooks-v2__btn {
+        width: 100%;
+        min-height: 48px;
+        padding: 12px 18px;
+      }
+    }
+  </style>
+</head>
+<body>
+  <div class="wrap">
+    <header class="nav">
+      <a href="./index.html"><img src="./assets/one-solution-logo-white.png" alt="One Solution"></a>
+      <button class="menuToggle" type="button" aria-label="Open menu" aria-expanded="false"><span class="menuIcon"><span></span></span></button>
+      <div class="links">
+        <a href="./index.html">Home</a>
+        <a href="./how-it-works.html">How It Works</a>
+        <a href="./solutions.html">Solutions</a>
+        <a class="active" href="./use-cases.html">Playbooks</a>
+        <a href="./pricing.html">Pricing</a>
+        <a href="./trust.html">Trust</a>
+        <a class="btn g" href="https://link.onesolutionapp.com/widget/form/CowOWlCpQDzIq8FGlDG9" target="_blank" rel="noopener noreferrer">Request Orion Setup</a>
+      </div>
+    </header>
+
+    <section class="orion-playbooks-v2">
+      <div class="orion-playbooks-v2__inner">
+
+        <header class="orion-playbooks-v2__hero">
+          <div class="orion-playbooks-v2__eyebrow">
+            <span class="orion-playbooks-v2__eyebrow-dot"></span>
+            Workflow Examples
+          </div>
+          <h1 class="orion-playbooks-v2__title">Playbooks for Real Business Workflows</h1>
+          <p class="orion-playbooks-v2__subtext">Practical examples of the repeatable workflow support lanes Orion can configure. Each playbook is designed around a specific operational pattern your team faces regularly.</p>
+          <p class="orion-playbooks-v2__note">These are examples of fit, not limits. Orion can be scoped to custom repeatable workflows during intake.</p>
+        </header>
+
+        <section class="orion-playbooks-v2__value-band" aria-label="Why playbooks work">
+          <article class="orion-playbooks-v2__value-card">
+            <div class="orion-playbooks-v2__value-icon"></div>
+            <h2>Built for recurring work</h2>
+            <p>Each playbook targets tasks that repeat weekly or daily, turning friction into flow.</p>
+          </article>
+          <article class="orion-playbooks-v2__value-card">
+            <div class="orion-playbooks-v2__value-icon"></div>
+            <h2>Designed for cleaner handoffs</h2>
+            <p>Support lanes reduce dropped balls and unclear next steps between team members.</p>
+          </article>
+          <article class="orion-playbooks-v2__value-card">
+            <div class="orion-playbooks-v2__value-icon"></div>
+            <h2>Scoped around your workflow</h2>
+            <p>Playbooks adapt to your systems, pace, and execution style—not generic templates.</p>
+          </article>
+        </section>
+
+        <section class="orion-playbooks-v2__grid" aria-label="Available playbooks">
+
+          <article class="orion-playbooks-v2__card">
+            <h3>Lead Follow-Up Support</h3>
+            <div class="orion-playbooks-v2__card-block">
+              <span class="orion-playbooks-v2__label">Best for</span>
+              <p>Sales teams with active lead flow and response pressure.</p>
+            </div>
+            <div class="orion-playbooks-v2__card-block">
+              <span class="orion-playbooks-v2__label">Orion support</span>
+              <p>Draft follow-up messages and flag high-priority touchpoints.</p>
+            </div>
+            <div class="orion-playbooks-v2__card-block">
+              <span class="orion-playbooks-v2__label">Likely first win</span>
+              <p>Faster response times and fewer dropped opportunities.</p>
+            </div>
+          </article>
+
+          <article class="orion-playbooks-v2__card">
+            <h3>Research Prep</h3>
+            <div class="orion-playbooks-v2__card-block">
+              <span class="orion-playbooks-v2__label">Best for</span>
+              <p>Teams doing regular prospect, account, or market research.</p>
+            </div>
+            <div class="orion-playbooks-v2__card-block">
+              <span class="orion-playbooks-v2__label">Orion support</span>
+              <p>Summarize key points and surface relevant context quickly.</p>
+            </div>
+            <div class="orion-playbooks-v2__card-block">
+              <span class="orion-playbooks-v2__label">Likely first win</span>
+              <p>Faster prep with stronger context for calls and meetings.</p>
+            </div>
+          </article>
+
+          <article class="orion-playbooks-v2__card">
+            <h3>Ops Summaries</h3>
+            <div class="orion-playbooks-v2__card-block">
+              <span class="orion-playbooks-v2__label">Best for</span>
+              <p>Teams needing regular status updates and bottleneck visibility.</p>
+            </div>
+            <div class="orion-playbooks-v2__card-block">
+              <span class="orion-playbooks-v2__label">Orion support</span>
+              <p>Compile blockers, wins, and next steps into clear summaries.</p>
+            </div>
+            <div class="orion-playbooks-v2__card-block">
+              <span class="orion-playbooks-v2__label">Likely first win</span>
+              <p>Faster reporting cycles with actionable clarity.</p>
+            </div>
+          </article>
+
+          <article class="orion-playbooks-v2__card">
+            <h3>Task Guidance Pack</h3>
+            <div class="orion-playbooks-v2__card-block">
+              <span class="orion-playbooks-v2__label">Best for</span>
+              <p>Projects with multiple stages and handoff requirements.</p>
+            </div>
+            <div class="orion-playbooks-v2__card-block">
+              <span class="orion-playbooks-v2__label">Orion support</span>
+              <p>Stage-appropriate guidance and next-step recommendations.</p>
+            </div>
+            <div class="orion-playbooks-v2__card-block">
+              <span class="orion-playbooks-v2__label">Likely first win</span>
+              <p>Clearer execution and fewer stalled projects.</p>
+            </div>
+          </article>
+
+          <article class="orion-playbooks-v2__card">
+            <h3>Pipeline Handoff Support</h3>
+            <div class="orion-playbooks-v2__card-block">
+              <span class="orion-playbooks-v2__label">Best for</span>
+              <p>Sales and service teams with stage-based workflows.</p>
+            </div>
+            <div class="orion-playbooks-v2__card-block">
+              <span class="orion-playbooks-v2__label">Orion support</span>
+              <p>Prepare handoff summaries and flag action items at each stage.</p>
+            </div>
+            <div class="orion-playbooks-v2__card-block">
+              <span class="orion-playbooks-v2__label">Likely first win</span>
+              <p>Cleaner handoffs and improved pipeline hygiene.</p>
+            </div>
+          </article>
+
+          <article class="orion-playbooks-v2__card">
+            <h3>Client Update Drafting</h3>
+            <div class="orion-playbooks-v2__card-block">
+              <span class="orion-playbooks-v2__label">Best for</span>
+              <p>Agencies and service businesses with ongoing client work.</p>
+            </div>
+            <div class="orion-playbooks-v2__card-block">
+              <span class="orion-playbooks-v2__label">Orion support</span>
+              <p>Draft status updates and progress summaries for review.</p>
+            </div>
+            <div class="orion-playbooks-v2__card-block">
+              <span class="orion-playbooks-v2__label">Likely first win</span>
+              <p>More consistent client communication with less manual drafting.</p>
+            </div>
+          </article>
+
+          <article class="orion-playbooks-v2__card">
+            <h3>Renewal / Recurring Follow-Up</h3>
+            <div class="orion-playbooks-v2__card-block">
+              <span class="orion-playbooks-v2__label">Best for</span>
+              <p>Insurance, subscription, and recurring revenue businesses.</p>
+            </div>
+            <div class="orion-playbooks-v2__card-block">
+              <span class="orion-playbooks-v2__label">Orion support</span>
+              <p>Track renewal timelines and draft follow-up sequences.</p>
+            </div>
+            <div class="orion-playbooks-v2__card-block">
+              <span class="orion-playbooks-v2__label">Likely first win</span>
+              <p>Better retention through consistent touchpoint management.</p>
+            </div>
+          </article>
+
+          <article class="orion-playbooks-v2__card">
+            <h3>Intake Support Lane</h3>
+            <div class="orion-playbooks-v2__card-block">
+              <span class="orion-playbooks-v2__label">Best for</span>
+              <p>Businesses with high inbound inquiry volume.</p>
+            </div>
+            <div class="orion-playbooks-v2__card-block">
+              <span class="orion-playbooks-v2__label">Orion support</span>
+              <p>Organize intake data and prepare initial response drafts.</p>
+            </div>
+            <div class="orion-playbooks-v2__card-block">
+              <span class="orion-playbooks-v2__label">Likely first win</span>
+              <p>Faster response times and cleaner intake organization.</p>
+            </div>
+          </article>
+
+        </section>
+
+        <section class="orion-playbooks-v2__proof" aria-label="Orion in action">
+          <div class="orion-playbooks-v2__proof-header">
+            <h2>Orion in action</h2>
+          </div>
+          <div class="orion-playbooks-v2__proof-visual">
+            <div class="orion-playbooks-v2__chat-preview">
+              <div class="orion-playbooks-v2__chat-line">
+                <div class="orion-playbooks-v2__chat-avatar">O</div>
+                <div class="orion-playbooks-v2__chat-content">
+                  <div class="orion-playbooks-v2__chat-sender">Orion Runtime</div>
+                  <div class="orion-playbooks-v2__chat-text">Backup created. Initiating workflow execution.</div>
+                </div>
+              </div>
+              <div class="orion-playbooks-v2__chat-line">
+                <div class="orion-playbooks-v2__chat-avatar">A</div>
+                <div class="orion-playbooks-v2__chat-content">
+                  <div class="orion-playbooks-v2__chat-sender">Specialized Agent</div>
+                  <div class="orion-playbooks-v2__chat-text">Spawned for task: Research Prep — Lead Qualification</div>
+                  <div class="orion-playbooks-v2__chat-status">Active</div>
+                </div>
+              </div>
+              <div class="orion-playbooks-v2__chat-line">
+                <div class="orion-playbooks-v2__chat-avatar">O</div>
+                <div class="orion-playbooks-v2__chat-content">
+                  <div class="orion-playbooks-v2__chat-sender">Orion Runtime</div>
+                  <div class="orion-playbooks-v2__chat-text">Task execution coordinated. Outputs ready for review.</div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </section>
+
+        <section class="orion-playbooks-v2__cta" aria-label="Custom playbook request">
+          <div class="orion-playbooks-v2__cta-content">
+            <div class="orion-playbooks-v2__cta-eyebrow">Not seeing your workflow?</div>
+            <h2>Need a custom playbook?</h2>
+            <p>These playbooks are common examples, not limitations. If your repeatable workflow doesn't match a standard profile, One Solution can scope a custom support lane during intake.</p>
+          </div>
+          <div class="orion-playbooks-v2__cta-actions">
+            <a href="https://link.onesolutionapp.com/widget/form/CowOWlCpQDzIq8FGlDG9" target="_blank" rel="noopener noreferrer" class="orion-playbooks-v2__btn orion-playbooks-v2__btn--primary">Request Orion Setup</a>
+            <a href="./pricing.html" class="orion-playbooks-v2__btn orion-playbooks-v2__btn--secondary">View Pricing</a>
+          </div>
+        </section>
+
+      </div>
+    </section>
+
+    <footer>
+      <div>© <span id="y"></span> One Solution LLC • Orion by One Solution</div>
+      <div class="legal">
+        <a href="https://my.onesolutionapp.com/privacy-policy/" target="_blank">Privacy Policy</a>
+        <a href="https://my.onesolutionapp.com/terms-of-service/" target="_blank">Terms of Service</a>
+      </div>
+    </footer>
+  </div>
+
+  <script>
+    document.getElementById('y').textContent = new Date().getFullYear();
+    const menuBtn = document.querySelector('.menuToggle');
+    const menuLinks = document.querySelector('.links');
+    if (menuBtn && menuLinks) {
+      menuBtn.addEventListener('click', () => {
+        const o = menuLinks.classList.toggle('open');
+        menuBtn.classList.toggle('open', o);
+        menuBtn.setAttribute('aria-expanded', o ? 'true' : 'false');
+      });
+    }
+    const navEl = document.querySelector('.nav');
+    (function() {
+      if (!navEl || window.innerWidth > 980) return;
+      let lastY = window.scrollY || 0;
+      let ticking = false;
+      window.addEventListener('scroll', () => {
+        if (ticking) return;
+        ticking = true;
+        requestAnimationFrame(() => {
+          const y = window.scrollY || 0;
+          const delta = y - lastY;
+          const menuOpen = document.querySelector('.links')?.classList.contains('open');
+          if (menuOpen) {
+            navEl.classList.remove('nav-hidden');
+            lastY = y;
+            ticking = false;
+            return;
+          }
+          if (y < 20) {
+            navEl.classList.remove('nav-hidden');
+          } else if (delta > 4) {
+            navEl.classList.add('nav-hidden');
+          } else if (delta < -4) {
+            navEl.classList.remove('nav-hidden');
+          }
+          lastY = y;
+          ticking = false;
+        });
+      }, { passive: true });
+    })();
+  </script>
+</body>
+</html>
