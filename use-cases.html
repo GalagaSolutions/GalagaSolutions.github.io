@@ -45,7 +45,7 @@
 
     .orion-playbooks-v2__hero {
       max-width: 860px;
-      margin-bottom: 42px;
+      margin-bottom: 36px;
     }
 
     .orion-playbooks-v2__eyebrow {
@@ -98,7 +98,7 @@
       display: grid;
       grid-template-columns: repeat(3, minmax(0, 1fr));
       gap: 16px;
-      margin-bottom: 42px;
+      margin-bottom: 48px;
     }
 
     .orion-playbooks-v2__value-card {
@@ -184,8 +184,9 @@
     .orion-playbooks-v2__card-block p {
       margin: 0;
       color: var(--orion-body);
-      font-size: 0.9rem;
-      line-height: 1.5;
+      font-size: 0.88rem;
+      line-height: 1.45;
+      max-width: 28ch;
     }
 
     .orion-playbooks-v2__proof {
@@ -198,87 +199,127 @@
     }
 
     .orion-playbooks-v2__proof-header h2 {
-      margin: 0;
+      margin: 0 0 10px;
       font-size: clamp(1.8rem, 3vw, 2.4rem);
       letter-spacing: -0.03em;
     }
 
+    .orion-playbooks-v2__proof-subhead {
+      margin: 0;
+      color: var(--orion-muted);
+      font-size: 1rem;
+      line-height: 1.6;
+    }
+
     .orion-playbooks-v2__proof-visual {
-      padding: 24px;
+      padding: 28px;
       border-radius: var(--orion-radius-xl);
-      background: linear-gradient(180deg, rgba(13, 26, 52, 0.9), rgba(11, 18, 36, 0.94));
-      border: 1px solid rgba(47, 78, 135, 0.4);
-      box-shadow: var(--orion-shadow-lg);
+      background: linear-gradient(180deg, rgba(13, 26, 52, 0.92), rgba(11, 18, 36, 0.96));
+      border: 1px solid rgba(47, 78, 135, 0.45);
+      box-shadow: var(--orion-shadow-lg), 0 0 0 1px rgba(140, 193, 255, 0.04);
     }
 
     .orion-playbooks-v2__chat-preview {
-      background: rgba(7, 11, 22, 0.6);
-      border-radius: 16px;
-      padding: 20px;
-      border: 1px solid rgba(49, 85, 151, 0.3);
+      background: rgba(7, 11, 22, 0.65);
+      border-radius: 18px;
+      padding: 24px;
+      border: 1px solid rgba(49, 85, 151, 0.35);
     }
 
     .orion-playbooks-v2__chat-line {
       display: flex;
       align-items: flex-start;
-      gap: 12px;
-      margin-bottom: 14px;
+      gap: 14px;
+      margin-bottom: 18px;
+      padding-bottom: 18px;
+      border-bottom: 1px solid rgba(47, 78, 135, 0.2);
+    }
+
+    .orion-playbooks-v2__chat-line:last-child {
+      margin-bottom: 0;
+      padding-bottom: 0;
+      border-bottom: none;
     }
 
     .orion-playbooks-v2__chat-avatar {
-      width: 32px;
-      height: 32px;
-      border-radius: 8px;
-      background: linear-gradient(135deg, rgba(47, 107, 255, 0.3), rgba(167, 139, 250, 0.2));
-      border: 1px solid rgba(140, 193, 255, 0.25);
+      width: 36px;
+      height: 36px;
+      border-radius: 10px;
+      background: linear-gradient(135deg, rgba(47, 107, 255, 0.35), rgba(167, 139, 250, 0.25));
+      border: 1px solid rgba(140, 193, 255, 0.3);
       display: grid;
       place-items: center;
       color: var(--orion-headline);
-      font-size: 0.8rem;
+      font-size: 0.85rem;
       font-weight: 700;
       flex-shrink: 0;
+      box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
     }
 
     .orion-playbooks-v2__chat-content {
       flex: 1;
+      min-width: 0;
     }
 
     .orion-playbooks-v2__chat-sender {
-      font-size: 0.85rem;
+      font-size: 0.88rem;
       font-weight: 700;
       color: var(--orion-headline);
-      margin-bottom: 4px;
+      margin-bottom: 5px;
+      letter-spacing: -0.01em;
     }
 
     .orion-playbooks-v2__chat-text {
-      font-size: 0.88rem;
+      font-size: 0.92rem;
       color: var(--orion-body);
-      line-height: 1.5;
+      line-height: 1.55;
     }
 
     .orion-playbooks-v2__chat-status {
       display: inline-flex;
       align-items: center;
       gap: 6px;
-      margin-top: 6px;
-      font-size: 0.78rem;
-      color: var(--orion-success);
+      margin-top: 8px;
+      padding: 4px 10px;
+      border-radius: 999px;
+      font-size: 0.75rem;
+      font-weight: 700;
+      color: #c9fff0;
+      background: rgba(5, 150, 105, 0.15);
+      border: 1px solid rgba(52, 211, 153, 0.25);
+      text-transform: uppercase;
+      letter-spacing: 0.03em;
+    }
+
+    .orion-playbooks-v2__chat-status::before {
+      content: '';
+      width: 6px;
+      height: 6px;
+      border-radius: 50%;
+      background: var(--orion-success);
+      box-shadow: 0 0 10px rgba(52, 211, 153, 0.6);
+      animation: pulse 2s ease-in-out infinite;
+    }
+
+    @keyframes pulse {
+      0%, 100% { opacity: 1; }
+      50% { opacity: 0.6; }
     }
 
     .orion-playbooks-v2__cta {
       display: flex;
       align-items: center;
       justify-content: space-between;
-      gap: 40px;
-      padding: 32px 36px;
+      gap: 44px;
+      padding: 36px 40px;
       border-radius: var(--orion-radius-xl);
-      background: linear-gradient(145deg, rgba(13, 26, 52, 0.92), rgba(11, 18, 36, 0.96));
-      border: 1px solid rgba(47, 78, 135, 0.4);
-      box-shadow: var(--orion-shadow-lg), 0 0 0 1px rgba(140, 193, 255, 0.04);
+      background: linear-gradient(145deg, rgba(13, 26, 52, 0.94), rgba(11, 18, 36, 0.98));
+      border: 1px solid rgba(47, 78, 135, 0.42);
+      box-shadow: var(--orion-shadow-lg), 0 0 0 1px rgba(140, 193, 255, 0.05);
     }
 
     .orion-playbooks-v2__cta-content {
-      max-width: 760px;
+      max-width: 700px;
     }
 
     .orion-playbooks-v2__cta-eyebrow {
@@ -292,7 +333,7 @@
     }
 
     .orion-playbooks-v2__cta h2 {
-      margin: 0 0 12px;
+      margin: 0 0 10px;
       font-size: clamp(1.8rem, 3vw, 2.4rem);
       letter-spacing: -0.03em;
       line-height: 1.05;
@@ -301,14 +342,17 @@
     .orion-playbooks-v2__cta p {
       margin: 0;
       color: var(--orion-body);
-      font-size: 1rem;
-      line-height: 1.7;
+      font-size: 0.98rem;
+      line-height: 1.65;
+      max-width: 54ch;
     }
 
     .orion-playbooks-v2__cta-actions {
       display: flex;
       flex-wrap: wrap;
       gap: 12px;
+      align-items: center;
+      justify-content: flex-end;
     }
 
     .orion-playbooks-v2__btn {
@@ -365,7 +409,7 @@
       }
 
       .orion-playbooks-v2__hero {
-        margin-bottom: 30px;
+        margin-bottom: 26px;
       }
 
       .orion-playbooks-v2__title {
@@ -388,7 +432,13 @@
       }
 
       .orion-playbooks-v2__card {
-        padding: 18px;
+        padding: 16px;
+      }
+
+      .orion-playbooks-v2__card-block p {
+        font-size: 0.86rem;
+        line-height: 1.42;
+        max-width: none;
       }
 
       .orion-playbooks-v2__proof {
@@ -474,7 +524,7 @@
             <h3>Lead Follow-Up Support</h3>
             <div class="orion-playbooks-v2__card-block">
               <span class="orion-playbooks-v2__label">Best for</span>
-              <p>Sales teams with active lead flow and response pressure.</p>
+              <p>Sales teams with active lead flow.</p>
             </div>
             <div class="orion-playbooks-v2__card-block">
               <span class="orion-playbooks-v2__label">Orion support</span>
@@ -494,7 +544,7 @@
             </div>
             <div class="orion-playbooks-v2__card-block">
               <span class="orion-playbooks-v2__label">Orion support</span>
-              <p>Summarize key points and surface relevant context quickly.</p>
+              <p>Surface key context and prep points fast.</p>
             </div>
             <div class="orion-playbooks-v2__card-block">
               <span class="orion-playbooks-v2__label">Likely first win</span>
@@ -510,7 +560,7 @@
             </div>
             <div class="orion-playbooks-v2__card-block">
               <span class="orion-playbooks-v2__label">Orion support</span>
-              <p>Compile blockers, wins, and next steps into clear summaries.</p>
+              <p>Turn blockers, wins, and next steps into clear summaries.</p>
             </div>
             <div class="orion-playbooks-v2__card-block">
               <span class="orion-playbooks-v2__label">Likely first win</span>
@@ -526,7 +576,7 @@
             </div>
             <div class="orion-playbooks-v2__card-block">
               <span class="orion-playbooks-v2__label">Orion support</span>
-              <p>Stage-appropriate guidance and next-step recommendations.</p>
+              <p>Provide stage-specific guidance and next steps.</p>
             </div>
             <div class="orion-playbooks-v2__card-block">
               <span class="orion-playbooks-v2__label">Likely first win</span>
@@ -542,7 +592,7 @@
             </div>
             <div class="orion-playbooks-v2__card-block">
               <span class="orion-playbooks-v2__label">Orion support</span>
-              <p>Prepare handoff summaries and flag action items at each stage.</p>
+              <p>Prepare handoff summaries and stage actions.</p>
             </div>
             <div class="orion-playbooks-v2__card-block">
               <span class="orion-playbooks-v2__label">Likely first win</span>
@@ -558,7 +608,7 @@
             </div>
             <div class="orion-playbooks-v2__card-block">
               <span class="orion-playbooks-v2__label">Orion support</span>
-              <p>Draft status updates and progress summaries for review.</p>
+              <p>Draft status updates and concise progress summaries.</p>
             </div>
             <div class="orion-playbooks-v2__card-block">
               <span class="orion-playbooks-v2__label">Likely first win</span>
@@ -574,7 +624,7 @@
             </div>
             <div class="orion-playbooks-v2__card-block">
               <span class="orion-playbooks-v2__label">Orion support</span>
-              <p>Track renewal timelines and draft follow-up sequences.</p>
+              <p>Track renewal timing and draft follow-up sequences.</p>
             </div>
             <div class="orion-playbooks-v2__card-block">
               <span class="orion-playbooks-v2__label">Likely first win</span>
@@ -590,7 +640,7 @@
             </div>
             <div class="orion-playbooks-v2__card-block">
               <span class="orion-playbooks-v2__label">Orion support</span>
-              <p>Organize intake data and prepare initial response drafts.</p>
+              <p>Organize intake details and prepare first responses.</p>
             </div>
             <div class="orion-playbooks-v2__card-block">
               <span class="orion-playbooks-v2__label">Likely first win</span>
@@ -603,6 +653,7 @@
         <section class="orion-playbooks-v2__proof" aria-label="Orion in action">
           <div class="orion-playbooks-v2__proof-header">
             <h2>Orion in action</h2>
+            <p class="orion-playbooks-v2__proof-subhead">A simplified view of how Orion coordinates work across runtime support, specialized execution, and final delivery.</p>
           </div>
           <div class="orion-playbooks-v2__proof-visual">
             <div class="orion-playbooks-v2__chat-preview">
