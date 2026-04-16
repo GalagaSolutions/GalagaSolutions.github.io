@@ -1,9 +1,587 @@
-<!doctype html><html lang='en'><head><meta charset='UTF-8'><meta name='viewport' content='width=device-width,initial-scale=1'><title>Orion Solutions | One Solution</title>
+<!doctype html>
+<html lang='en'>
+<head>
+  <meta charset='UTF-8'>
+  <meta name='viewport' content='width=device-width,initial-scale=1'>
+  <title>Orion Solutions | One Solution</title>
   <link rel="canonical" href="https://orin.onesolutionapp.com/solutions.html" />
-  <meta name="description" content="Orion by One Solution — done-for-you AI operator setup, support, and deployment for real business workflows." /><link rel='icon' href='./assets/favicon-one-solution.jpg'><link rel='stylesheet' href='./assets/orin-theme.css'><style>.grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(260px,1fr));gap:12px}.tag{display:inline-flex;background:#122041;border:1px solid #27437f;color:#9ec5ff;padding:5px 9px;border-radius:999px;font-size:.78rem}</style>  <meta property="og:title" content="Orion by One Solution" />
+  <meta name="description" content="Orion by One Solution — done-for-you AI operator setup, support, and deployment for real business workflows." />
+  <link rel='icon' href='./assets/favicon-one-solution.jpg'>
+  <link rel='stylesheet' href='./assets/orin-theme.css'>
+  <style>
+    /* Solutions Page v2 Styles */
+    .orion-solutions-v2 {
+      --orion-bg: #070b16;
+      --orion-panel: #0b1224;
+      --orion-panel-2: #0d1a34;
+      --orion-border: #1e2d4d;
+      --orion-border-2: #2f4e87;
+      --orion-border-3: #315597;
+      --orion-blue: #2f6bff;
+      --orion-blue-2: #1f5af5;
+      --orion-headline: #f4f8ff;
+      --orion-body: #dce9ff;
+      --orion-muted: #9db4de;
+      --orion-muted-2: #8fb4ff;
+      --orion-success: #34d399;
+      --orion-radius-xl: 28px;
+      --orion-radius-lg: 20px;
+      --orion-radius-md: 14px;
+      --orion-shadow-lg: 0 16px 38px rgba(0, 0, 0, 0.28);
+
+      position: relative;
+      padding: 78px 0 72px;
+      color: var(--orion-headline);
+      background:
+        radial-gradient(circle at top right, rgba(140, 193, 255, 0.05), transparent 26%),
+        radial-gradient(circle at top left, rgba(167, 139, 250, 0.04), transparent 20%);
+    }
+
+    .orion-solutions-v2__inner {
+      width: min(1240px, calc(100% - 48px));
+      margin: 0 auto;
+    }
+
+    .orion-solutions-v2__hero {
+      max-width: 860px;
+      margin-bottom: 42px;
+    }
+
+    .orion-solutions-v2__eyebrow {
+      display: inline-flex;
+      align-items: center;
+      gap: 10px;
+      padding: 8px 14px;
+      border-radius: 999px;
+      border: 1px solid rgba(140, 180, 255, 0.22);
+      background: rgba(13, 26, 52, 0.75);
+      color: var(--orion-muted-2);
+      font-size: 12px;
+      font-weight: 700;
+      letter-spacing: 0.14em;
+      text-transform: uppercase;
+      margin-bottom: 18px;
+    }
+
+    .orion-solutions-v2__eyebrow-dot {
+      width: 8px;
+      height: 8px;
+      border-radius: 50%;
+      background: linear-gradient(135deg, #ffffff, #8cc1ff);
+      box-shadow: 0 0 14px rgba(140, 193, 255, 0.5);
+    }
+
+    .orion-solutions-v2__title {
+      margin: 0 0 14px;
+      font-size: clamp(2.4rem, 5vw, 4.4rem);
+      line-height: 1;
+      letter-spacing: -0.045em;
+    }
+
+    .orion-solutions-v2__subtext {
+      margin: 0 0 12px;
+      max-width: 64ch;
+      color: var(--orion-body);
+      font-size: 1.04rem;
+      line-height: 1.72;
+    }
+
+    .orion-solutions-v2__note {
+      margin: 0;
+      color: var(--orion-muted);
+      font-size: 0.95rem;
+      line-height: 1.6;
+    }
+
+    .orion-solutions-v2__value-band {
+      display: grid;
+      grid-template-columns: repeat(3, minmax(0, 1fr));
+      gap: 16px;
+      margin-bottom: 34px;
+    }
+
+    .orion-solutions-v2__value-card {
+      padding: 20px;
+      border-radius: var(--orion-radius-lg);
+      background: linear-gradient(180deg, rgba(13, 26, 52, 0.88), rgba(11, 18, 36, 0.92));
+      border: 1px solid rgba(47, 78, 135, 0.32);
+      box-shadow: var(--orion-shadow-lg);
+    }
+
+    .orion-solutions-v2__value-icon {
+      width: 12px;
+      height: 12px;
+      border-radius: 999px;
+      margin-bottom: 14px;
+      background: linear-gradient(135deg, #8cc1ff, #2f6bff);
+      box-shadow: 0 0 0 4px rgba(47, 107, 255, 0.1);
+    }
+
+    .orion-solutions-v2__value-card h2 {
+      margin: 0 0 10px;
+      font-size: 1.15rem;
+      line-height: 1.2;
+      letter-spacing: -0.02em;
+    }
+
+    .orion-solutions-v2__value-card p {
+      margin: 0;
+      color: var(--orion-body);
+      font-size: 0.94rem;
+      line-height: 1.65;
+    }
+
+    .orion-solutions-v2__grid {
+      display: grid;
+      grid-template-columns: repeat(3, minmax(0, 1fr));
+      gap: 16px;
+      margin-bottom: 40px;
+    }
+
+    .orion-solutions-v2__card {
+      padding: 20px;
+      border-radius: var(--orion-radius-lg);
+      background: linear-gradient(180deg, rgba(13, 26, 52, 0.88), rgba(11, 18, 36, 0.92));
+      border: 1px solid rgba(47, 78, 135, 0.34);
+      box-shadow: var(--orion-shadow-lg);
+    }
+
+    .orion-solutions-v2__card-top {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 10px;
+      margin-bottom: 18px;
+    }
+
+    .orion-solutions-v2__card-top h3 {
+      margin: 0;
+      font-size: 1.28rem;
+      letter-spacing: -0.02em;
+      line-height: 1.1;
+    }
+
+    .orion-solutions-v2__lane-tag {
+      display: inline-flex;
+      align-items: center;
+      padding: 6px 10px;
+      border-radius: 999px;
+      font-size: 0.73rem;
+      font-weight: 800;
+      letter-spacing: 0.04em;
+      text-transform: uppercase;
+      color: var(--orion-muted-2);
+      background: rgba(47, 107, 255, 0.11);
+      border: 1px solid rgba(47, 107, 255, 0.18);
+      white-space: nowrap;
+    }
+
+    .orion-solutions-v2__card-block + .orion-solutions-v2__card-block {
+      margin-top: 16px;
+    }
+
+    .orion-solutions-v2__label {
+      display: inline-block;
+      margin-bottom: 6px;
+      color: var(--orion-headline);
+      font-size: 0.88rem;
+      font-weight: 800;
+      letter-spacing: -0.01em;
+    }
+
+    .orion-solutions-v2__card-block p {
+      margin: 0;
+      color: var(--orion-body);
+      font-size: 0.96rem;
+      line-height: 1.7;
+    }
+
+    .orion-solutions-v2__custom {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 28px;
+      padding: 28px;
+      border-radius: var(--orion-radius-xl);
+      background: linear-gradient(180deg, rgba(13, 26, 52, 0.88), rgba(11, 18, 36, 0.94));
+      border: 1px solid rgba(47, 78, 135, 0.34);
+      box-shadow: var(--orion-shadow-lg);
+    }
+
+    .orion-solutions-v2__custom-content {
+      max-width: 760px;
+    }
+
+    .orion-solutions-v2__custom-eyebrow {
+      display: inline-block;
+      margin-bottom: 10px;
+      color: var(--orion-muted-2);
+      font-size: 0.78rem;
+      font-weight: 800;
+      letter-spacing: 0.1em;
+      text-transform: uppercase;
+    }
+
+    .orion-solutions-v2__custom h2 {
+      margin: 0 0 12px;
+      font-size: clamp(1.8rem, 3vw, 2.4rem);
+      letter-spacing: -0.03em;
+      line-height: 1.05;
+    }
+
+    .orion-solutions-v2__custom p {
+      margin: 0;
+      color: var(--orion-body);
+      font-size: 1rem;
+      line-height: 1.7;
+    }
+
+    .orion-solutions-v2__custom-actions {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 12px;
+    }
+
+    .orion-solutions-v2__btn {
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      min-height: 52px;
+      padding: 14px 20px;
+      border-radius: 14px;
+      font-size: 0.96rem;
+      font-weight: 700;
+      text-decoration: none;
+      transition: transform 0.18s ease, box-shadow 0.18s ease;
+    }
+
+    .orion-solutions-v2__btn:hover {
+      transform: translateY(-1px);
+    }
+
+    .orion-solutions-v2__btn--primary {
+      background: linear-gradient(135deg, var(--orion-blue), var(--orion-blue-2));
+      color: #fff;
+      box-shadow: 0 12px 24px rgba(47, 107, 255, 0.3);
+    }
+
+    .orion-solutions-v2__btn--secondary {
+      background: rgba(13, 26, 52, 0.9);
+      border: 1px solid rgba(140, 180, 255, 0.22);
+      color: var(--orion-headline);
+    }
+
+    @media (max-width: 1120px) {
+      .orion-solutions-v2__value-band {
+        grid-template-columns: 1fr;
+      }
+
+      .orion-solutions-v2__grid {
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+      }
+
+      .orion-solutions-v2__custom {
+        flex-direction: column;
+        align-items: flex-start;
+      }
+    }
+
+    @media (max-width: 760px) {
+      .orion-solutions-v2 {
+        padding: 64px 0 56px;
+      }
+
+      .orion-solutions-v2__inner {
+        width: min(100%, calc(100% - 30px));
+      }
+
+      .orion-solutions-v2__hero {
+        margin-bottom: 30px;
+      }
+
+      .orion-solutions-v2__subtext {
+        font-size: 1rem;
+      }
+
+      .orion-solutions-v2__grid {
+        grid-template-columns: 1fr;
+        gap: 14px;
+      }
+
+      .orion-solutions-v2__card,
+      .orion-solutions-v2__value-card,
+      .orion-solutions-v2__custom {
+        padding: 18px;
+      }
+
+      .orion-solutions-v2__card-top {
+        align-items: flex-start;
+        flex-direction: column;
+        gap: 10px;
+      }
+
+      .orion-solutions-v2__lane-tag {
+        white-space: normal;
+      }
+
+      .orion-solutions-v2__custom-actions {
+        width: 100%;
+        flex-direction: column;
+      }
+
+      .orion-solutions-v2__btn {
+        width: 100%;
+      }
+    }
+  </style>
+  <meta property="og:title" content="Orion by One Solution" />
   <meta property="og:description" content="Done-for-you AI operator setup, support, and deployment for real business workflows." />
   <meta property="og:type" content="website" />
   <meta property="og:url" content="https://orin.onesolutionapp.com/solutions.html" />
-</head><body><div class='wrap'><header class='nav'><a href='./index.html'><img src='./assets/one-solution-logo-white.png' alt='One Solution'></a><button class='menuToggle' type='button' aria-label='Open menu' aria-expanded='false'><span class='menuIcon'><span></span></span></button><div class="links"><a href='./index.html'>Home</a><a href='./how-it-works.html'>How It Works</a><a class='active' href='./solutions.html'>Solutions</a><a href='./use-cases.html'>Playbooks</a><a href='./pricing.html'>Pricing</a><a href='./trust.html'>Trust</a><a class='btn g' href='https://link.onesolutionapp.com/widget/form/CowOWlCpQDzIq8FGlDG9' target='_blank' rel='noopener noreferrer'>Request Orion Setup</a></div></header><section><span class='tag'>INDUSTRY FIT</span><h1>Solutions by Business Type</h1><p class='muted'>Industry-specific problems, setup lanes, and expected outcomes.</p></section><section><div class='visualShowcase'><article class='visualTile'><span class='visualIcon'>🏗️</span><h3>Industry-Fit Lanes</h3><p class='muted'>Each solution lane is designed around the real bottlenecks in that business type.</p></article><article class='visualTile'><span class='visualIcon'>🔄</span><h3>Repeatable Workflows</h3><p class='muted'>Create process consistency that holds up under team growth and daily pressure.</p></article></div></section><section><div class='grid'><article class='card'><h3>Agencies</h3><p class='muted'><strong>Problem:</strong> inconsistent prep/follow-up.</p><p class='muted'><strong>Orion setup:</strong> research + draft support + internal coordination.</p><p class='muted'><strong>Expected result:</strong> faster prep and consistent delivery rhythm.</p></article><article class='card'><h3>Home Services</h3><p class='muted'><strong>Problem:</strong> response lag and handoff leakage.</p><p class='muted'><strong>Orion setup:</strong> lead follow-up support + ops summaries.</p><p class='muted'><strong>Expected result:</strong> better speed-to-lead and fewer dropped opportunities.</p></article><article class='card'><h3>Insurance Teams</h3><p class='muted'><strong>Problem:</strong> repetitive admin + communication drift.</p><p class='muted'><strong>Orion setup:</strong> renewal/follow-up drafting support.</p><p class='muted'><strong>Expected result:</strong> cleaner communication cadence and pipeline hygiene.</p></article><article class='card'><h3>Real Estate</h3><p class='muted'><strong>Problem:</strong> high inquiry volume coordination challenges.</p><p class='muted'><strong>Orion setup:</strong> response prep + team support summaries.</p><p class='muted'><strong>Expected result:</strong> improved responsiveness and throughput.</p></article><article class='card'><h3>Accounting & Tax</h3><p class='muted'><strong>Problem:</strong> seasonal admin overload.</p><p class='muted'><strong>Orion setup:</strong> intake support + recurring workflow assistance.</p><p class='muted'><strong>Expected result:</strong> reduced admin drag.</p></article><article class='card'><h3>Ops Teams</h3><p class='muted'><strong>Problem:</strong> too many systems, low execution consistency.</p><p class='muted'><strong>Orion setup:</strong> cross-team workflow support lane.</p><p class='muted'><strong>Expected result:</strong> clearer execution and consistency.</p></article></div></section><section><div class='card'><h2>Custom solution lane</h2><p class='muted'>If your workflow doesn’t fit a standard industry profile, we scope a custom lane during intake.</p><p class='ctaCenter'><a class='btn p' href='https://checkout.stripe.com/c/pay/cs_live_b1SCjREghERx0UHyYOIUXezzKmCp5Lll2F70ppTW7xs60TiRoELA8FusKu#fidnandhYHdWcXxpYCc%2FJ2FgY2RwaXEnKSdkdWxOYHwnPyd1blppbHNgWjA0UU4waDBVV09oRj1odTZUdVJSTXRudFNnYHdtVkhyYjZmSWZrPHNpU2t2a2BAZ2NCNmdQZmtLSEJQczFmZkFEVk5GcWpyYj1qbn9kYE9ASUxdaVdya2BLNTVQfE5MQj1SQCcpJ2N3amhWYHdzYHcnP3F3cGApJ2dkZm5id2pwa2FGamlqdyc%2FJyZjY2NjY2MnKSdpZHxqcHFRfHVgJz8naHBpcWxabHFgaCcpJ2BrZGdpYFVpZGZgbWppYWB3dic%2FcXdwYHgl' target='_blank' rel='noopener noreferrer'>Purchase Orion Setup</a></p></div></section><footer><div>© <span id='y'></span> One Solution LLC • Orion by One Solution</div><div class='legal'><a href='https://my.onesolutionapp.com/privacy-policy/' target='_blank'>Privacy Policy</a><a href='https://my.onesolutionapp.com/terms-of-service/' target='_blank'>Terms of Service</a></div></footer></div><script>document.getElementById('y').textContent=new Date().getFullYear();const menuBtn=document.querySelector('.menuToggle');const menuLinks=document.querySelector('.links');if(menuBtn&&menuLinks){menuBtn.addEventListener('click',()=>{const o=menuLinks.classList.toggle('open');menuBtn.classList.toggle('open',o);menuBtn.setAttribute('aria-expanded',o?'true':'false');});}
-const navEl=document.querySelector('.nav');
-(function(){if(!navEl||window.innerWidth>980)return;let lastY=window.scrollY||0;let ticking=false;window.addEventListener('scroll',()=>{if(ticking)return;ticking=true;requestAnimationFrame(()=>{const y=window.scrollY||0;const delta=y-lastY;const menuOpen=document.querySelector('.links')?.classList.contains('open');if(menuOpen){navEl.classList.remove('nav-hidden');lastY=y;ticking=false;return;}if(y<20){navEl.classList.remove('nav-hidden');}else if(delta>4){navEl.classList.add('nav-hidden');}else if(delta<-4){navEl.classList.remove('nav-hidden');}lastY=y;ticking=false;});},{passive:true});})();</script></body></html>
+</head>
+<body>
+  <div class='wrap'>
+    <header class='nav'>
+      <a href='./index.html'><img src='./assets/one-solution-logo-white.png' alt='One Solution'></a>
+      <button class='menuToggle' type='button' aria-label='Open menu' aria-expanded='false'><span class='menuIcon'><span></span></span></button>
+      <div class="links">
+        <a href='./index.html'>Home</a>
+        <a href='./how-it-works.html'>How It Works</a>
+        <a class='active' href='./solutions.html'>Solutions</a>
+        <a href='./use-cases.html'>Playbooks</a>
+        <a href='./pricing.html'>Pricing</a>
+        <a href='./trust.html'>Trust</a>
+        <a class='btn g' href='https://link.onesolutionapp.com/widget/form/CowOWlCpQDzIq8FGlDG9' target='_blank' rel='noopener noreferrer'>Request Orion Setup</a>
+      </div>
+    </header>
+
+    <section class="orion-solutions-v2">
+      <div class="orion-solutions-v2__inner">
+
+        <header class="orion-solutions-v2__hero">
+          <div class="orion-solutions-v2__eyebrow">
+            <span class="orion-solutions-v2__eyebrow-dot"></span>
+            Industry Fit
+          </div>
+
+          <h1 class="orion-solutions-v2__title">Solutions by Business Type</h1>
+
+          <p class="orion-solutions-v2__subtext">
+            See how Orion can be configured around common business bottlenecks, recurring workflow pressure, and team execution gaps across different industries.
+          </p>
+
+          <p class="orion-solutions-v2__note">
+            These are examples of fit, not limits. Orion can also be scoped to a custom workflow lane.
+          </p>
+        </header>
+
+        <section class="orion-solutions-v2__value-band" aria-label="Why Orion fits different business types">
+          <article class="orion-solutions-v2__value-card">
+            <div class="orion-solutions-v2__value-icon"></div>
+            <h2>Built around real bottlenecks</h2>
+            <p>Each lane starts with the operational friction slowing your team down today.</p>
+          </article>
+
+          <article class="orion-solutions-v2__value-card">
+            <div class="orion-solutions-v2__value-icon"></div>
+            <h2>Configured for repeatable workflows</h2>
+            <p>Orion supports recurring tasks that need speed, consistency, and cleaner handoffs.</p>
+          </article>
+
+          <article class="orion-solutions-v2__value-card">
+            <div class="orion-solutions-v2__value-icon"></div>
+            <h2>Adapted to your team's execution style</h2>
+            <p>Support lanes can be scoped around your team's systems, pace, and workflow pressure.</p>
+          </article>
+        </section>
+
+        <section class="orion-solutions-v2__grid" aria-label="Industry-specific solution cards">
+
+          <article class="orion-solutions-v2__card">
+            <div class="orion-solutions-v2__card-top">
+              <h3>Agencies</h3>
+              <span class="orion-solutions-v2__lane-tag">Client delivery</span>
+            </div>
+            <div class="orion-solutions-v2__card-block">
+              <span class="orion-solutions-v2__label">Common bottleneck</span>
+              <p>Inconsistent prep, follow-up, and internal coordination across active client work.</p>
+            </div>
+            <div class="orion-solutions-v2__card-block">
+              <span class="orion-solutions-v2__label">Orion support lane</span>
+              <p>Research support, draft preparation, and internal coordination summaries.</p>
+            </div>
+            <div class="orion-solutions-v2__card-block">
+              <span class="orion-solutions-v2__label">Likely first win</span>
+              <p>Faster prep and more consistent delivery rhythm across client-facing work.</p>
+            </div>
+          </article>
+
+          <article class="orion-solutions-v2__card">
+            <div class="orion-solutions-v2__card-top">
+              <h3>Home Services</h3>
+              <span class="orion-solutions-v2__lane-tag">Lead response</span>
+            </div>
+            <div class="orion-solutions-v2__card-block">
+              <span class="orion-solutions-v2__label">Common bottleneck</span>
+              <p>Response lag, handoff leakage, and missed follow-up during active lead flow.</p>
+            </div>
+            <div class="orion-solutions-v2__card-block">
+              <span class="orion-solutions-v2__label">Orion support lane</span>
+              <p>Lead follow-up support, ops summaries, and cleaner next-step coordination.</p>
+            </div>
+            <div class="orion-solutions-v2__card-block">
+              <span class="orion-solutions-v2__label">Likely first win</span>
+              <p>Better speed-to-lead and fewer dropped opportunities during busy intake periods.</p>
+            </div>
+          </article>
+
+          <article class="orion-solutions-v2__card">
+            <div class="orion-solutions-v2__card-top">
+              <h3>Insurance Teams</h3>
+              <span class="orion-solutions-v2__lane-tag">Renewals + comms</span>
+            </div>
+            <div class="orion-solutions-v2__card-block">
+              <span class="orion-solutions-v2__label">Common bottleneck</span>
+              <p>Repetitive admin, renewal communication drift, and inconsistent client touchpoints.</p>
+            </div>
+            <div class="orion-solutions-v2__card-block">
+              <span class="orion-solutions-v2__label">Orion support lane</span>
+              <p>Renewal drafting support, follow-up cadence assistance, and pipeline summaries.</p>
+            </div>
+            <div class="orion-solutions-v2__card-block">
+              <span class="orion-solutions-v2__label">Likely first win</span>
+              <p>Cleaner communication rhythm and better pipeline hygiene across recurring workflows.</p>
+            </div>
+          </article>
+
+          <article class="orion-solutions-v2__card">
+            <div class="orion-solutions-v2__card-top">
+              <h3>Real Estate</h3>
+              <span class="orion-solutions-v2__lane-tag">Inquiry handling</span>
+            </div>
+            <div class="orion-solutions-v2__card-block">
+              <span class="orion-solutions-v2__label">Common bottleneck</span>
+              <p>High inquiry volume, coordination pressure, and inconsistent response follow-through.</p>
+            </div>
+            <div class="orion-solutions-v2__card-block">
+              <span class="orion-solutions-v2__label">Orion support lane</span>
+              <p>Response prep, internal summaries, and team support around active inquiry flow.</p>
+            </div>
+            <div class="orion-solutions-v2__card-block">
+              <span class="orion-solutions-v2__label">Likely first win</span>
+              <p>Improved responsiveness and cleaner throughput across inquiry-heavy periods.</p>
+            </div>
+          </article>
+
+          <article class="orion-solutions-v2__card">
+            <div class="orion-solutions-v2__card-top">
+              <h3>Accounting &amp; Tax</h3>
+              <span class="orion-solutions-v2__lane-tag">Seasonal admin</span>
+            </div>
+            <div class="orion-solutions-v2__card-block">
+              <span class="orion-solutions-v2__label">Common bottleneck</span>
+              <p>Seasonal admin overload, intake pressure, and recurring workflow drag during busy periods.</p>
+            </div>
+            <div class="orion-solutions-v2__card-block">
+              <span class="orion-solutions-v2__label">Orion support lane</span>
+              <p>Intake support, recurring workflow assistance, and status summary support.</p>
+            </div>
+            <div class="orion-solutions-v2__card-block">
+              <span class="orion-solutions-v2__label">Likely first win</span>
+              <p>Reduced admin drag and more consistent execution during high-volume cycles.</p>
+            </div>
+          </article>
+
+          <article class="orion-solutions-v2__card">
+            <div class="orion-solutions-v2__card-top">
+              <h3>Ops Teams</h3>
+              <span class="orion-solutions-v2__lane-tag">Cross-team execution</span>
+            </div>
+            <div class="orion-solutions-v2__card-block">
+              <span class="orion-solutions-v2__label">Common bottleneck</span>
+              <p>Too many systems, low execution consistency, and unclear handoffs across teams.</p>
+            </div>
+            <div class="orion-solutions-v2__card-block">
+              <span class="orion-solutions-v2__label">Orion support lane</span>
+              <p>Cross-team workflow support, summary drafting, and operational coordination assistance.</p>
+            </div>
+            <div class="orion-solutions-v2__card-block">
+              <span class="orion-solutions-v2__label">Likely first win</span>
+              <p>Clearer execution and stronger consistency across recurring operational processes.</p>
+            </div>
+          </article>
+
+        </section>
+
+        <section class="orion-solutions-v2__custom" aria-label="Custom lane section">
+          <div class="orion-solutions-v2__custom-content">
+            <div class="orion-solutions-v2__custom-eyebrow">Not seeing your business type?</div>
+            <h2>Need a custom workflow lane?</h2>
+            <p>
+              These categories are common examples, not limitations. If your workflow does not fit a standard profile,
+              One Solution can scope Orion around your business during intake.
+            </p>
+          </div>
+
+          <div class="orion-solutions-v2__custom-actions">
+            <a href="https://link.onesolutionapp.com/widget/form/CowOWlCpQDzIq8FGlDG9" target="_blank" rel="noopener noreferrer" class="orion-solutions-v2__btn orion-solutions-v2__btn--primary">Request Orion Setup</a>
+            <a href="./pricing.html" class="orion-solutions-v2__btn orion-solutions-v2__btn--secondary">View Pricing</a>
+          </div>
+        </section>
+
+      </div>
+    </section>
+
+    <footer>
+      <div>© <span id='y'></span> One Solution LLC • Orion by One Solution</div>
+      <div class='legal'>
+        <a href='https://my.onesolutionapp.com/privacy-policy/' target='_blank'>Privacy Policy</a>
+        <a href='https://my.onesolutionapp.com/terms-of-service/' target='_blank'>Terms of Service</a>
+      </div>
+    </footer>
+  </div>
+
+  <script>
+    document.getElementById('y').textContent = new Date().getFullYear();
+    const menuBtn = document.querySelector('.menuToggle');
+    const menuLinks = document.querySelector('.links');
+    if (menuBtn && menuLinks) {
+      menuBtn.addEventListener('click', () => {
+        const o = menuLinks.classList.toggle('open');
+        menuBtn.classList.toggle('open', o);
+        menuBtn.setAttribute('aria-expanded', o ? 'true' : 'false');
+      });
+    }
+    const navEl = document.querySelector('.nav');
+    (function () {
+      if (!navEl || window.innerWidth > 980) return;
+      let lastY = window.scrollY || 0;
+      let ticking = false;
+      window.addEventListener('scroll', () => {
+        if (ticking) return;
+        ticking = true;
+        requestAnimationFrame(() => {
+          const y = window.scrollY || 0;
+          const delta = y - lastY;
+          const menuOpen = document.querySelector('.links')?.classList.contains('open');
+          if (menuOpen) {
+            navEl.classList.remove('nav-hidden');
+            lastY = y;
+            ticking = false;
+            return;
+          }
+          if (y < 20) {
+            navEl.classList.remove('nav-hidden');
+          } else if (delta > 4) {
+            navEl.classList.add('nav-hidden');
+          } else if (delta < -4) {
+            navEl.classList.remove('nav-hidden');
+          }
+          lastY = y;
+          ticking = false;
+        });
+      }, { passive: true });
+    })();
+  </script>
+</body>
+</html>
