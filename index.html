@@ -9,28 +9,67 @@
   <link rel="icon" href="./assets/favicon-one-solution.jpg" />
   <link rel="stylesheet" href="./assets/orin-theme.css" />
   <style>
-    /* Hero section specific styles */
-    .hero{display:grid;grid-template-columns:1.02fr .98fr;gap:26px;align-items:center;padding-top:18px}
-    .eyebrow{display:inline-flex;background:linear-gradient(135deg,#122041,#1a3055);border:1px solid #315597;color:#b9d3ff;padding:6px 14px;border-radius:999px;font-size:.78rem;font-weight:700;margin-bottom:12px;letter-spacing:.08em;text-transform:uppercase}
-    .heroKicker{font-size:.92rem;color:#8fb4ff;text-transform:uppercase;letter-spacing:.12em;margin-bottom:10px}
-    .hero h1{max-width:18ch;margin-bottom:14px;line-height:1.1}
-    .hero h1 span{display:block}
-    .heroAccent{background:linear-gradient(90deg,#ffffff 0%,#d7e5ff 38%,#8cc1ff 72%,#a78bfa 100%);background-size:200% auto;-webkit-background-clip:text;background-clip:text;color:transparent;animation:shimmer 3s linear infinite}
-    @keyframes shimmer{0%{background-position:0% center}100%{background-position:200% center}}
-    .sub{max-width:60ch;font-size:1.03rem}
-    .ctaRow{display:flex;gap:10px;flex-wrap:wrap;margin-top:16px}
-    .heroNote{margin-top:12px;padding:11px 13px;border:1px solid #355b9e;border-radius:12px;background:linear-gradient(135deg,rgba(18,32,65,.95),rgba(19,43,87,.9));color:#dce9ff;font-size:.93rem;box-shadow:0 10px 30px rgba(15,25,52,.24)}
-    .heroStats{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:10px;margin-top:14px}
-    .heroStat{border:1px solid #2f4f89;background:linear-gradient(145deg,#0e1831,#0b1226);border-radius:14px;padding:12px;transition:all .3s ease}
-    .heroStat:hover{transform:translateY(-2px);border-color:#4a73c0;box-shadow:0 8px 20px rgba(0,0,0,0.2)}
-    .heroStat b{display:block;font-size:1.28rem;line-height:1.05;color:#f4f8ff;margin-bottom:4px}
-    .heroStat span{display:block;font-size:.85rem;color:#a9bbdf}
-    .chipRow{display:flex;gap:8px;flex-wrap:wrap;margin-top:14px}
-    .chip{font-size:.8rem;border:1px solid #315597;background:linear-gradient(135deg,#122041,#152a52);color:#d6e7ff;padding:5px 12px;border-radius:999px;transition:all .2s ease}
-    .chip:hover{background:linear-gradient(135deg,#1a3055,#1e3a66);transform:translateY(-1px)}
-
-    /* Hero visual container */
-    .heroVisualContainer{position:relative;padding:20px 0}
+    /* Refined Hero v2 Styles */
+    .orion-hero-v2{--orion-bg:#070b16;--orion-panel:#0b1224;--orion-panel-2:#0d1a34;--orion-border:#1e2d4d;--orion-border-2:#2f4e87;--orion-border-3:#315597;--orion-blue:#2f6bff;--orion-blue-2:#1f5af5;--orion-headline:#f4f8ff;--orion-body:#dce9ff;--orion-muted:#9db4de;--orion-muted-2:#8fb4ff;--orion-success:#34d399;--orion-warning:#fbbf24;--orion-radius-xl:28px;--orion-radius-lg:20px;--orion-radius-md:14px;--orion-shadow-xl:0 28px 70px rgba(0,0,0,0.42);--orion-shadow-lg:0 16px 38px rgba(0,0,0,0.3);position:relative;overflow:hidden;padding:82px 0 64px;background:radial-gradient(circle at top right,rgba(140,193,255,0.08),transparent 28%),radial-gradient(circle at top left,rgba(167,139,250,0.06),transparent 20%);color:var(--orion-headline)}
+    .orion-hero-v2__inner{width:min(1240px,calc(100% - 48px));margin:0 auto;display:grid;grid-template-columns:minmax(0,1.02fr) minmax(0,1fr);gap:36px;align-items:center}
+    .orion-hero-v2__eyebrow{display:inline-flex;align-items:center;gap:10px;padding:8px 14px;border:1px solid rgba(140,180,255,0.22);background:rgba(13,26,52,0.75);color:var(--orion-muted-2);border-radius:999px;font-size:12px;font-weight:700;letter-spacing:0.14em;text-transform:uppercase;margin-bottom:20px;backdrop-filter:blur(10px)}
+    .orion-hero-v2__eyebrow-dot{width:8px;height:8px;border-radius:50%;background:linear-gradient(135deg,#ffffff,#8cc1ff);box-shadow:0 0 16px rgba(140,193,255,0.65)}
+    .orion-hero-v2__title{margin:0 0 18px;display:flex;flex-direction:column;gap:4px;font-size:clamp(2.8rem,5.2vw,4.4rem);line-height:0.97;letter-spacing:-0.045em;max-width:14.5ch}
+    .orion-hero-v2__title-gradient{display:block;background:linear-gradient(90deg,#ffffff 0%,#d7e5ff 30%,#8cc1ff 72%,#a78bfa 100%);-webkit-background-clip:text;background-clip:text;color:transparent}
+    .orion-hero-v2__subtext{max-width:58ch;margin:0 0 24px;color:var(--orion-body);font-size:1.02rem;line-height:1.68}
+    .orion-hero-v2__cta-row{display:flex;flex-wrap:wrap;gap:14px;margin-bottom:20px}
+    .orion-hero-v2__btn{display:inline-flex;align-items:center;justify-content:center;min-height:52px;padding:15px 22px;border-radius:14px;font-size:0.98rem;font-weight:700;text-decoration:none;transition:transform 0.18s ease,box-shadow 0.18s ease,background 0.18s ease}
+    .orion-hero-v2__btn:hover{transform:translateY(-1px)}
+    .orion-hero-v2__btn--primary{background:linear-gradient(135deg,var(--orion-blue),var(--orion-blue-2));color:#fff;box-shadow:0 14px 28px rgba(47,107,255,0.34)}
+    .orion-hero-v2__btn--secondary{background:rgba(13,26,52,0.9);border:1px solid rgba(140,180,255,0.22);color:var(--orion-headline);box-shadow:inset 0 1px 0 rgba(255,255,255,0.04)}
+    .orion-hero-v2__proof{display:inline-flex;align-items:center;gap:10px;color:var(--orion-muted);font-size:0.92rem;padding:10px 14px;background:rgba(11,18,36,0.9);border:1px solid rgba(49,85,151,0.34);border-radius:14px;margin-bottom:22px}
+    .orion-hero-v2__proof strong{color:var(--orion-headline)}
+    .orion-hero-v2__chips{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:12px;max-width:560px}
+    .orion-hero-v2__chip{display:flex;align-items:center;gap:10px;min-height:50px;padding:12px 14px;background:rgba(11,18,36,0.82);border:1px solid rgba(49,85,151,0.26);border-radius:14px;color:var(--orion-body);font-size:0.93rem;box-shadow:inset 0 1px 0 rgba(255,255,255,0.03)}
+    .orion-hero-v2__chip-icon{width:10px;height:10px;flex:0 0 10px;border-radius:999px;background:linear-gradient(135deg,#8cc1ff,#2f6bff);box-shadow:0 0 0 4px rgba(47,107,255,0.1)}
+    .orion-hero-v2__visual{position:relative;min-height:600px}
+    .orion-hero-v2__glow{position:absolute;inset:8% 4% auto auto;width:300px;height:300px;border-radius:50%;background:radial-gradient(circle,rgba(140,193,255,0.12),rgba(140,193,255,0.04) 45%,transparent 72%);filter:blur(8px);pointer-events:none}
+    .orion-hero-v2__runtime{position:relative;z-index:2;padding:16px;border-radius:var(--orion-radius-xl);background:linear-gradient(180deg,rgba(13,26,52,0.94),rgba(11,18,36,0.95));border:1px solid rgba(49,85,151,0.44);box-shadow:var(--orion-shadow-xl);overflow:hidden}
+    .orion-hero-v2__runtime-head{display:flex;align-items:center;justify-content:space-between;gap:14px;margin-bottom:14px}
+    .orion-hero-v2__runtime-title-wrap{display:flex;align-items:center;gap:12px}
+    .orion-hero-v2__runtime-logo{width:36px;height:36px;border-radius:12px;background:linear-gradient(135deg,rgba(47,107,255,0.24),rgba(167,139,250,0.18));border:1px solid rgba(140,193,255,0.25);display:grid;place-items:center;color:#fff;font-weight:800;letter-spacing:-0.04em}
+    .orion-hero-v2__runtime-title{font-size:1.02rem;font-weight:700;color:var(--orion-headline);letter-spacing:-0.02em}
+    .orion-hero-v2__runtime-subtitle{margin-top:4px;color:var(--orion-muted);font-size:0.82rem}
+    .orion-hero-v2__support-badge{display:inline-flex;align-items:center;gap:8px;padding:9px 11px;border-radius:999px;background:rgba(5,150,105,0.1);border:1px solid rgba(52,211,153,0.28);color:#bff8e5;font-size:0.82rem;white-space:nowrap}
+    .orion-hero-v2__support-dot{width:8px;height:8px;border-radius:50%;background:var(--orion-success);box-shadow:0 0 12px rgba(52,211,153,0.6)}
+    .orion-hero-v2__runtime-grid{display:grid;grid-template-columns:1.02fr 1fr 1.02fr;gap:12px}
+    .orion-hero-v2__panel{min-height:390px;padding:14px;border-radius:var(--orion-radius-lg);background:linear-gradient(180deg,rgba(13,26,52,0.88),rgba(11,18,36,0.92));border:1px solid rgba(47,78,135,0.34);box-shadow:var(--orion-shadow-lg)}
+    .orion-hero-v2__panel-head{display:flex;align-items:center;justify-content:space-between;gap:10px;margin-bottom:12px;color:var(--orion-headline);font-size:0.93rem;font-weight:700;letter-spacing:-0.02em}
+    .orion-hero-v2__panel-hint{color:var(--orion-muted);font-weight:500;font-size:0.78rem}
+    .orion-hero-v2__request-card{padding:14px;border-radius:16px;background:rgba(7,11,22,0.42);border:1px solid rgba(49,85,151,0.34);margin-bottom:12px}
+    .orion-hero-v2__request-text{margin:0 0 12px;color:var(--orion-headline);line-height:1.55;font-size:0.92rem}
+    .orion-hero-v2__tag-row{display:flex;flex-wrap:wrap;gap:8px}
+    .orion-hero-v2__tag{display:inline-flex;align-items:center;padding:6px 10px;border-radius:999px;background:rgba(47,107,255,0.11);border:1px solid rgba(47,107,255,0.18);color:var(--orion-muted-2);font-size:0.74rem;font-weight:700}
+    .orion-hero-v2__meta-list{margin-top:12px;display:grid;gap:9px}
+    .orion-hero-v2__meta-item{display:flex;align-items:center;justify-content:space-between;gap:12px;padding:10px 12px;border-radius:14px;background:rgba(255,255,255,0.02);border:1px solid rgba(255,255,255,0.04);color:var(--orion-body);font-size:0.83rem}
+    .orion-hero-v2__meta-item strong{color:var(--orion-headline)}
+    .orion-hero-v2__state{display:flex;gap:12px;align-items:flex-start;padding:12px 13px;border-radius:16px;background:rgba(7,11,22,0.44);border:1px solid rgba(49,85,151,0.22);margin-bottom:9px}
+    .orion-hero-v2__state-dot{width:13px;height:13px;flex:0 0 13px;border-radius:999px;margin-top:2px;background:rgba(96,165,250,0.24);border:2px solid rgba(96,165,250,0.8);box-shadow:0 0 0 4px rgba(96,165,250,0.08)}
+    .orion-hero-v2__state--done .orion-hero-v2__state-dot{background:rgba(52,211,153,0.22);border-color:var(--orion-success);box-shadow:0 0 0 4px rgba(52,211,153,0.08)}
+    .orion-hero-v2__state--active{border-color:rgba(140,193,255,0.42);background:linear-gradient(180deg,rgba(47,107,255,0.12),rgba(7,11,22,0.36))}
+    .orion-hero-v2__state--active .orion-hero-v2__state-dot{background:rgba(251,191,36,0.22);border-color:var(--orion-warning);box-shadow:0 0 0 4px rgba(251,191,36,0.08)}
+    .orion-hero-v2__state h3{margin:0 0 5px;font-size:0.92rem;letter-spacing:-0.02em;color:var(--orion-headline)}
+    .orion-hero-v2__state p{margin:0;color:var(--orion-muted);font-size:0.8rem;line-height:1.45}
+    .orion-hero-v2__output-card{padding:13px;border-radius:16px;background:rgba(7,11,22,0.42);border:1px solid rgba(49,85,151,0.28);margin-bottom:10px}
+    .orion-hero-v2__output-head{display:flex;align-items:center;justify-content:space-between;gap:10px;margin-bottom:8px}
+    .orion-hero-v2__output-head h3{margin:0;font-size:0.92rem;letter-spacing:-0.02em;color:var(--orion-headline)}
+    .orion-hero-v2__status{display:inline-flex;align-items:center;gap:6px;border-radius:999px;padding:5px 8px;font-size:0.7rem;font-weight:800;letter-spacing:0.02em;text-transform:uppercase;border:1px solid transparent}
+    .orion-hero-v2__status--ready{color:#c9fff0;background:rgba(5,150,105,0.14);border-color:rgba(52,211,153,0.22)}
+    .orion-hero-v2__status--send{color:#d6e7ff;background:rgba(47,107,255,0.14);border-color:rgba(96,165,250,0.2)}
+    .orion-hero-v2__status--team{color:#fff0c7;background:rgba(245,158,11,0.14);border-color:rgba(251,191,36,0.22)}
+    .orion-hero-v2__output-meta{color:var(--orion-muted);font-size:0.74rem;margin-bottom:7px}
+    .orion-hero-v2__output-list{margin:0;padding-left:18px;color:var(--orion-body);font-size:0.8rem;line-height:1.5}
+    .orion-hero-v2__output-list li+li{margin-top:4px}
+    .orion-hero-v2__integrations{margin-top:14px;display:flex;justify-content:center;gap:8px;flex-wrap:wrap}
+    .orion-hero-v2__integration-chip{display:inline-flex;align-items:center;justify-content:center;min-height:34px;padding:8px 12px;border-radius:999px;background:rgba(11,18,36,0.94);border:1px solid rgba(49,85,151,0.28);color:var(--orion-body);font-size:0.76rem;font-weight:700;box-shadow:0 12px 24px rgba(0,0,0,0.26)}
+    @media(max-width:1120px){.orion-hero-v2__inner{grid-template-columns:1fr}.orion-hero-v2__visual{min-height:auto}}
+    @media(max-width:900px){.orion-hero-v2__runtime-grid{grid-template-columns:1fr}.orion-hero-v2__panel{min-height:auto}}
+    @media(max-width:640px){.orion-hero-v2{padding:72px 0 56px}.orion-hero-v2__inner{width:min(100%,calc(100% - 32px))}.orion-hero-v2__chips{grid-template-columns:1fr}.orion-hero-v2__cta-row{flex-direction:column}.orion-hero-v2__btn{width:100%}.orion-hero-v2__runtime{padding:14px;border-radius:22px}.orion-hero-v2__runtime-head{flex-direction:column;align-items:flex-start}.orion-hero-v2__support-badge{white-space:normal}}
 
     /* System strip with glassmorphism */
     .systemStrip{display:grid;grid-template-columns:repeat(auto-fit,minmax(120px,1fr));gap:10px}
@@ -158,106 +197,202 @@
       </div>
     </header>
 
-    <!-- NEW HERO SECTION -->
-    <section class="hero">
-      <div>
-        <span class="eyebrow">ORION BY ONE SOLUTION</span>
-        <h1>
-          <span>A Done-for-You AI</span>
-          <span class="heroAccent">Operator for Real</span>
-          <span>Business Workflows</span>
-        </h1>
-        <p class="muted sub">One Solution configures Orion around your workflow, deploys it into your tools, and supports it after launch. Get help with follow-up, research, summaries, and execution without the DIY setup burden.</p>
-        <div class="ctaRow">
-          <a class="btn p" href="./pricing.html">View Pricing</a>
-          <a class="btn g" href="https://link.onesolutionapp.com/widget/form/CowOWlCpQDzIq8FGlDG9" target="_blank" rel="noopener noreferrer">Request Orion Setup</a>
+    <!-- REFINED HERO V2 -->
+    <section class="orion-hero-v2">
+      <div class="orion-hero-v2__inner">
+        <div class="orion-hero-v2__content">
+          <div class="orion-hero-v2__eyebrow">
+            <span class="orion-hero-v2__eyebrow-dot"></span>
+            Orion by One Solution
+          </div>
+
+          <h1 class="orion-hero-v2__title">
+            <span>A Done-for-You AI Operator</span>
+            <span class="orion-hero-v2__title-gradient">for Real Business Workflows</span>
+          </h1>
+
+          <p class="orion-hero-v2__subtext">
+            One Solution configures Orion around your workflow, deploys it into your team's existing tools, and supports it after launch. Get help with follow-up, research, summaries, and execution without the DIY setup burden.
+          </p>
+
+          <div class="orion-hero-v2__cta-row">
+            <a href="./pricing.html" class="orion-hero-v2__btn orion-hero-v2__btn--primary">View Pricing</a>
+            <a href="https://link.onesolutionapp.com/widget/form/CowOWlCpQDzIq8FGlDG9" target="_blank" rel="noopener noreferrer" class="orion-hero-v2__btn orion-hero-v2__btn--secondary">Request Orion Setup</a>
+          </div>
+
+          <div class="orion-hero-v2__proof">
+            <strong>Fast launch path:</strong>
+            most teams can activate an initial Orion workflow lane in days, not months.
+          </div>
+
+          <div class="orion-hero-v2__chips">
+            <div class="orion-hero-v2__chip">
+              <span class="orion-hero-v2__chip-icon"></span>
+              Done-for-you setup
+            </div>
+            <div class="orion-hero-v2__chip">
+              <span class="orion-hero-v2__chip-icon"></span>
+              Live support + ticketing
+            </div>
+            <div class="orion-hero-v2__chip">
+              <span class="orion-hero-v2__chip-icon"></span>
+              Cancel anytime
+            </div>
+            <div class="orion-hero-v2__chip">
+              <span class="orion-hero-v2__chip-icon"></span>
+              Built around your workflow
+            </div>
+          </div>
         </div>
-        <div class="heroNote">⚡ Fast launch path: most teams can activate an initial Orion workflow lane in days, not months.</div>
-        <div class="chipRow">
-          <span class="chip">Done-for-you setup</span>
-          <span class="chip">Live support + ticketing</span>
-          <span class="chip">Cancel anytime</span>
-          <span class="chip">Built around your workflow</span>
+
+        <div class="orion-hero-v2__visual">
+          <div class="orion-hero-v2__glow"></div>
+
+          <div class="orion-hero-v2__runtime">
+            <div class="orion-hero-v2__runtime-head">
+              <div class="orion-hero-v2__runtime-title-wrap">
+                <div class="orion-hero-v2__runtime-logo">O</div>
+                <div>
+                  <div class="orion-hero-v2__runtime-title">Orion Runtime</div>
+                  <div class="orion-hero-v2__runtime-subtitle">
+                    Workflow execution layer configured and supported by One Solution
+                  </div>
+                </div>
+              </div>
+
+              <div class="orion-hero-v2__support-badge">
+                <span class="orion-hero-v2__support-dot"></span>
+                Ticketed refinement active
+              </div>
+            </div>
+
+            <div class="orion-hero-v2__runtime-grid">
+              <div class="orion-hero-v2__panel">
+                <div class="orion-hero-v2__panel-head">
+                  <span>Request Intake</span>
+                  <span class="orion-hero-v2__panel-hint">Active lane</span>
+                </div>
+
+                <div class="orion-hero-v2__request-card">
+                  <p class="orion-hero-v2__request-text">
+                    Prepare follow-up drafts, summarize research, and flag handoff risks for the current lead pipeline.
+                  </p>
+
+                  <div class="orion-hero-v2__tag-row">
+                    <span class="orion-hero-v2__tag">Priority: High</span>
+                    <span class="orion-hero-v2__tag">Sales + Ops</span>
+                    <span class="orion-hero-v2__tag">Active</span>
+                  </div>
+                </div>
+
+                <div class="orion-hero-v2__meta-list">
+                  <div class="orion-hero-v2__meta-item">
+                    <span>Workflow</span>
+                    <strong>Pipeline Support</strong>
+                  </div>
+                  <div class="orion-hero-v2__meta-item">
+                    <span>Primary channel</span>
+                    <strong>CRM + Email</strong>
+                  </div>
+                  <div class="orion-hero-v2__meta-item">
+                    <span>Support mode</span>
+                    <strong>Guided refinement</strong>
+                  </div>
+                </div>
+              </div>
+
+              <div class="orion-hero-v2__panel">
+                <div class="orion-hero-v2__panel-head">
+                  <span>Orion Runtime</span>
+                  <span class="orion-hero-v2__panel-hint">Execution flow</span>
+                </div>
+
+                <div class="orion-hero-v2__state orion-hero-v2__state--done">
+                  <div class="orion-hero-v2__state-dot"></div>
+                  <div>
+                    <h3>Request Scoped</h3>
+                    <p>Workflow lane confirmed and aligned to the active task.</p>
+                  </div>
+                </div>
+
+                <div class="orion-hero-v2__state orion-hero-v2__state--done">
+                  <div class="orion-hero-v2__state-dot"></div>
+                  <div>
+                    <h3>Context Collected</h3>
+                    <p>Relevant activity and support notes gathered from connected lanes.</p>
+                  </div>
+                </div>
+
+                <div class="orion-hero-v2__state orion-hero-v2__state--active">
+                  <div class="orion-hero-v2__state-dot"></div>
+                  <div>
+                    <h3>Draft Prepared</h3>
+                    <p>Follow-up language and handoff notes assembled for review.</p>
+                  </div>
+                </div>
+
+                <div class="orion-hero-v2__state">
+                  <div class="orion-hero-v2__state-dot"></div>
+                  <div>
+                    <h3>Review Ready</h3>
+                    <p>Outputs packaged for action with refinement available after launch.</p>
+                  </div>
+                </div>
+              </div>
+
+              <div class="orion-hero-v2__panel">
+                <div class="orion-hero-v2__panel-head">
+                  <span>Output Previews</span>
+                  <span class="orion-hero-v2__panel-hint">Ready for action</span>
+                </div>
+
+                <div class="orion-hero-v2__output-card">
+                  <div class="orion-hero-v2__output-head">
+                    <h3>Research Brief</h3>
+                    <span class="orion-hero-v2__status orion-hero-v2__status--ready">Ready</span>
+                  </div>
+                  <div class="orion-hero-v2__output-meta">3 sources • 2 min read</div>
+                  <ul class="orion-hero-v2__output-list">
+                    <li>Lead interest patterns summarized.</li>
+                    <li>Priority talking points surfaced.</li>
+                  </ul>
+                </div>
+
+                <div class="orion-hero-v2__output-card">
+                  <div class="orion-hero-v2__output-head">
+                    <h3>Follow-Up Draft</h3>
+                    <span class="orion-hero-v2__status orion-hero-v2__status--send">Ready to Send</span>
+                  </div>
+                  <div class="orion-hero-v2__output-meta">Personalized • Context-aware</div>
+                  <ul class="orion-hero-v2__output-list">
+                    <li>Subject: Following up on your request</li>
+                    <li>Draft prepared with clear next steps.</li>
+                  </ul>
+                </div>
+
+                <div class="orion-hero-v2__output-card">
+                  <div class="orion-hero-v2__output-head">
+                    <h3>Ops Summary</h3>
+                    <span class="orion-hero-v2__status orion-hero-v2__status--team">Team Summary</span>
+                  </div>
+                  <div class="orion-hero-v2__output-meta">Weekly snapshot • 5 sections</div>
+                  <ul class="orion-hero-v2__output-list">
+                    <li>Blockers flagged for quick review.</li>
+                    <li>Wins and next steps captured.</li>
+                  </ul>
+                </div>
+              </div>
+            </div>
+
+            <div class="orion-hero-v2__integrations">
+              <span class="orion-hero-v2__integration-chip">Slack</span>
+              <span class="orion-hero-v2__integration-chip">Teams</span>
+              <span class="orion-hero-v2__integration-chip">Telegram</span>
+              <span class="orion-hero-v2__integration-chip">CRM</span>
+            </div>
+          </div>
         </div>
       </div>
-
-      <aside class="heroVisualContainer">
-        <!-- Product Mockup Visual -->
-        <div class="productMockup">
-          <!-- Floating Integration Chips -->
-          <div class="floatingChip slack">
-            <img src="https://cdn.jsdelivr.net/npm/simple-icons@v11/icons/slack.svg" alt="">Slack
-          </div>
-          <div class="floatingChip teams">
-            <img src="https://cdn.jsdelivr.net/npm/simple-icons@v11/icons/microsoftteams.svg" alt="">Teams
-          </div>
-          <div class="floatingChip telegram">
-            <img src="https://cdn.jsdelivr.net/npm/simple-icons@v11/icons/telegram.svg" alt="">Telegram
-          </div>
-          <div class="floatingChip crm">CRM</div>
-          <div class="floatingChip trello">
-            <img src="https://cdn.jsdelivr.net/npm/simple-icons@v11/icons/trello.svg" alt="">Trello
-          </div>
-          <div class="floatingChip email">Email</div>
-
-          <!-- Left Panel: Request Input -->
-          <div class="mockupPanel">
-            <h4>Request Input</h4>
-            <div class="mockupInput">
-              <strong>New lead inquiry</strong>
-              <span>From: prospect@company.com</span>
-            </div>
-            <div class="mockupInput">
-              <strong>Follow-up needed</strong>
-              <span>Priority: High</span>
-            </div>
-            <div class="mockupInput">
-              <strong>Research task</strong>
-              <span>Due: End of day</span>
-            </div>
-          </div>
-
-          <!-- Center Panel: Orion Runtime -->
-          <div class="mockupPanel center">
-            <h4 style="text-align:center;color:#dce9ff;">Orion Runtime</h4>
-            <div class="flowLine"></div>
-            <div class="orchestrationNode active">
-              <i></i>
-              <span>Request Received</span>
-            </div>
-            <div class="orchestrationNode">
-              <span>Workflow Triggered</span>
-            </div>
-            <div class="orchestrationNode">
-              <span>Draft Prepared</span>
-            </div>
-            <div class="orchestrationNode">
-              <span>Output Ready</span>
-            </div>
-            <div class="flowLine"></div>
-          </div>
-
-          <!-- Right Panel: Output Previews -->
-          <div class="mockupPanel">
-            <h4>Output Previews</h4>
-            <div class="mockupInput" style="border-color:#059669;">
-              <strong style="color:#34d399;">✓ Research Brief</strong>
-              <span>Ready for review</span>
-            </div>
-            <div class="mockupInput" style="border-color:#059669;">
-              <strong style="color:#34d399;">✓ Follow-Up Draft</strong>
-              <span>Ready to send</span>
-            </div>
-            <div class="mockupInput" style="border-color:#3b82f6;">
-              <strong style="color:#60a5fa;">⟳ Ops Summary</strong>
-              <span>Processing...</span>
-            </div>
-          </div>
-
-          <!-- Support Badge -->
-          <div class="supportBadge">Ticketed refinement active</div>
-        </div>
-      </aside>
     </section>
 
     <section>
