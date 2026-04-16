@@ -10,12 +10,12 @@
   <link rel="stylesheet" href="./assets/orin-theme.css" />
   <style>
     /* Compact Hero v3 Styles - Final Polish */
-    .orion-hero-v3{--orion-bg:#070b16;--orion-panel:#0b1224;--orion-panel-2:#0d1a34;--orion-border-2:#2f4e87;--orion-blue:#2f6bff;--orion-blue-2:#1f5af5;--orion-headline:#f4f8ff;--orion-body:#dce9ff;--orion-muted:#9db4de;--orion-muted-2:#8fb4ff;--orion-success:#34d399;--orion-warning:#fbbf24;--orion-radius-xl:24px;--orion-radius-lg:16px;--orion-radius-md:12px;--orion-shadow-xl:0 20px 48px rgba(0,0,0,0.35);--orion-shadow-lg:0 12px 24px rgba(0,0,0,0.22);position:relative;overflow:hidden;padding:60px 0 36px;background:radial-gradient(circle at top right,rgba(140,193,255,0.08),transparent 24%),radial-gradient(circle at top left,rgba(167,139,250,0.05),transparent 18%);color:var(--orion-headline)}
+    .orion-hero-v3{--orion-bg:#070b16;--orion-panel:#0b1224;--orion-panel-2:#0d1a34;--orion-border-2:#2f4e87;--orion-blue:#2f6bff;--orion-blue-2:#1f5af5;--orion-headline:#f4f8ff;--orion-body:#dce9ff;--orion-muted:#9db4de;--orion-muted-2:#8fb4ff;--orion-success:#34d399;--orion-warning:#fbbf24;--orion-radius-xl:24px;--orion-radius-lg:16px;--orion-radius-md:12px;--orion-shadow-xl:0 20px 48px rgba(0,0,0,0.35);--orion-shadow-lg:0 12px 24px rgba(0,0,0,0.22);position:relative;overflow:hidden;padding:60px 0 28px;background:radial-gradient(circle at top right,rgba(140,193,255,0.08),transparent 24%),radial-gradient(circle at top left,rgba(167,139,250,0.05),transparent 18%);color:var(--orion-headline)}
     .orion-hero-v3__inner{width:min(1240px,calc(100% - 48px));margin:0 auto;display:grid;grid-template-columns:minmax(0,0.98fr) minmax(0,1.02fr);gap:28px;align-items:flex-start;padding-top:8px}
     .orion-hero-v3__eyebrow{display:inline-flex;align-items:center;gap:10px;padding:8px 14px;border:1px solid rgba(140,180,255,0.22);background:rgba(13,26,52,0.75);color:var(--orion-muted-2);border-radius:999px;font-size:12px;font-weight:700;letter-spacing:0.14em;text-transform:uppercase;margin-bottom:16px}
     .orion-hero-v3__eyebrow-dot{width:8px;height:8px;border-radius:50%;background:linear-gradient(135deg,#ffffff,#8cc1ff);box-shadow:0 0 14px rgba(140,193,255,0.55)}
-    .orion-hero-v3__title{margin:0 0 14px;display:flex;flex-direction:column;gap:2px;font-size:clamp(2.2rem,4vw,3.2rem);line-height:0.98;letter-spacing:-0.045em;max-width:16ch}
-    .orion-hero-v3__title-gradient{display:block;background:linear-gradient(90deg,#ffffff 0%,#d7e5ff 30%,#8cc1ff 72%,#a78bfa 100%);background-size:200% auto;-webkit-background-clip:text;background-clip:text;color:transparent;animation:shimmer 4s ease-in-out infinite}
+    .orion-hero-v3__title{margin:0 0 12px;display:flex;flex-direction:column;gap:1px;font-size:clamp(2.1rem,3.8vw,3rem);line-height:0.96;letter-spacing:-0.045em;max-width:17ch}
+    .orion-hero-v3__title-gradient{display:block;background:linear-gradient(90deg,#ffffff 0%,#d7e5ff 30%,#8cc1ff 72%,#a78bfa 100%);background-size:200% auto;-webkit-background-clip:text;background-clip:text;color:transparent;animation:shimmer 5s ease-in-out infinite}
     .orion-hero-v3__subtext{max-width:52ch;margin:0 0 18px;color:var(--orion-body);font-size:0.96rem;line-height:1.55}
     .orion-hero-v3__cta-row{display:flex;flex-wrap:wrap;gap:12px;margin-bottom:16px}
     .orion-hero-v3__btn{display:inline-flex;align-items:center;justify-content:center;min-height:48px;padding:13px 20px;border-radius:12px;font-size:0.95rem;font-weight:700;text-decoration:none;transition:transform 0.18s ease,box-shadow 0.18s ease}
@@ -33,7 +33,7 @@
     .orion-hero-v3__runtime-title-wrap{display:flex;align-items:center;gap:10px}
     .orion-hero-v3__runtime-logo{width:32px;height:32px;border-radius:10px;background:linear-gradient(135deg,rgba(47,107,255,0.24),rgba(167,139,250,0.18));border:1px solid rgba(140,193,255,0.25);display:grid;place-items:center;color:#fff;font-weight:800;font-size:0.9rem}
     .orion-hero-v3__runtime-title{font-size:0.95rem;font-weight:700;color:var(--orion-headline)}
-    .orion-hero-v3__runtime-subtitle{margin-top:3px;color:var(--orion-muted);font-size:0.78rem}
+    .orion-hero-v3__runtime-subtitle{margin-top:3px;color:var(--orion-body);font-size:0.78rem}
     .orion-hero-v3__support-badge{display:inline-flex;align-items:center;gap:6px;padding:6px 10px;border-radius:999px;background:rgba(5,150,105,0.1);border:1px solid rgba(52,211,153,0.28);color:#bff8e5;font-size:0.78rem;white-space:nowrap}
     .orion-hero-v3__support-dot{width:7px;height:7px;border-radius:50%;background:var(--orion-success)}
     .orion-hero-v3__runtime-grid{display:grid;grid-template-columns:1fr 1fr 1fr;gap:8px}
@@ -256,7 +256,7 @@
 
                 <div class="orion-hero-v3__request-card">
                   <p class="orion-hero-v3__request-text">
-                    Prepare follow-up drafts, summarize research, and flag handoff risks.
+                    Prepare follow-up drafts and flag handoff risks.
                   </p>
                   <div class="orion-hero-v3__tag-row">
                     <span class="orion-hero-v3__tag">High priority</span>
