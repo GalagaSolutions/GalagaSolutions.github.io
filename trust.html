@@ -24,19 +24,20 @@
     .orion-trust-v2__chip{display:flex;align-items:center;gap:10px;min-height:50px;padding:12px 14px;background:linear-gradient(180deg,rgba(13,26,52,.88),rgba(11,18,36,.92));border:1px solid rgba(49,85,151,.3);border-radius:14px;color:var(--orion-body);font-size:.9rem;box-shadow:0 10px 20px rgba(0,0,0,.16), inset 0 1px 0 rgba(255,255,255,.03)}
     .orion-trust-v2__chip-dot{width:10px;height:10px;flex:0 0 10px;border-radius:999px;background:linear-gradient(135deg,#8cc1ff,#2f6bff);box-shadow:0 0 0 4px rgba(47,107,255,.1),0 0 14px rgba(140,193,255,.22)}
 
-    .orion-trust-v2__section{margin-bottom:46px}
+    .orion-trust-v2__section{margin-bottom:42px}
     .orion-trust-v2__section-head{max-width:860px;margin-bottom:24px}
     .orion-trust-v2__section-head h2{margin:0 0 10px;font-size:clamp(1.8rem,3vw,2.4rem);letter-spacing:-.03em;line-height:1.05}
     .orion-trust-v2__section-head p{margin:0;color:var(--orion-body);font-size:1rem;line-height:1.62}
 
     .orion-trust-v2__top-grid,.orion-trust-v2__boundaries-grid,.orion-trust-v2__not-grid{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:16px}
-    .orion-trust-v2__card{padding:24px;border-radius:var(--orion-radius-lg);background:linear-gradient(180deg,rgba(13,26,52,.9),rgba(11,18,36,.94));border:1px solid rgba(47,78,135,.38);box-shadow:var(--orion-shadow-lg),0 0 0 1px rgba(140,193,255,.04)}
+    .orion-trust-v2__card{padding:24px;border-radius:var(--orion-radius-lg);background:linear-gradient(180deg,rgba(13,26,52,.9),rgba(11,18,36,.94));border:1px solid rgba(47,78,135,.38);box-shadow:var(--orion-shadow-lg),0 0 0 1px rgba(140,193,255,.04);transition:transform .18s ease,box-shadow .18s ease}
     .orion-trust-v2__card h3{margin:0 0 10px;font-size:1.1rem;letter-spacing:-.02em;line-height:1.2}
     .orion-trust-v2__card p{margin:0;color:var(--orion-body);font-size:.9rem;line-height:1.52;max-width:30ch}
+    .orion-trust-v2__card:hover,.orion-trust-v2__priority-card:hover{transform:translateY(-2px);box-shadow:0 20px 44px rgba(0,0,0,.3),0 0 0 1px rgba(140,193,255,.05)}
     .orion-trust-v2__card-icon{width:14px;height:14px;border-radius:999px;margin-bottom:16px;background:linear-gradient(135deg,#8cc1ff,#2f6bff);box-shadow:0 0 0 5px rgba(47,107,255,.12),0 0 20px rgba(140,193,255,.3)}
 
     .orion-trust-v2__priority-grid{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:16px}
-    .orion-trust-v2__priority-card{padding:22px;border-radius:var(--orion-radius-lg);background:linear-gradient(180deg,rgba(13,26,52,.88),rgba(11,18,36,.92));border:1px solid rgba(47,78,135,.36);box-shadow:var(--orion-shadow-lg);position:relative;overflow:hidden}
+    .orion-trust-v2__priority-card{padding:24px;border-radius:var(--orion-radius-lg);background:linear-gradient(180deg,rgba(13,26,52,.88),rgba(11,18,36,.92));border:1px solid rgba(47,78,135,.36);box-shadow:var(--orion-shadow-lg),0 0 0 1px rgba(140,193,255,.03);position:relative;overflow:hidden;transition:transform .18s ease,box-shadow .18s ease}
     .orion-trust-v2__priority-card::before{content:'';position:absolute;inset:0 auto 0 0;width:4px;background:linear-gradient(180deg,var(--orion-blue),rgba(140,193,255,.42))}
     .orion-trust-v2__priority-card--high::before{background:linear-gradient(180deg,var(--orion-danger),rgba(248,113,113,.42))}
     .orion-trust-v2__priority-card--medium::before{background:linear-gradient(180deg,var(--orion-warning),rgba(251,191,36,.42))}
@@ -82,7 +83,7 @@
       .orion-trust-v2__chips,.orion-trust-v2__top-grid,.orion-trust-v2__priority-grid,.orion-trust-v2__boundaries-grid,.orion-trust-v2__not-grid{grid-template-columns:1fr;gap:10px}
       .orion-trust-v2__chip,.orion-trust-v2__card,.orion-trust-v2__priority-card{padding:16px}
       .orion-trust-v2__chip{min-height:44px;font-size:.86rem}
-      .orion-trust-v2__section{margin-bottom:32px}
+      .orion-trust-v2__section{margin-bottom:30px}
       .orion-trust-v2__section-head{margin-bottom:16px}
       .orion-trust-v2__section-head h2{font-size:1.48rem}
       .orion-trust-v2__section-head p,.orion-trust-v2__card p,.orion-trust-v2__priority-card p,.orion-trust-v2__faq p,.orion-trust-v2__cta p{font-size:.86rem;line-height:1.46}
