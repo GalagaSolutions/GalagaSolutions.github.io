@@ -1,9 +1,190 @@
-<!doctype html><html lang='en'><head><meta charset='UTF-8'><meta name='viewport' content='width=device-width,initial-scale=1'><title>Trust & Support | Orion</title>
-  <link rel="canonical" href="https://orin.onesolutionapp.com/trust.html" />
-  <meta name="description" content="Orion by One Solution — done-for-you AI operator setup, support, and deployment for real business workflows." /><link rel='icon' href='./assets/favicon-one-solution.jpg'><link rel='stylesheet' href='./assets/orin-theme.css'><style>.grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(240px,1fr));gap:12px}.table{width:100%;border-collapse:collapse;background:#0d162d;border:1px solid #253455;border-radius:12px;overflow:hidden}.table th,.table td{border-bottom:1px solid #253455;padding:10px 12px;text-align:left}.table th{background:#101b36;color:#cfe0ff}.faq details{background:#0b1328;border:1px solid #2f446f;border-radius:10px;padding:12px 14px}.faq details+details{margin-top:8px}.faq summary{cursor:pointer;font-weight:700;color:#dce9ff}</style>  <meta property="og:title" content="Orion by One Solution" />
-  <meta property="og:description" content="Done-for-you AI operator setup, support, and deployment for real business workflows." />
-  <meta property="og:type" content="website" />
-  <meta property="og:url" content="https://orin.onesolutionapp.com/trust.html" />
-</head><body><div class='wrap'><header class='nav'><a href='./index.html'><img src='./assets/one-solution-logo-white.png' alt='One Solution'></a><button class='menuToggle' type='button' aria-label='Open menu' aria-expanded='false'><span class='menuIcon'><span></span></span></button><div class="links"><a href='./index.html'>Home</a><a href='./how-it-works.html'>How It Works</a><a href='./solutions.html'>Solutions</a><a href='./use-cases.html'>Playbooks</a><a href='./pricing.html'>Pricing</a><a class='active' href='./trust.html'>Trust</a><a class='btn g' href='https://link.onesolutionapp.com/widget/form/CowOWlCpQDzIq8FGlDG9' target='_blank' rel='noopener noreferrer'>Request Orion Setup</a></div></header><section><h1>Trust, Support, and Operating Model</h1><p class='muted'>Clear support expectations and escalation standards for production use.</p></section><section><div class='grid'><article class='card'><h3>Ticketed support</h3><p class='muted'>All adjustments and troubleshooting are handled through structured requests.</p></article><article class='card'><h3>Operational priority</h3><p class='muted'>Workflows affecting active pipeline movement get priority handling.</p></article><article class='card'><h3>Continuous alignment</h3><p class='muted'>Refinements are driven by real usage feedback and evolving business needs.</p></article></div></section><section><h2>Support response tiers</h2><table class='table'><thead><tr><th>Severity</th><th>Example</th><th>Target response</th></tr></thead><tbody><tr><td>High</td><td>Workflow blocker affecting active operations</td><td>Same day, prioritized</td></tr><tr><td>Medium</td><td>Output quality issue or partial process friction</td><td>~24 hours</td></tr><tr><td>Low</td><td>Enhancement or optimization request</td><td>Scheduled in support queue</td></tr></tbody></table></section><section><h2>Implementation boundaries</h2><div class='grid'><article class='card'><h3>Included</h3><p class='muted'>Assistant setup, workflow alignment, and operational refinement support.</p></article><article class='card'><h3>Scoped separately</h3><p class='muted'>Large custom development projects and unrelated system rebuilds.</p></article><article class='card'><h3>Access model</h3><p class='muted'>Configured based on practical workflow requirements and business context.</p></article></div></section><section class='faq'><h2>Trust FAQ</h2><details><summary>Is Orion replacing my team?</summary><p class='muted'>No. Orion is a support layer for repetitive digital workflows and coordination.</p></details><details><summary>What if our needs change after launch?</summary><p class='muted'>That is expected. Ongoing support includes ticketed refinement updates.</p></details><details><summary>Can we request a custom operating lane?</summary><p class='muted'>Yes. We scope custom lanes during intake based on workflow goals.</p></details></section><footer><div>© <span id='y'></span> One Solution LLC • Orion by One Solution</div><div class='legal'><a href='https://my.onesolutionapp.com/privacy-policy/' target='_blank'>Privacy Policy</a><a href='https://my.onesolutionapp.com/terms-of-service/' target='_blank'>Terms of Service</a></div></footer></div><script>document.getElementById('y').textContent=new Date().getFullYear();const menuBtn=document.querySelector('.menuToggle');const menuLinks=document.querySelector('.links');if(menuBtn&&menuLinks){menuBtn.addEventListener('click',()=>{const o=menuLinks.classList.toggle('open');menuBtn.classList.toggle('open',o);menuBtn.setAttribute('aria-expanded',o?'true':'false');});}
-const navEl=document.querySelector('.nav');
-(function(){if(!navEl||window.innerWidth>980)return;let lastY=window.scrollY||0;let ticking=false;window.addEventListener('scroll',()=>{if(ticking)return;ticking=true;requestAnimationFrame(()=>{const y=window.scrollY||0;const delta=y-lastY;const menuOpen=document.querySelector('.links')?.classList.contains('open');if(menuOpen){navEl.classList.remove('nav-hidden');lastY=y;ticking=false;return;}if(y<20){navEl.classList.remove('nav-hidden');}else if(delta>4){navEl.classList.add('nav-hidden');}else if(delta<-4){navEl.classList.remove('nav-hidden');}lastY=y;ticking=false;});},{passive:true});})();</script></body></html>
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <title>Trust & Support | Orion</title>
+  <link rel="canonical" href="https://orin.onesolutionapp.com/trust.html">
+  <meta name="description" content="Orion by One Solution — done-for-you AI operator setup, support, and deployment for real business workflows.">
+  <link rel="icon" href="./assets/favicon-one-solution.jpg">
+  <link rel="stylesheet" href="./assets/orin-theme.css">
+  <style>
+    .orion-trust-v2{
+      --orion-bg:#070b16;--orion-panel:#0b1224;--orion-panel-2:#0d1a34;--orion-border:#1e2d4d;--orion-border-2:#2f4e87;--orion-border-3:#315597;--orion-blue:#2f6bff;--orion-blue-2:#1f5af5;--orion-headline:#f4f8ff;--orion-body:#dce9ff;--orion-muted:#9db4de;--orion-muted-2:#8fb4ff;--orion-success:#34d399;--orion-warning:#fbbf24;--orion-danger:#f87171;--orion-radius-xl:28px;--orion-radius-lg:20px;--orion-radius-md:14px;--orion-shadow-lg:0 16px 38px rgba(0,0,0,.28);
+      position:relative;padding:78px 0 72px;color:var(--orion-headline);
+      background:radial-gradient(circle at top right,rgba(140,193,255,.05),transparent 26%),radial-gradient(circle at top left,rgba(167,139,250,.04),transparent 20%);
+    }
+    .orion-trust-v2__inner{width:min(1240px,calc(100% - 48px));margin:0 auto}
+    .orion-trust-v2__hero{max-width:920px;margin-bottom:34px}
+    .orion-trust-v2__eyebrow{display:inline-flex;align-items:center;gap:10px;padding:8px 14px;border-radius:999px;border:1px solid rgba(140,180,255,.22);background:rgba(13,26,52,.75);color:var(--orion-muted-2);font-size:12px;font-weight:700;letter-spacing:.14em;text-transform:uppercase;margin-bottom:18px}
+    .orion-trust-v2__eyebrow-dot{width:8px;height:8px;border-radius:50%;background:linear-gradient(135deg,#fff,#8cc1ff);box-shadow:0 0 14px rgba(140,193,255,.5)}
+    .orion-trust-v2__title{margin:0 0 14px;font-size:clamp(2.4rem,5vw,4.2rem);line-height:1;letter-spacing:-.045em}
+    .orion-trust-v2__subtext{margin:0 0 18px;max-width:66ch;color:var(--orion-body);font-size:1.04rem;line-height:1.72}
+    .orion-trust-v2__chips{display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:12px;max-width:920px}
+    .orion-trust-v2__chip{display:flex;align-items:center;gap:10px;min-height:48px;padding:11px 13px;background:rgba(11,18,36,.82);border:1px solid rgba(49,85,151,.24);border-radius:14px;color:var(--orion-body);font-size:.9rem;box-shadow:0 8px 18px rgba(0,0,0,.16), inset 0 1px 0 rgba(255,255,255,.03)}
+    .orion-trust-v2__chip-dot{width:9px;height:9px;flex:0 0 9px;border-radius:999px;background:linear-gradient(135deg,#8cc1ff,#2f6bff);box-shadow:0 0 0 4px rgba(47,107,255,.08)}
+
+    .orion-trust-v2__section{margin-bottom:46px}
+    .orion-trust-v2__section-head{max-width:860px;margin-bottom:24px}
+    .orion-trust-v2__section-head h2{margin:0 0 10px;font-size:clamp(1.8rem,3vw,2.4rem);letter-spacing:-.03em;line-height:1.05}
+    .orion-trust-v2__section-head p{margin:0;color:var(--orion-muted);font-size:1rem;line-height:1.65}
+
+    .orion-trust-v2__top-grid,.orion-trust-v2__boundaries-grid,.orion-trust-v2__not-grid{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:16px}
+    .orion-trust-v2__card{padding:24px;border-radius:var(--orion-radius-lg);background:linear-gradient(180deg,rgba(13,26,52,.9),rgba(11,18,36,.94));border:1px solid rgba(47,78,135,.38);box-shadow:var(--orion-shadow-lg),0 0 0 1px rgba(140,193,255,.04)}
+    .orion-trust-v2__card h3{margin:0 0 10px;font-size:1.1rem;letter-spacing:-.02em;line-height:1.2}
+    .orion-trust-v2__card p{margin:0;color:var(--orion-body);font-size:.94rem;line-height:1.6}
+    .orion-trust-v2__card-icon{width:14px;height:14px;border-radius:999px;margin-bottom:16px;background:linear-gradient(135deg,#8cc1ff,#2f6bff);box-shadow:0 0 0 5px rgba(47,107,255,.12),0 0 20px rgba(140,193,255,.3)}
+
+    .orion-trust-v2__priority-grid{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:16px}
+    .orion-trust-v2__priority-card{padding:22px;border-radius:var(--orion-radius-lg);background:linear-gradient(180deg,rgba(13,26,52,.88),rgba(11,18,36,.92));border:1px solid rgba(47,78,135,.36);box-shadow:var(--orion-shadow-lg);position:relative;overflow:hidden}
+    .orion-trust-v2__priority-card::before{content:'';position:absolute;inset:0 auto 0 0;width:4px;background:linear-gradient(180deg,var(--orion-blue),rgba(140,193,255,.42))}
+    .orion-trust-v2__priority-card--high::before{background:linear-gradient(180deg,var(--orion-danger),rgba(248,113,113,.42))}
+    .orion-trust-v2__priority-card--medium::before{background:linear-gradient(180deg,var(--orion-warning),rgba(251,191,36,.42))}
+    .orion-trust-v2__priority-card--low::before{background:linear-gradient(180deg,var(--orion-blue),rgba(140,193,255,.42))}
+    .orion-trust-v2__priority-tier{display:inline-flex;align-items:center;padding:6px 10px;border-radius:999px;font-size:.74rem;font-weight:800;letter-spacing:.05em;text-transform:uppercase;margin-bottom:12px}
+    .orion-trust-v2__priority-tier--high{background:rgba(248,113,113,.12);border:1px solid rgba(248,113,113,.22);color:#ffd7d7}
+    .orion-trust-v2__priority-tier--medium{background:rgba(251,191,36,.12);border:1px solid rgba(251,191,36,.22);color:#fff1c4}
+    .orion-trust-v2__priority-tier--low{background:rgba(47,107,255,.12);border:1px solid rgba(96,165,250,.22);color:#d9e8ff}
+    .orion-trust-v2__priority-card h3{margin:0 0 8px;font-size:1.08rem;letter-spacing:-.02em}
+    .orion-trust-v2__priority-card p{margin:0 0 10px;color:var(--orion-body);font-size:.92rem;line-height:1.58}
+    .orion-trust-v2__priority-target{font-size:.82rem;color:var(--orion-muted-2);font-weight:700;letter-spacing:.01em}
+
+    .orion-trust-v2__faq{display:grid;gap:10px}
+    .orion-trust-v2__faq details{background:linear-gradient(180deg,rgba(11,18,36,.94),rgba(11,18,36,.99));border:1px solid rgba(47,78,135,.42);border-radius:14px;padding:15px 16px;box-shadow:0 12px 28px rgba(0,0,0,.14), inset 0 1px 0 rgba(255,255,255,.025)}
+    .orion-trust-v2__faq summary{cursor:pointer;font-weight:700;color:var(--orion-headline);font-size:.98rem;list-style:none;display:flex;align-items:center;justify-content:space-between;gap:12px}
+    .orion-trust-v2__faq summary::-webkit-details-marker{display:none}
+    .orion-trust-v2__faq summary::after{content:'+';font-size:1.12rem;color:var(--orion-muted-2);line-height:1;padding:2px 6px;border-radius:999px;background:rgba(47,107,255,.08);border:1px solid rgba(47,107,255,.12)}
+    .orion-trust-v2__faq details[open] summary::after{content:'–'}
+    .orion-trust-v2__faq details[open]{border-color:rgba(96,165,250,.45)}
+    .orion-trust-v2__faq p{margin:12px 0 0;color:var(--orion-body);font-size:.92rem;line-height:1.6;padding-top:10px;border-top:1px solid rgba(47,78,135,.2)}
+
+    .orion-trust-v2__cta{display:flex;align-items:center;justify-content:space-between;gap:40px;padding:34px 38px;border-radius:var(--orion-radius-xl);background:linear-gradient(145deg,rgba(13,26,52,.94),rgba(11,18,36,.98));border:1px solid rgba(47,78,135,.42);box-shadow:var(--orion-shadow-lg),0 0 0 1px rgba(140,193,255,.05)}
+    .orion-trust-v2__cta-content{max-width:700px}
+    .orion-trust-v2__cta h2{margin:0 0 10px;font-size:clamp(1.8rem,3vw,2.4rem);letter-spacing:-.03em;line-height:1.05}
+    .orion-trust-v2__cta p{margin:0;color:var(--orion-body);font-size:.98rem;line-height:1.65;max-width:56ch}
+    .orion-trust-v2__cta-actions{display:flex;flex-wrap:wrap;gap:12px;align-items:center;justify-content:flex-end}
+    .orion-trust-v2__btn{display:inline-flex;align-items:center;justify-content:center;min-height:52px;padding:14px 20px;border-radius:14px;font-size:.96rem;font-weight:700;text-decoration:none;transition:transform .18s ease,box-shadow .18s ease}
+    .orion-trust-v2__btn:hover{transform:translateY(-1px)}
+    .orion-trust-v2__btn--primary{background:linear-gradient(135deg,var(--orion-blue),var(--orion-blue-2));color:#fff;box-shadow:0 12px 24px rgba(47,107,255,.3)}
+    .orion-trust-v2__btn--secondary{background:rgba(13,26,52,.9);border:1px solid rgba(140,180,255,.22);color:var(--orion-headline)}
+
+    @media(max-width:1120px){
+      .orion-trust-v2__chips,.orion-trust-v2__top-grid,.orion-trust-v2__priority-grid,.orion-trust-v2__boundaries-grid,.orion-trust-v2__not-grid{grid-template-columns:1fr 1fr}
+      .orion-trust-v2__cta{flex-direction:column;align-items:flex-start}
+      .orion-trust-v2__cta-actions{justify-content:flex-start}
+    }
+    @media(max-width:760px){
+      .orion-trust-v2{padding:56px 0 44px}
+      .orion-trust-v2__inner{width:min(100%,calc(100% - 24px))}
+      .orion-trust-v2__hero{margin-bottom:26px}
+      .orion-trust-v2__title{font-size:clamp(2rem,6.5vw,2.8rem)}
+      .orion-trust-v2__subtext{font-size:.98rem;line-height:1.6}
+      .orion-trust-v2__chips,.orion-trust-v2__top-grid,.orion-trust-v2__priority-grid,.orion-trust-v2__boundaries-grid,.orion-trust-v2__not-grid{grid-template-columns:1fr;gap:12px}
+      .orion-trust-v2__chip,.orion-trust-v2__card,.orion-trust-v2__priority-card{padding:18px}
+      .orion-trust-v2__section{margin-bottom:36px}
+      .orion-trust-v2__section-head{margin-bottom:18px}
+      .orion-trust-v2__section-head h2{font-size:1.55rem}
+      .orion-trust-v2__section-head p,.orion-trust-v2__card p,.orion-trust-v2__priority-card p,.orion-trust-v2__faq p,.orion-trust-v2__cta p{font-size:.88rem;line-height:1.5}
+      .orion-trust-v2__cta{padding:24px 20px;gap:18px}
+      .orion-trust-v2__cta h2{font-size:1.5rem}
+      .orion-trust-v2__cta-actions{width:100%;flex-direction:column}
+      .orion-trust-v2__btn{width:100%;min-height:48px;padding:12px 18px}
+    }
+  </style>
+  <meta property="og:title" content="Orion by One Solution">
+  <meta property="og:description" content="Done-for-you AI operator setup, support, and deployment for real business workflows.">
+  <meta property="og:type" content="website">
+  <meta property="og:url" content="https://orin.onesolutionapp.com/trust.html">
+</head>
+<body>
+  <div class="wrap">
+    <header class="nav"><a href="./index.html"><img src="./assets/one-solution-logo-white.png" alt="One Solution"></a><button class="menuToggle" type="button" aria-label="Open menu" aria-expanded="false"><span class="menuIcon"><span></span></span></button><div class="links"><a href="./index.html">Home</a><a href="./how-it-works.html">How It Works</a><a href="./solutions.html">Solutions</a><a href="./use-cases.html">Playbooks</a><a href="./pricing.html">Pricing</a><a class="active" href="./trust.html">Trust</a><a class="btn g" href="https://link.onesolutionapp.com/widget/form/CowOWlCpQDzIq8FGlDG9" target="_blank" rel="noopener noreferrer">Request Orion Setup</a></div></header>
+
+    <section class="orion-trust-v2">
+      <div class="orion-trust-v2__inner">
+        <header class="orion-trust-v2__hero">
+          <div class="orion-trust-v2__eyebrow"><span class="orion-trust-v2__eyebrow-dot"></span>Support & Trust</div>
+          <h1 class="orion-trust-v2__title">Trust, Support, and the Orion Operating Model</h1>
+          <p class="orion-trust-v2__subtext">Orion is launched as a done-for-you workflow support lane with structured refinement, clear request handling, and ongoing alignment after go-live. The goal is simple: practical support that keeps Orion useful inside real business operations.</p>
+          <div class="orion-trust-v2__chips">
+            <div class="orion-trust-v2__chip"><span class="orion-trust-v2__chip-dot"></span>Done-for-you setup</div>
+            <div class="orion-trust-v2__chip"><span class="orion-trust-v2__chip-dot"></span>Ticketed support</div>
+            <div class="orion-trust-v2__chip"><span class="orion-trust-v2__chip-dot"></span>Priority handling for blockers</div>
+            <div class="orion-trust-v2__chip"><span class="orion-trust-v2__chip-dot"></span>Ongoing refinement</div>
+          </div>
+        </header>
+
+        <section class="orion-trust-v2__section" aria-label="Top trust pillars">
+          <div class="orion-trust-v2__top-grid">
+            <article class="orion-trust-v2__card"><div class="orion-trust-v2__card-icon"></div><h3>Structured support after launch</h3><p>Orion is not left alone after deployment. Refinements and support requests are handled through a clear, structured process.</p></article>
+            <article class="orion-trust-v2__card"><div class="orion-trust-v2__card-icon"></div><h3>Priority handling for workflow blockers</h3><p>When active workflow execution is affected, support is prioritized based on business impact and urgency.</p></article>
+            <article class="orion-trust-v2__card"><div class="orion-trust-v2__card-icon"></div><h3>Continuous refinement as needs evolve</h3><p>Orion is intended to stay aligned with real use, not freeze at launch. Ongoing refinement keeps the workflow lane practical.</p></article>
+          </div>
+        </section>
+
+        <section class="orion-trust-v2__section" aria-label="How support is prioritized">
+          <div class="orion-trust-v2__section-head">
+            <h2>How support is prioritized</h2>
+            <p>Support is prioritized based on workflow impact, urgency, and the level of business disruption involved.</p>
+          </div>
+          <div class="orion-trust-v2__priority-grid">
+            <article class="orion-trust-v2__priority-card orion-trust-v2__priority-card--high"><div class="orion-trust-v2__priority-tier orion-trust-v2__priority-tier--high">High</div><h3>Workflow blocker affecting active operations</h3><p>Use when Orion is blocked in a way that disrupts active work, handoffs, or time-sensitive execution.</p><div class="orion-trust-v2__priority-target">Target response: same day, prioritized</div></article>
+            <article class="orion-trust-v2__priority-card orion-trust-v2__priority-card--medium"><div class="orion-trust-v2__priority-tier orion-trust-v2__priority-tier--medium">Medium</div><h3>Output quality issue or partial process friction</h3><p>Use when the workflow still functions, but quality, clarity, or consistency needs adjustment.</p><div class="orion-trust-v2__priority-target">Target response: ~24 hours</div></article>
+            <article class="orion-trust-v2__priority-card orion-trust-v2__priority-card--low"><div class="orion-trust-v2__priority-tier orion-trust-v2__priority-tier--low">Low</div><h3>Enhancement or optimization request</h3><p>Use for improvements, additional polish, or lower-priority support items that can be scheduled into the queue.</p><div class="orion-trust-v2__priority-target">Target response: scheduled in support queue</div></article>
+          </div>
+        </section>
+
+        <section class="orion-trust-v2__section" aria-label="Implementation boundaries">
+          <div class="orion-trust-v2__section-head">
+            <h2>Implementation boundaries</h2>
+            <p>Trust comes from clarity. Standard support covers ongoing workflow alignment, while larger or unrelated needs can still be scoped separately when necessary.</p>
+          </div>
+          <div class="orion-trust-v2__boundaries-grid">
+            <article class="orion-trust-v2__card"><h3>Included in standard support</h3><p>Ticketed refinement, workflow alignment, practical adjustments, and ongoing support around active Orion use cases.</p></article>
+            <article class="orion-trust-v2__card"><h3>Scoped separately when needed</h3><p>Large custom development, advanced technical projects, or work that goes beyond the normal Orion support lane.</p></article>
+            <article class="orion-trust-v2__card"><h3>Configured around your workflow</h3><p>Orion is implemented against real workflow requirements, team handoffs, and operating pressure points—not generic deployment assumptions.</p></article>
+          </div>
+        </section>
+
+        <section class="orion-trust-v2__section" aria-label="What Orion is not">
+          <div class="orion-trust-v2__section-head">
+            <h2>What Orion is not</h2>
+            <p>Orion is not a replacement employee and it is not a replacement for humans. It is a configured AI support lane designed to reduce recurring workload, improve consistency, and support execution inside the work your team is already doing.</p>
+          </div>
+          <div class="orion-trust-v2__not-grid">
+            <article class="orion-trust-v2__card"><h3>Not a replacement employee</h3><p>Orion is meant to support your team, not replace judgment, ownership, or human responsibility.</p></article>
+            <article class="orion-trust-v2__card"><h3>Not a fully autonomous system</h3><p>Orion works best as a configured support layer inside real workflows, with refinement and practical oversight.</p></article>
+            <article class="orion-trust-v2__card"><h3>Not vague “AI magic”</h3><p>It is scoped around defined tasks, recurring work, and useful outputs that help your team move faster with less manual effort.</p></article>
+          </div>
+        </section>
+
+        <section class="orion-trust-v2__section" aria-label="Trust FAQ">
+          <div class="orion-trust-v2__section-head"><h2>Trust FAQ</h2><p>Practical answers for buyers who want to understand how Orion is supported, how it evolves, and where the boundaries are.</p></div>
+          <div class="orion-trust-v2__faq">
+            <details><summary>Is Orion replacing my team?</summary><p>No. Orion is a configured support lane that reduces recurring digital workload and supports execution. It is not a replacement for human judgment or ownership.</p></details>
+            <details><summary>What if our needs change after launch?</summary><p>That is expected. Monthly support includes ticketed refinement so Orion can stay aligned as your workflow changes.</p></details>
+            <details><summary>Can we request a custom operating lane?</summary><p>Yes. Orion can be scoped around custom repeatable workflows when your use case does not fit a standard pattern.</p></details>
+            <details><summary>How are support requests handled?</summary><p>Support is handled through structured requests and prioritized based on urgency, workflow impact, and business disruption.</p></details>
+            <details><summary>What is included in standard support?</summary><p>Standard support includes workflow alignment, ticketed adjustments, practical refinement, and continuity support for active Orion lanes.</p></details>
+            <details><summary>Can advanced work be scoped separately?</summary><p>Yes. Larger development work, special technical requirements, or unrelated rebuilds can be scoped separately when needed.</p></details>
+          </div>
+        </section>
+
+        <section class="orion-trust-v2__cta" aria-label="Final trust CTA">
+          <div class="orion-trust-v2__cta-content">
+            <h2>Launch Orion with real support behind it</h2>
+            <p>Get a done-for-you workflow support lane configured by One Solution, supported after go-live, and refined through clear, structured requests.</p>
+          </div>
+          <div class="orion-trust-v2__cta-actions">
+            <a class="orion-trust-v2__btn orion-trust-v2__btn--primary" href="https://link.onesolutionapp.com/widget/form/CowOWlCpQDzIq8FGlDG9" target="_blank" rel="noopener noreferrer">Request Orion Setup</a>
+            <a class="orion-trust-v2__btn orion-trust-v2__btn--secondary" href="./pricing.html">View Pricing</a>
+          </div>
+        </section>
+      </div>
+    </section>
+
+    <footer><div>© <span id='y'></span> One Solution LLC • Orion by One Solution</div><div class='legal'><a href='https://my.onesolutionapp.com/privacy-policy/' target='_blank'>Privacy Policy</a><a href='https://my.onesolutionapp.com/terms-of-service/' target='_blank'>Terms of Service</a></div></footer>
+  </div>
+  <script>document.getElementById('y').textContent=new Date().getFullYear();const menuBtn=document.querySelector('.menuToggle');const menuLinks=document.querySelector('.links');if(menuBtn&&menuLinks){menuBtn.addEventListener('click',()=>{const o=menuLinks.classList.toggle('open');menuBtn.classList.toggle('open',o);menuBtn.setAttribute('aria-expanded',o?'true':'false');});}const navEl=document.querySelector('.nav');(function(){if(!navEl||window.innerWidth>980)return;let lastY=window.scrollY||0;let ticking=false;window.addEventListener('scroll',()=>{if(ticking)return;ticking=true;requestAnimationFrame(()=>{const y=window.scrollY||0;const delta=y-lastY;const menuOpen=document.querySelector('.links')?.classList.contains('open');if(menuOpen){navEl.classList.remove('nav-hidden');lastY=y;ticking=false;return;}if(y<20){navEl.classList.remove('nav-hidden');}else if(delta>4){navEl.classList.add('nav-hidden');}else if(delta<-4){navEl.classList.remove('nav-hidden');}lastY=y;ticking=false;});},{passive:true});})();</script>
+</body>
+</html>
