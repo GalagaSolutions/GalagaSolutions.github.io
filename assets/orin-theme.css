@@ -924,7 +924,8 @@ footer {
     align-items: stretch;
   }
   .links a { padding: 10px 12px; }
-  .ctaCenter .btn { width: 100%; max-width: 420px; }
+  .links > .btn { width: 100%; justify-content: center; }
+  .ctaCenter .btn { width: 100%; max-width: 420px; min-height: 48px; }
 
   /* Mobile product mockup */
   .productMockup {
