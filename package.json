@@ -1,0 +1,20 @@
+{
+  "name": "orin-product-site",
+  "version": "1.0.0",
+  "description": "Orion by One Solution - Done-for-You AI Operator",
+  "private": true,
+  "scripts": {
+    "build": "echo 'Static site - no build required'",
+    "dev": "npx http-server -p 3000"
+  },
+  "dependencies": {
+    "@vercel/analytics": "^2.0.1"
+  },
+  "keywords": [
+    "ai",
+    "orion",
+    "one-solution"
+  ],
+  "author": "Galaga Solutions",
+  "license": "UNLICENSED"
+}

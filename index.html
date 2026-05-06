@@ -718,5 +718,11 @@
     const navEl=document.querySelector('.nav');
     (function(){if(!navEl||window.innerWidth>980)return;let lastY=window.scrollY||0;let ticking=false;window.addEventListener('scroll',()=>{if(ticking)return;ticking=true;requestAnimationFrame(()=>{const y=window.scrollY||0;const d=y-lastY;const open=document.querySelector('.links')?.classList.contains('open');if(open){navEl.classList.remove('nav-hidden');lastY=y;ticking=false;return;}if(y<20){navEl.classList.remove('nav-hidden');}else if(d>4){navEl.classList.add('nav-hidden');}else if(d<-4){navEl.classList.remove('nav-hidden');}lastY=y;ticking=false;});},{passive:true});})();
   </script>
+  
+  <!-- Vercel Web Analytics -->
+  <script type="module">
+    import { inject } from 'https://cdn.jsdelivr.net/npm/@vercel/analytics@2/+esm';
+    inject();
+  </script>
 </body>
 </html>
