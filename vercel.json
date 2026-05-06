@@ -8,7 +8,7 @@
         { "key": "Referrer-Policy", "value": "strict-origin-when-cross-origin" },
         { "key": "Permissions-Policy", "value": "camera=(), microphone=(), geolocation=()" },
         { "key": "Strict-Transport-Security", "value": "max-age=31536000; includeSubDomains; preload" },
-        { "key": "Content-Security-Policy", "value": "default-src 'self'; script-src 'self' 'unsafe-inline' https://link.onesolutionapp.com; style-src 'self' 'unsafe-inline'; img-src 'self' data: https://cdn.jsdelivr.net https://cdn.simpleicons.org; frame-src https://link.onesolutionapp.com https://checkout.stripe.com; connect-src 'self' https://link.onesolutionapp.com https://api.stripe.com; font-src 'self' data:; base-uri 'self'; form-action 'self' https://link.onesolutionapp.com https://checkout.stripe.com; frame-ancestors 'self'; upgrade-insecure-requests" }
+        { "key": "Content-Security-Policy", "value": "default-src 'self'; script-src 'self' 'unsafe-inline' https://link.onesolutionapp.com https://va.vercel-scripts.com; style-src 'self' 'unsafe-inline'; img-src 'self' data: https://cdn.jsdelivr.net https://cdn.simpleicons.org; frame-src https://link.onesolutionapp.com https://checkout.stripe.com; connect-src 'self' https://link.onesolutionapp.com https://api.stripe.com https://vitals.vercel-insights.com; font-src 'self' data:; base-uri 'self'; form-action 'self' https://link.onesolutionapp.com https://checkout.stripe.com; frame-ancestors 'self'; upgrade-insecure-requests" }
       ]
     }
   ]
