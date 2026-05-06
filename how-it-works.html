@@ -173,5 +173,9 @@
     <footer><div>© <span id='y'></span> One Solution LLC • Orion by One Solution</div><div class='legal'><a href='https://my.onesolutionapp.com/privacy-policy/' target='_blank'>Privacy Policy</a><a href='https://my.onesolutionapp.com/terms-of-service/' target='_blank'>Terms of Service</a></div></footer>
   </div>
   <script>document.getElementById('y').textContent=new Date().getFullYear();const menuBtn=document.querySelector('.menuToggle');const menuLinks=document.querySelector('.links');if(menuBtn&&menuLinks){menuBtn.addEventListener('click',()=>{const o=menuLinks.classList.toggle('open');menuBtn.classList.toggle('open',o);menuBtn.setAttribute('aria-expanded',o?'true':'false');});}const navEl=document.querySelector('.nav');(function(){if(!navEl||window.innerWidth>980)return;let lastY=window.scrollY||0;let ticking=false;window.addEventListener('scroll',()=>{if(ticking)return;ticking=true;requestAnimationFrame(()=>{const y=window.scrollY||0;const delta=y-lastY;const menuOpen=document.querySelector('.links')?.classList.contains('open');if(menuOpen){navEl.classList.remove('nav-hidden');lastY=y;ticking=false;return;}if(y<20){navEl.classList.remove('nav-hidden');}else if(delta>4){navEl.classList.add('nav-hidden');}else if(delta<-4){navEl.classList.remove('nav-hidden');}lastY=y;ticking=false;});},{passive:true});})();</script>
+  <script>
+    window.va = window.va || function () { (window.vaq = window.vaq || []).push(arguments); };
+  </script>
+  <script defer src="/_vercel/insights/script.js"></script>
 </body>
 </html>
