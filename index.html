@@ -39,7 +39,7 @@
     import { onCLS, onINP, onFCP, onLCP, onTTFB } from 'https://unpkg.com/web-vitals@4/dist/web-vitals.attribution.js?module';
     function sendToAnalytics(metric) {
       const body = JSON.stringify(metric);
-      (navigator.sendBeacon && navigator.sendBeacon('/analytics', body)) || fetch('/analytics', { body, method: 'POST', keepalive: true });
+      (navigator.sendBeacon && navigator.sendBeacon('/api/analytics', body)) || fetch('/api/analytics', { body, method: 'POST', keepalive: true });
     }
     onCLS(sendToAnalytics);
     onINP(sendToAnalytics);

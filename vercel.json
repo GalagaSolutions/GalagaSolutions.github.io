@@ -18,6 +18,7 @@
     }
   ],
   "rewrites": [
+    { "source": "/analytics", "destination": "/api/analytics" },
     { "source": "/how-it-works", "destination": "/how-it-works.html" },
     { "source": "/solutions", "destination": "/solutions.html" },
     { "source": "/use-cases", "destination": "/use-cases.html" },
