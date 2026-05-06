@@ -1,0 +1,23 @@
+{
+  "name": "primary",
+  "version": "1.0.0",
+  "description": "Test websites by OpenClaw # Cache bust: Mon Apr 13 20:37:13 UTC 2026 Cache bust: Tue Apr 14 20:26:34 UTC 2026",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/GalagaSolutions/GalagaSolutions.github.io.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/GalagaSolutions/GalagaSolutions.github.io/issues"
+  },
+  "homepage": "https://github.com/GalagaSolutions/GalagaSolutions.github.io#readme",
+  "dependencies": {
+    "@vercel/analytics": "^2.0.1"
+  }
+}
