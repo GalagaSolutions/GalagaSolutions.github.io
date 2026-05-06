@@ -1,23 +1,66 @@
 User-agent: *
 Allow: /
 
-# Allow all search engines and AI crawlers
+# Search engines
 User-agent: Googlebot
 Allow: /
 
 User-agent: Bingbot
 Allow: /
 
+# OpenAI / ChatGPT
 User-agent: ChatGPT-User
 Allow: /
 
 User-agent: GPTBot
 Allow: /
 
+# Anthropic / Claude
 User-agent: Claude-Web
 Allow: /
 
+User-agent: ClaudeBot
+Allow: /
+
+# Perplexity
 User-agent: PerplexityBot
+Allow: /
+
+# Google Gemini / AI
+User-agent: Google-Extended
+Allow: /
+
+User-agent: GoogleOther
+Allow: /
+
+# xAI / Grok
+User-agent: GrokBot
+Allow: /
+
+User-agent: xAI-Crawler
+Allow: /
+
+# Meta AI
+User-agent: Meta-ExternalAgent
+Allow: /
+
+User-agent: MetaAI
+Allow: /
+
+User-agent: FacebookBot
+Allow: /
+
+# Other AI crawlers
+User-agent: CohereBot
+Allow: /
+
+User-agent: Amazonbot
+Allow: /
+
+User-agent: Applebot
+Allow: /
+
+User-agent: YouBot
 Allow: /
 
 # Sitemap location
