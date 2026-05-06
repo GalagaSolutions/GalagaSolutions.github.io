@@ -5,7 +5,7 @@
   <meta name="viewport" content="width=device-width,initial-scale=1" />
   <title>Orion by One Solution | Done-for-You AI Operator</title>
   <link rel="canonical" href="https://orion.onesolutionapp.com/" />
-  <meta name="description" content="Orion by One Solution — done-for-you AI operator, AI employee, and AI assistant setup, support, and deployment for real business workflows." />
+  <meta name="description" content="Launch Orion by One Solution, a done-for-you AI operator, AI employee, and AI assistant configured around your workflows, deployed into your team tools, and supported after go-live." />
   <!-- Open Graph / Social Sharing -->
   <meta property="og:title" content="Orion by One Solution | Done-for-You AI Operator">
   <meta property="og:description" content="Launch Orion by One Solution, a done-for-you AI operator, AI employee, and AI assistant configured around your workflows, deployed into your team tools, and supported after go-live.">
@@ -36,16 +36,16 @@
   </script>
   <!-- Web Vitals Monitoring -->
   <script type="module">
-    import {getCLS, getFID, getFCP, getLCP, getTTFB} from 'https://unpkg.com/web-vitals@3/dist/web-vitals.attribution.js?module';
+    import { onCLS, onINP, onFCP, onLCP, onTTFB } from 'https://unpkg.com/web-vitals@4/dist/web-vitals.attribution.js?module';
     function sendToAnalytics(metric) {
       const body = JSON.stringify(metric);
-      (navigator.sendBeacon && navigator.sendBeacon('/analytics', body)) || fetch('/analytics', {body, method: 'POST', keepalive: true});
+      (navigator.sendBeacon && navigator.sendBeacon('/analytics', body)) || fetch('/analytics', { body, method: 'POST', keepalive: true });
     }
-    getCLS(sendToAnalytics);
-    getFID(sendToAnalytics);
-    getFCP(sendToAnalytics);
-    getLCP(sendToAnalytics);
-    getTTFB(sendToAnalytics);
+    onCLS(sendToAnalytics);
+    onINP(sendToAnalytics);
+    onFCP(sendToAnalytics);
+    onLCP(sendToAnalytics);
+    onTTFB(sendToAnalytics);
   </script>
   <link rel="icon" href="./assets/favicon-one-solution.jpg" />
   <link rel="stylesheet" href="./assets/orin-theme.css" />
