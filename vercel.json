@@ -1,15 +1,20 @@
 {
-  "headers": [
-    {
-      "source": "/(.*)",
-      "headers": [
-        { "key": "X-Content-Type-Options", "value": "nosniff" },
-        { "key": "X-Frame-Options", "value": "SAMEORIGIN" },
-        { "key": "Referrer-Policy", "value": "strict-origin-when-cross-origin" },
-        { "key": "Permissions-Policy", "value": "camera=(), microphone=(), geolocation=()" },
-        { "key": "Strict-Transport-Security", "value": "max-age=31536000; includeSubDomains; preload" },
-        { "key": "Content-Security-Policy", "value": "default-src 'self'; script-src 'self' 'unsafe-inline' https://link.onesolutionapp.com; style-src 'self' 'unsafe-inline'; img-src 'self' data: https://cdn.jsdelivr.net https://cdn.simpleicons.org; frame-src https://link.onesolutionapp.com https://checkout.stripe.com; connect-src 'self' https://link.onesolutionapp.com https://api.stripe.com; font-src 'self' data:; base-uri 'self'; form-action 'self' https://link.onesolutionapp.com https://checkout.stripe.com; frame-ancestors 'self'; upgrade-insecure-requests" }
-      ]
-    }
+  "cleanUrls": true,
+  "trailingSlash": false,
+  "rewrites": [
+    { "source": "/how-it-works", "destination": "/how-it-works.html" },
+    { "source": "/solutions", "destination": "/solutions.html" },
+    { "source": "/use-cases", "destination": "/use-cases.html" },
+    { "source": "/pricing", "destination": "/pricing.html" },
+    { "source": "/trust", "destination": "/trust.html" },
+    { "source": "/request", "destination": "/request.html" }
+  ],
+  "redirects": [
+    { "source": "/how-it-works.html", "destination": "/how-it-works", "permanent": true },
+    { "source": "/solutions.html", "destination": "/solutions", "permanent": true },
+    { "source": "/use-cases.html", "destination": "/use-cases", "permanent": true },
+    { "source": "/pricing.html", "destination": "/pricing", "permanent": true },
+    { "source": "/trust.html", "destination": "/trust", "permanent": true },
+    { "source": "/request.html", "destination": "/request", "permanent": true }
   ]
 }
