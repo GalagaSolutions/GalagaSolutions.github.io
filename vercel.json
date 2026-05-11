@@ -46,6 +46,12 @@
     { "source": "/use-cases.html", "destination": "/use-cases", "permanent": true },
     { "source": "/pricing.html", "destination": "/pricing", "permanent": true },
     { "source": "/trust.html", "destination": "/trust", "permanent": true },
-    { "source": "/request.html", "destination": "/request", "permanent": true }
+    { "source": "/request.html", "destination": "/request", "permanent": true },
+    { "source": "/integrations.html", "destination": "/solutions", "permanent": true },
+    { "source": "/packages.html", "destination": "/pricing", "permanent": true },
+    { "source": "/orin.html", "destination": "/", "permanent": true },
+    { "source": "/integrations", "destination": "/solutions", "permanent": true },
+    { "source": "/packages", "destination": "/pricing", "permanent": true },
+    { "source": "/orin", "destination": "/", "permanent": true }
   ]
 }
