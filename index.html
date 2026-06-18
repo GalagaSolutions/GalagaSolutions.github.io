@@ -176,12 +176,13 @@
     .proofStrip h3{font-size:1.6rem;margin-bottom:8px}
     .proofStrip .subtext{font-size:.95rem;color:var(--muted);margin-bottom:35px}
     .proofVideoGrid{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:18px;margin:0 0 30px}
-    .proofVideoCard{text-align:left;padding:16px;border:1px solid rgba(59,130,246,0.14);background:linear-gradient(180deg,rgba(15,25,52,0.88),rgba(10,16,32,0.94));border-radius:18px;box-shadow:0 10px 30px rgba(0,0,0,0.18)}
+    .proofVideoCard{text-align:left;padding:16px;border:1px solid rgba(59,130,246,0.14);background:linear-gradient(180deg,rgba(15,25,52,0.88),rgba(10,16,32,0.94));border-radius:18px;box-shadow:0 10px 30px rgba(0,0,0,0.18);display:flex;flex-direction:column;height:100%}
     .proofVideoLabel{display:inline-flex;align-items:center;gap:8px;padding:6px 10px;border-radius:999px;border:1px solid rgba(140,180,255,0.18);background:rgba(13,26,52,0.72);color:#dce9ff;font-size:.74rem;font-weight:800;letter-spacing:.04em;text-transform:uppercase;margin-bottom:12px}
     .proofVideoCard h4{margin:0 0 8px;font-size:1.08rem;color:#f4f8ff}
     .proofVideoCard p{margin:0 0 14px;color:#a9bbdf;font-size:.9rem;line-height:1.5}
-    .proofVideoWrap{border-radius:14px;overflow:hidden;border:1px solid rgba(59,130,246,0.14);background:#050914}
-    .proofVideoWrap video{display:block;width:100%;height:auto}
+    .proofVideoWrap{margin-top:auto;border-radius:14px;overflow:hidden;border:1px solid rgba(59,130,246,0.14);background:#050914;aspect-ratio:4 / 5;min-height:420px}
+    .proofVideoWrap video{display:block;width:100%;height:100%;object-fit:cover;object-position:center center}
+    .proofVideoWrap--after video{object-position:right center}
     .proofStats{display:grid;grid-template-columns:repeat(3,1fr);gap:30px;margin-top:30px}
     .proofStat{text-align:center}
     .proofStat .number{font-size:2.8rem;font-weight:800;background:linear-gradient(90deg,#fff,#8cc1ff);-webkit-background-clip:text;background-clip:text;color:transparent;line-height:1.1;margin-bottom:10px}
@@ -277,6 +278,7 @@
       .proofVideoCard{padding:12px}
       .proofVideoCard h4{font-size:1rem}
       .proofVideoCard p{font-size:.85rem}
+      .proofVideoWrap{min-height:340px}
       .proofStrip{padding:28px 16px;margin:18px 0}
       .proofStat .number{font-size:2rem}
       .proofStat .label{font-size:0.85rem}
@@ -549,7 +551,7 @@
             <div class="proofVideoLabel">Before Orion</div>
             <h4>Manual voicemail note-taking and callback prep</h4>
             <p>Your team listens, writes, organizes, and prepares follow-up by hand.</p>
-            <div class="proofVideoWrap">
+            <div class="proofVideoWrap proofVideoWrap--before">
               <video autoplay muted loop playsinline preload="metadata">
                 <source src="./assets/orion-before-voicemail.mp4" type="video/mp4">
               </video>
@@ -559,7 +561,7 @@
             <div class="proofVideoLabel">With Orion</div>
             <h4>Summaries, contact cards, and callback-ready context</h4>
             <p>Orion organizes the repetitive digital prep so your team can review and respond faster.</p>
-            <div class="proofVideoWrap">
+            <div class="proofVideoWrap proofVideoWrap--after">
               <video autoplay muted loop playsinline preload="metadata">
                 <source src="./assets/orion-after-voicemail.mp4" type="video/mp4">
               </video>
